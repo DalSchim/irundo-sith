@@ -1,6 +1,7 @@
 <template>
   <nav-components/>
   <router-view/>
+  <footer-components/>
 </template>
 
 <style>
@@ -65,5 +66,6 @@ li{
 </style>
 <script setup>
 import NavComponents from "@/components/NavComponents.vue";
+import FooterComponents from "@/components/FooterComponents.vue";
 
 </script>

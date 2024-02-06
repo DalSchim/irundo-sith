@@ -63,7 +63,6 @@
     </div>
   </section>
   <slider-component/>
-  <FooterComponents/>
 </template>
 
 <script>
@@ -71,11 +70,10 @@
 
 import ButtonComponent from "@/components/ButtonCoponent.vue";
 import SliderComponent from "@/components/SliderComponent.vue";
-import FooterComponents from "@/components/FooterComponents.vue";
 
 export default {
   name: 'HomeView',
-  components: {FooterComponents, SliderComponent, ButtonComponent},
+  components: { SliderComponent, ButtonComponent},
 }
 </script>
 <style scoped lang="scss">
