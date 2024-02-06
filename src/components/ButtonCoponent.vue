@@ -40,6 +40,7 @@ export default {
   cursor: pointer;
   transition: all 0.3s ease;
 
+
   &.white {
     background-color: transparent;
     border: white 1px solid;
@@ -53,8 +54,8 @@ export default {
 
   &.blue {
     background-color: transparent;
-    border: 1px solid #283783;
-    color: #283783;
+    border:#283783 1px solid;
+    color: #283783 !important;
 
     &:hover {
       background-color: #283783;

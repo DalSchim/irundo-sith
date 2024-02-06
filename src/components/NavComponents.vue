@@ -7,19 +7,49 @@ export default {
   components: {
     ButtonComponent
   },
-  // la nav est obligatoirement visible sur les écrans de plus de 768px sinon elle est cachée
+
+  // la nav barre est caché par défaut en media screen max-width: 920px
   data() {
     return {
       hiden: true
     }
   },
 
-
   methods: {
+    toggleNav() {
+      this.hiden = !this.hiden;
+    },
+    isMobile() {
+      return window.innerWidth <= 920;
+    },
+    isDesktop() {
+      return window.innerWidth > 920;
+    }
+
+
+
+
+  },
+  mounted() {
+    if (this.isMobile()) {
+      this.hiden = false;
+    }
+
+    if (this.isDesktop()) {
+      this.hiden = true;
+    }
+
+    window.addEventListener('resize', () => {
+      if (this.isMobile()) {
+        return this.hiden = false;
+      }
+      if (this.isDesktop()) {
+        return this.hiden = true;
+      }
+
+    });
 
   }
-
-
 }
 </script>
 
@@ -32,7 +62,7 @@ export default {
         <span></span>
       </div>
     </div>
-    <div v-if="hiden" class="nav-head">
+    <div v-show="hiden" class="nav-head">
       <div class="logo">
         <img src="../../public/Vector.png" alt="logo"/>
         <h1>Irundo</h1>

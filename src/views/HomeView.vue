@@ -1,11 +1,11 @@
 <template>
-  <section id="heade">
+  <header id="heade">
     <h1>Irundo<br>une solution souveraine et innovante</h1>
     <div class="buton-link">
       <button-component class="buton" color="white" text="Contact" path="/contact"></button-component>
       <button-component class="buton" color="white" text="En savoir plus" path="/about"></button-component>
     </div>
-  </section>
+  </header>
   <section id="qui-sommes-nous">
     <div class="container">
       <div class="wrapper">
@@ -61,6 +61,7 @@
     </div>
   </section>
   <slider-component/>
+  <FooterComponents/>
 </template>
 
 <script>
@@ -68,10 +69,11 @@
 
 import ButtonComponent from "@/components/ButtonCoponent.vue";
 import SliderComponent from "@/components/SliderComponent.vue";
+import FooterComponents from "@/components/FooterComponents.vue";
 
 export default {
   name: 'HomeView',
-  components: {SliderComponent, ButtonComponent},
+  components: {FooterComponents, SliderComponent, ButtonComponent},
 }
 </script>
 <style scoped lang="scss">
@@ -211,8 +213,5 @@ export default {
     }
   }
 }
-
-
-
 
 </style>
