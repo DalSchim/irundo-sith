@@ -1,12 +1,14 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <nav-components/>
   <router-view/>
 </template>
 
 <style>
+
+$color-primary: white;
+$color-secondary: #283783;
+$color-tersier: black;
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,16 +17,51 @@
   color: #2c3e50;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 nav {
   padding: 30px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+h1{
+  font-family: Orbitron, sans-serif;
+  font-size: 64px;
+}
+h2{
+  font-family: Orbitron, sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  margin-bottom: 32px;
+}
+p{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+}
+label{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+}
+li{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  line-height: 1.5;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
+<script setup>
+import NavComponents from "@/components/NavComponents.vue";
+
+</script>
