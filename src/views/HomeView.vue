@@ -213,5 +213,71 @@ export default {
     }
   }
 }
+@media screen and (max-width: 920px) {
+  #heade {
+    h1 {
+      font-size: 38px;
+      width: 80%;
+    }
+  }
+  #qui-sommes-nous {
+    .container {
+      .wrapper {
+        flex-direction: column;
+
+        .desciption {
+          width: 100%;
+          margin-bottom: 32px;
+        }
+
+        .image-qsn {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  #nos-objectifs {
+    .container {
+      .wrapper {
+        flex-direction: column-reverse;
+
+
+        .desciption {
+          width: 100%;
+          margin-bottom: 32px;
+        }
+
+        .image-qsn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  #nos-solutions {
+    .container {
+      .wrapper {
+        flex-direction: column;
+
+        .desciption {
+          width: 100%;
+          margin-bottom: 32px;
+        }
+
+        .image-qsn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
 
 </style>

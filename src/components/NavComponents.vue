@@ -27,8 +27,6 @@ export default {
     }
 
 
-
-
   },
   mounted() {
     if (this.isMobile()) {
@@ -55,11 +53,14 @@ export default {
 
 <template>
   <div>
-    <div class="burger">
-      <div @click="toggleNav" class="burger" :class="{open: hiden}">
-        <span></span>
-        <span></span>
-        <span></span>
+    <img class="logo-burgeur" src="../../public/Vector.png" alt="">
+    <div class="head-responce">
+      <div class="burgers">
+        <div @click="toggleNav" class="burger" :class="{open: hiden}">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
     <div v-show="hiden" class="nav-head">
@@ -82,6 +83,10 @@ export default {
 
 <style scoped lang="scss">
 .burger {
+  display: none;
+}
+
+.logo-burgeur {
   display: none;
 }
 
@@ -131,25 +136,75 @@ nav ul li a {
 }
 
 @media screen and (max-width: 920px) {
-  .burger {
-    z-index: 9999;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
+  .logo-burgeur {
+    display: block;
+    width: 64px;
+    height: 64px;
     cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
 
-    span {
-      width: 100%;
-      height: 3px;
-      background-color: #000000;
-      transition: all 0.3s ease;
+
+  .head-responce {
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 20px;
+
+    // burger cross
+    .burgers {
+      display: flex;
+      gap: 20px;
+    }
+
+    .burger {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffff;
+        position: absolute;
+        transition: all 0.3s ease;
+        &:nth-child(1) {
+          top: 0;
+        }
+        &:nth-child(2) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+      &.open {
+        span {
+          &:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+          }
+        }
+      }
     }
   }
+
+
   .nav-head {
     height: 100vh;
     flex-direction: column;
@@ -158,6 +213,8 @@ nav ul li a {
     gap: 20px;
     background-color: rgba(0, 0, 0, 0.56);
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    z-index: 2;
 
     nav {
       display: flex;

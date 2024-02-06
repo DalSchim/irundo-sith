@@ -63,7 +63,7 @@ export default ({
         interval: 2000,
         breakpoints: {
           600: {
-            perPage: 1,
+            perPage: 2,
           },
           800: {
             perPage: 2,
@@ -111,6 +111,17 @@ section{
         max-width: 100%;
         height: 64px;
         object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .container{
+    padding: 80px 30px;
+    .wraper {
+      h2 {
+        font-size: 20px;
       }
     }
   }
