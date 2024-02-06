@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="nos-partenaires">
     <div class="container">
       <div class="wraper">
         <h2>Nos partenaires et technologies</h2>
@@ -37,6 +37,7 @@ import '@splidejs/vue-splide/css/sea-green';
 import '@splidejs/vue-splide/css/core';
 
 export default ({
+  name: 'SliderComponent',
   components: {
     Splide,
     SplideSlide,

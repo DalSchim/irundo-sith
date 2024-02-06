@@ -44,8 +44,10 @@
     <div class="container">
       <div class="wrapper">
         <div class="desciption">
-          <h2>Nos solutions</h2>
-          <p>Irundo est une solution open source libre et souveraine qui a pour  but d’offrir une interface web centralisée de déploiement  et d’infogérance de l'ensemble des établissements scolaires de la collectivité.</p>
+          <h2>Notre solution</h2>
+          <p>Irundo est une solution open source libre et souveraine qui a pour but d’offrir une interface web
+            centralisée de déploiement et d’infogérance de l'ensemble des établissements scolaires de la
+            collectivité.</p>
           <ul>
             <li>POC réalisé et fonctionnel</li>
             <li>MCO ccompétitif</li>
@@ -193,6 +195,7 @@ export default {
       .desciption {
         width: 50%;
         color: black;
+
         ul {
           margin-top: 32px;
           margin-left: 16px;
@@ -213,6 +216,7 @@ export default {
     }
   }
 }
+
 @media screen and (max-width: 920px) {
   #heade {
     h1 {

@@ -1,13 +1,11 @@
 <script>
 
 import ButtonComponent from "@/components/ButtonCoponent.vue";
-
 export default {
   name: 'NavComponents',
   components: {
     ButtonComponent
   },
-
   // la nav barre est caché par défaut en media screen max-width: 920px
   data() {
     return {
@@ -70,10 +68,30 @@ export default {
       </div>
       <nav>
         <ul>
-          <li><a href="#">Acceil</a></li>
-          <li><a href="#">Qui sommes-nous</a></li>
-          <li><a href="#">Nos partenaires</a></li>
-          <li><a href="#">Notre actualité</a></li>
+          <li>
+            <router-link class="link" to="/">Acceil</router-link>
+          </li>
+
+          <li>
+            <router-link to="/#qui-sommes-nous">Qui sommes-nous</router-link>
+          </li>
+
+          <li>
+            <router-link to="/#nos-objectifs">Nos objectif</router-link>
+          </li>
+
+          <li>
+            <router-link to="/#nos-solutions">Nos solutions</router-link>
+          </li>
+
+          <li>
+            <router-link to="/#nos-partenaires">Nos partenaires</router-link>
+          </li>
+
+          <li>
+            <router-link class="link" to="/fonctionalitées">Nos fonctionalité</router-link>
+          </li>
+
           <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
         </ul>
       </nav>
@@ -135,6 +153,31 @@ nav ul li a {
   font-weight: 600;
 }
 
+
+//under bar link  smooth
+nav ul li a {
+  position: relative;
+  transition: all 0.3s ease;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
 @media screen and (max-width: 920px) {
   .logo-burgeur {
     display: block;
@@ -145,7 +188,6 @@ nav ul li a {
     top: 20px;
     right: 20px;
   }
-
 
   .head-responce {
     z-index: 10;
@@ -168,6 +210,7 @@ nav ul li a {
       height: 30px;
       position: relative;
       cursor: pointer;
+
       span {
         display: block;
         width: 100%;
@@ -175,26 +218,32 @@ nav ul li a {
         background-color: #ffff;
         position: absolute;
         transition: all 0.3s ease;
+        border-radius:32px;
         &:nth-child(1) {
           top: 0;
         }
+
         &:nth-child(2) {
           top: 50%;
           transform: translateY(-50%);
         }
+
         &:nth-child(3) {
           bottom: 0;
         }
       }
+
       &.open {
         span {
           &:nth-child(1) {
             top: 50%;
             transform: translateY(-50%) rotate(45deg);
           }
+
           &:nth-child(2) {
             opacity: 0;
           }
+
           &:nth-child(3) {
             bottom: 50%;
             transform: translateY(50%) rotate(-45deg);
@@ -203,8 +252,6 @@ nav ul li a {
       }
     }
   }
-
-
   .nav-head {
     height: 100vh;
     flex-direction: column;
@@ -229,6 +276,5 @@ nav ul li a {
       }
     }
   }
-
 }
 </style>

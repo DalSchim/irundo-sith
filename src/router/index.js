@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import FormView from "../views/FormView.vue";
+import FonctionView from "@/views/FonctionView.vue";
 
 const routes = [
     {
@@ -20,7 +21,18 @@ const routes = [
         path: '/form',
         name: 'form',
         component: FormView
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'not-found',
+        component: () => import(/* webpackChunkName: "not-found" */ '../views/NotFoundView.vue')
+    },
+    {
+        path:'/fonctionalitées',
+        name: 'fonctionalitées',
+        component: FonctionView
     }
+
 ]
 
 const router = createRouter({
