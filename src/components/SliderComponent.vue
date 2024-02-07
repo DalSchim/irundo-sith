@@ -11,7 +11,7 @@
             <img src="../../public/logo_SambaEdu_223px100px.png" alt="logo SambaEdu">
           </splide-slide>
           <splide-slide class="slide">
-            <img src="../../public/Group10.png" alt="Logo Neofutur">
+            <img src="../../public/neo.png" alt="Logo Neofutur">
           </splide-slide>
           <splide-slide class="slide">
             <img src="../../public/debian_logo_icon_168290.png" alt="logoDebian">
@@ -57,7 +57,7 @@ export default ({
         pagination: false,
         autoScroll: true,
         arrows: false,
-        autoWidth: false,
+        autoWidth: true,
         autoplay: true, // use this instead of autoScroll
         pauseOnHover: true,
         resetProgress: false,
@@ -105,9 +105,7 @@ section{
       text-align: center;
     }
     .slide {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
+
       img {
         max-width: 100%;
         height: 64px;
