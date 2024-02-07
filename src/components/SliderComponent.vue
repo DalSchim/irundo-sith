@@ -117,12 +117,13 @@ section{
   }
 }
 
-@media screen and (max-width: 920px) {
-  .container{
-    padding: 80px 30px;
+@media (max-width: 920px) {
+  .container {
+    padding: 0;
     .wraper {
-      h2 {
-        font-size: 20px;
+      padding: 0;
+      .splide{
+        padding: 0;
       }
     }
   }
