@@ -81,7 +81,6 @@ section{
   background-color: #ffff;
   padding: 80px 30px;
 }
-
 .container{
   max-width: 100%;
   padding: 0 15px;
@@ -93,6 +92,7 @@ section{
   align-items: center;
   justify-content: center;
   padding: 80px 30px;
+
   .wraper {
     margin: 0px auto;
     max-width: 940px;
