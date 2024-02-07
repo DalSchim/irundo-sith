@@ -69,7 +69,7 @@ export default {
       <nav>
         <ul>
           <li>
-            <router-link class="link" to="/">Acceil</router-link>
+            <router-link class="link" to="/">Accueil</router-link>
           </li>
 
           <li>

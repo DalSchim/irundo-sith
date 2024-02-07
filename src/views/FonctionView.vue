@@ -75,6 +75,7 @@ export default {
     gap: 20px;
 
     h2 {
+      padding: 32px;
       font-size: 2rem;
       color: #283783;
     }
