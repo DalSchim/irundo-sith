@@ -28,8 +28,8 @@ const routes = [
         component: () => import(/* webpackChunkName: "not-found" */ '../views/NotFoundView.vue')
     },
     {
-        path:'/fonctionalitées',
-        name: 'fonctionalitées',
+        path:'/fonctionalitees',
+        name: 'fonctionalitees',
         component: FonctionView
     }
 

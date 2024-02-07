@@ -77,11 +77,11 @@ export default {
           </li>
 
           <li>
-            <router-link to="/#nos-objectifs">Nos objectif</router-link>
+            <router-link to="/#nos-objectifs">Nos objectifs</router-link>
           </li>
 
           <li>
-            <router-link to="/#nos-solutions">Nos solutions</router-link>
+            <router-link to="/#nos-solutions">Notre solution</router-link>
           </li>
 
           <li>
@@ -89,7 +89,7 @@ export default {
           </li>
 
           <li>
-            <router-link class="link" to="/fonctionalitées">Nos fonctionalité</router-link>
+            <router-link class="link" to="/fonctionalitees">Nos fonctionalité</router-link>
           </li>
 
           <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
@@ -109,6 +109,7 @@ export default {
 }
 
 .nav-head {
+  z-index: 9999;
   position: fixed;
   top: 0;
   display: flex;
@@ -194,9 +195,10 @@ nav ul li a {
     position: fixed;
     display: flex;
     align-items: center;
-    width: 100vw;
     justify-content: space-between;
+    border-radius: 0  0 10px 0;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.56);
 
     // burger cross
     .burgers {

@@ -55,11 +55,11 @@ export default {
   &.blue {
     background-color: transparent;
     border:#283783 1px solid;
-    color: #283783 !important;
+    color: #283783;
 
     &:hover {
       background-color: #283783;
-      color: white;
+    color: white;
     }
   }
 }
