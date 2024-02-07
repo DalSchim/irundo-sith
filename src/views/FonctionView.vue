@@ -42,16 +42,20 @@ export default {
 
 <style scoped lang="scss">
 .head {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../public/datacenter-son-role.png');
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
+  color: #ffff;
 
   h1 {
-    font-size: 3rem;
+    font-size: 64px;
     color: #ffff;
   }
 }
@@ -87,7 +91,13 @@ export default {
 }
 
 
-@media (max-width: 920px) {
+@media screen and (max-width: 920px){
+  .head {
+    h1 {
+      text-align: center;
+      font-size: 32px;
+    }
+  }
   .fonctionalité-sec {
     .contaner {
       .wrapper {
