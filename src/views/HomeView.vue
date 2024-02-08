@@ -75,6 +75,24 @@ export default {
   name: 'HomeView',
   components: {SliderComponent, ButtonComponent},
 
+  beforeRouteUpdate(to, from, next) {
+    // Vérifiez si la route actuelle a une ancre
+    if (to.hash) {
+      // Effectuez le défilement vers l'élément avec l'ID correspondant à l'ancre
+      this.scrollToElement(to.hash);
+    }
+    next();
+  },
+  methods: {
+    scrollToElement(hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        // Utilisez la fonction scrollTo pour effectuer le défilement
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
   //creation  d'un scroll pour chaque #id
 
 }
@@ -91,6 +109,7 @@ export default {
   background-attachment: fixed;
   background-position: center;
   color: #ffff;
+
 
   .buton-link {
     position: absolute;
@@ -246,7 +265,6 @@ export default {
     .container {
       .wrapper {
         flex-direction: column-reverse;
-
 
         .desciption {
           width: 100%;

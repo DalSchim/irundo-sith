@@ -42,46 +42,53 @@ import ButtonComponent from "@/components/ButtonCoponent.vue";
 </template>
 
 <style scoped>
-  h1{
-    margin-bottom: 20px;
-    margin-top: 12px;
-  }
-  .form{
-    padding: 125px 0px;
-    margin: 0px 32px;
-    height: 100vh;
-  }
-  form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  .section-name{
-    display: flex;
-    gap: 20px;
-    width: 100%;
-  }
-  .form-group{
-    margin-bottom: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .form-group label{
-    display: block;
-    margin-bottom: 5px;
-  }
-  .form-group input{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  .btn{
-    padding :12px 25px;
-  }
+h1 {
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.form {
+  padding: 125px 0px;
+  margin: 0px 32px;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.section-name {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 12px 25px;
+}
 
 
 </style>

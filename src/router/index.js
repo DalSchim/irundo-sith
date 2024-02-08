@@ -7,6 +7,14 @@ const routes = [
         path: '/',
         name: 'home',
         component: HomeView,
+        children: [
+            {
+                path:'/#section1',
+                name: 'section1',
+                component: HomeView
+            },
+
+        ]
     },
 
     {
@@ -29,6 +37,7 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+
 })
 export default router
