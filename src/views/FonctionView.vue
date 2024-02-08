@@ -48,7 +48,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../public/datacenter-son-role.png');
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../public/Img/datacenter-son-role.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

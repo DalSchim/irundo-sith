@@ -5,19 +5,19 @@
         <h2>Nos partenaires et technologies</h2>
         <Splide :options="splideOptions">
           <splide-slide class="slide">
-            <img src="../../public/levelsys_cover.jpg" alt="logo levelsys">
+            <img src="../../public/Img/levelsys_cover.jpg" alt="logo levelsys">
           </splide-slide>
           <splide-slide class="slide">
-            <img src="../../public/logo_SambaEdu_223px100px.png" alt="logo SambaEdu">
+            <img src="../../public/Img/logo_SambaEdu_223px100px.png" alt="logo SambaEdu">
           </splide-slide>
           <splide-slide class="slide">
-            <img src="../../public/neo.png" alt="Logo Neofutur">
+            <img src="../../public/Img/neo.png" alt="Logo Neofutur">
           </splide-slide>
           <splide-slide class="slide">
-            <img src="../../public/debian_logo_icon_168290.png" alt="logoDebian">
+            <img src="../../public/Img/debian_logo_icon_168290.png" alt="logoDebian">
           </splide-slide>
           <splide-slide class="slide">
-            <img src="../../public/Proxmox.webp" alt="">
+            <img src="../../public/Img/Proxmox.webp" alt="">
           </splide-slide>
         </Splide>
       </div>

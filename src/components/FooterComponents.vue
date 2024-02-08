@@ -12,7 +12,7 @@ export default {
   <footer>
     <div class="conatin">
       <div class="wrappers">
-        <img src="../../public/Fichier3.png" alt="">
+        <img src="../../public/Img/Fichier3.png" alt="">
         <div class="info">
           <h2>Irundo</h2>
           <ul>

@@ -49,7 +49,7 @@ export default {
 
 <template>
   <div>
-    <img class="logo-burgeur" src="../../public/Vector.png" alt="">
+    <img class="logo-burgeur" src="../../public/Img/Vector.png" alt="">
     <div class="head-responce">
       <div class="burgers">
         <div @click="toggleNav" class="burger" :class="{open: hiden}">
@@ -61,13 +61,13 @@ export default {
     </div>
     <div v-show="hiden" class="nav-head">
       <div class="logo">
-        <img src="../../public/Vector.png" alt="logo"/>
+        <img src="../../public/Img/Vector.png" alt="logo"/>
         <h1>Irundo</h1>
       </div>
       <nav>
         <ul>
           <li>
-            <router-link class="link" to="/">Accueil</router-link>
+            <router-link class="link" to="/#accueil">Accueil</router-link>
           </li>
 
           <li>

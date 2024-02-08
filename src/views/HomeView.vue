@@ -1,5 +1,5 @@
 <template>
-  <header id="heade">
+  <header id="accueil">
     <h1>Irundo<br>une solution souveraine et innovante</h1>
     <div class="buton-link">
       <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
@@ -15,7 +15,7 @@
             mettent en commun leurs compétences et celles de leurs sociétés dans un projet innovant.</p>
         </div>
         <div class="image-qsn">
-          <img class="image-1" src="../../public/Coworking-amico.png" alt="qui-sommes-nous">
+          <img class="image-1" src="../../public/Img/Coworking-amico.png" alt="qui-sommes-nous">
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
     <div class="container">
       <div class="wrapper">
         <div class="image-qsn">
-          <img src="../../public/Multi-device%20targeting-amico.png" alt="nos objectifs">
+          <img src="../../public/Img/Multi-device%20targeting-amico.png" alt="nos objectifs">
         </div>
         <div class="desciption">
           <h2>Nos objectifs</h2>
@@ -57,7 +57,7 @@
           </ul>
         </div>
         <div class="image-qsn">
-          <img src="../../public/Fichier3.png" alt="nos solutions">
+          <img src="../../public/Img/Fichier3.png" alt="nos solutions">
         </div>
       </div>
     </div>
@@ -96,13 +96,13 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-#heade {
+#accueil {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../public/datacenter-son-role.png');
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../public/Img/datacenter-son-role.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
