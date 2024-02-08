@@ -1,6 +1,27 @@
-<script setup>
+<script>
 
 import ButtonComponent from "@/components/ButtonCoponent.vue";
+
+export default {
+  name: 'FormView',
+  components: {ButtonComponent},
+  data(){
+    return {
+      nom: '',
+      prenom: '',
+      email: '',
+      collectivite: '',
+      telephone: '',
+      fonction: '',
+      message: ''
+    }
+  },
+  methods: {
+    submitForm(){
+      console.log(this.nom, this.prenom, this.email, this.collectivite, this.telephone, this.fonction, this.message);
+    }
+  }
+}
 </script>
 
 <template>
@@ -18,7 +39,6 @@ import ButtonComponent from "@/components/ButtonCoponent.vue";
           <input type="text" id="prenom" placeholder="Prénom">
         </div>
       </div>
-
       <div class="form-group">
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="Email">
@@ -35,6 +55,12 @@ import ButtonComponent from "@/components/ButtonCoponent.vue";
         <label for="fonction">Fonction éxercée</label>
         <input type="text" id="fonction" placeholder="Fonction éxercée">
       </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Message"></textarea>
+      </div>
+
+      <hr>
       <button-component class="buton" color="blue" text="Envoyer" type="submit"></button-component>
     </form>
   </div>
@@ -85,12 +111,27 @@ form {
   border-radius: 5px;
 }
 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  height: 150px;
+}
+
+hr{
+  border: 1px solid #e0e0e0;
+}
+
 @media screen and (min-width: 768px) {
   .form {
     padding: 125px 0px;
     margin: 0px 32px;
   }
+
 }
+
 
 
 </style>
