@@ -2,7 +2,7 @@
   <header id="heade">
     <h1>Irundo<br>une solution souveraine et innovante</h1>
     <div class="buton-link">
-      <button-component class="buton" color="white" text="Contact" path="/contact"></button-component>
+      <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
       <button-component class="buton" color="white" text="En savoir plus" path="/about"></button-component>
     </div>
   </header>
@@ -74,6 +74,8 @@ import SliderComponent from "@/components/SliderComponent.vue";
 export default {
   name: 'HomeView',
   components: {SliderComponent, ButtonComponent},
+
+  //creation  d'un scroll pour chaque #id
 
 }
 </script>

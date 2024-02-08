@@ -24,6 +24,7 @@ const routes = [
         name: 'fonctionalitees',
         component: FonctionView
     },
+
 ]
 
 const router = createRouter({
