@@ -87,7 +87,7 @@ export default {
           </li>
 
           <li>
-            <router-link class="link" to="fonctionalitees">Nos fonctionalité</router-link>
+            <router-link class="link" to="fonctionalitees">Nos fonctionalitées</router-link>
           </li>
 
           <button-component class="buton" color="white" text="Contact" path="/form"></button-component>

@@ -15,7 +15,7 @@
             mettent en commun leurs compétences et celles de leurs sociétés dans un projet innovant.</p>
         </div>
         <div class="image-qsn">
-          <img src="../../public/Coworking-amico.png" alt="qui-sommes-nous">
+          <img class="image-1" src="../../public/Coworking-amico.png" alt="qui-sommes-nous">
         </div>
       </div>
     </div>
@@ -92,9 +92,7 @@ export default {
       }
     }
   }
-
   //creation  d'un scroll pour chaque #id
-
 }
 </script>
 <style scoped lang="scss">
@@ -151,6 +149,7 @@ export default {
       .image-qsn {
         width: 40%;
         max-width: 46%;
+        overflow: hidden;
 
         img {
           width: 100%;
