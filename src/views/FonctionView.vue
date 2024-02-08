@@ -11,11 +11,11 @@ export default {
 <template>
 
   <section class="head">
-    <h1>Les fonctionnalités</h1>
+    <h1>Les fonctionnalitées</h1>
   </section>
   <section class="fonctionalité-sec">
     <div class="contaner">
-      <h2>Les fonctionnalités</h2>
+      <h2>Les fonctionnalitées</h2>
       <div class="wrapper">
         <card-component title="Controle domaine" image="mdi:number-1-circle"
                         description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (Pronote/EDT, Siecle/STS ou les ENT)"/>
