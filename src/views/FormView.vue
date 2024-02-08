@@ -50,7 +50,6 @@ h1 {
 .form {
   padding: 125px 0px;
   margin: 0px 32px;
-  height: 100vh;
 }
 
 form {
@@ -86,8 +85,11 @@ form {
   border-radius: 5px;
 }
 
-.btn {
-  padding: 12px 25px;
+@media screen and (min-width: 768px) {
+  .form {
+    padding: 125px 0px;
+    margin: 0px 32px;
+  }
 }
 
 
