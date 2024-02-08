@@ -74,7 +74,6 @@ import SliderComponent from "@/components/SliderComponent.vue";
 export default {
   name: 'HomeView',
   components: {SliderComponent, ButtonComponent},
-
   beforeRouteUpdate(to, from, next) {
     // Vérifiez si la route actuelle a une ancre
     if (to.hash) {
@@ -237,7 +236,7 @@ export default {
 }
 
 @media screen and (max-width: 920px) {
-  #heade {
+  #accueil {
     h1 {
       font-size: 38px;
       width: 80%;

@@ -69,6 +69,7 @@ footer {
   .info {
     display: flex;
     justify-content: start;
+
     flex-direction: column;
     gap: 20px;
 
@@ -84,7 +85,6 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      margin-left: 16px;
       li{
         list-style: none;
       }
@@ -156,13 +156,18 @@ footer {
         font-weight: 600;
         font-optical-sizing: auto;
         margin-bottom: 32px;
+        text-align: center;
       }
 
       ul {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        margin-left: 16px;
+        li{
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-size: 16px;
+          list-style: none;
+        }
       }
     }
 
@@ -175,6 +180,7 @@ footer {
       border: 1px solid #e0e0e0;
     }
     p{
+      text-align: center;
       font-family: "Orbitron", sans-serif;
       font-size: 16px;
       font-weight: 400;
