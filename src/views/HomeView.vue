@@ -74,6 +74,7 @@ import SliderComponent from "@/components/SliderComponent.vue";
 export default {
   name: 'HomeView',
   components: {SliderComponent, ButtonComponent},
+
 }
 </script>
 <style scoped lang="scss">

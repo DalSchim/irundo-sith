@@ -6,13 +6,11 @@ export default {
   components: {
     ButtonComponent
   },
-  // la nav barre est caché par défaut en media screen max-width: 920px
   data() {
     return {
       hiden: true
     }
   },
-
   methods: {
     toggleNav() {
       this.hiden = !this.hiden;
@@ -22,8 +20,7 @@ export default {
     },
     isDesktop() {
       return window.innerWidth > 920;
-    }
-
+    },
 
   },
   mounted() {
@@ -45,7 +42,8 @@ export default {
 
     });
 
-  }
+  },
+
 }
 </script>
 
@@ -89,7 +87,7 @@ export default {
           </li>
 
           <li>
-            <router-link class="link" to="/fonctionalitees">Nos fonctionalité</router-link>
+            <router-link class="link" to="fonctionalitees">Nos fonctionalité</router-link>
           </li>
 
           <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
