@@ -1,45 +1,20 @@
 <template>
   <header id="accueil">
-    <h1>Irundo<br>une solution souveraine et innovante</h1>
+
+    <div class="titre">
+      <h1>Irundo : Révolutionnez l'Éducation en Toute Liberté</h1>
+      <p class="desciption"></p>
+    </div>
+
+    <div class="spline">
+      <spline-component/>
+    </div>
+
     <div class="buton-link">
       <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
       <button-component class="buton" color="white" text="En savoir plus" path="/about"></button-component>
     </div>
   </header>
-  <section id="qui-sommes-nous">
-    <div class="container">
-      <div class="wrapper">
-        <div class="desciption">
-          <h2>Qui sommes-nous ?</h2>
-          <p>Des entrepreneurs, experts du monde l’éducation, des infrastructures, des logiciels, de l’interfaçage
-            mettent en commun leurs compétences et celles de leurs sociétés dans un projet innovant.</p>
-        </div>
-        <div class="image-qsn">
-          <img class="image-1" src="../../public/Img/Coworking-amico.png" alt="qui-sommes-nous">
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="nos-objectifs">
-    <div class="container">
-      <div class="wrapper">
-        <div class="image-qsn">
-          <img src="../../public/Img/Multi-device%20targeting-amico.png" alt="nos objectifs">
-        </div>
-        <div class="desciption">
-          <h2>Nos objectifs</h2>
-          <ul>
-            <li>Apporter une solution disruptive, libre et évolutive de centralisation de serveurs</li>
-            <li>Développée pour les besoins des équipes qui doivent gérer des solutions éducatives en multi-sites.</li>
-            <li>Mettre en place une démarche numérique responsable</li>
-            <li>Basé sur un produit unique éprouvé (650 serveurs en production)</li>
-            <li>Une garantie de pérennité, une reprise d’actifs possible.</li>
-            <li>Intégration d'un cloud souverain</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
   <section id="nos-solutions">
     <div class="container">
       <div class="wrapper">
@@ -62,6 +37,28 @@
       </div>
     </div>
   </section>
+  <tabs-component/>
+  <section id="nos-objectifs">
+    <div class="container">
+      <div class="wrapper">
+        <div class="image-qsn">
+          <img src="../../public/Img/Multi-device%20targeting-amico.png" alt="nos objectifs">
+        </div>
+        <div class="desciption">
+          <h2>Nos objectifs</h2>
+          <ul>
+            <li>Apporter une solution disruptive, libre et évolutive de centralisation de serveurs</li>
+            <li>Développée pour les besoins des équipes qui doivent gérer des solutions éducatives en multi-sites.</li>
+            <li>Mettre en place une démarche numérique responsable</li>
+            <li>Basé sur un produit unique éprouvé (650 serveurs en production)</li>
+            <li>Une garantie de pérennité, une reprise d’actifs possible.</li>
+            <li>Intégration d'un cloud souverain</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <slider-component/>
 </template>
 
@@ -70,10 +67,12 @@
 
 import ButtonComponent from "@/components/ButtonCoponent.vue";
 import SliderComponent from "@/components/SliderComponent.vue";
+import SplineComponent from "@/components/SplineComponent.vue";
+import TabsComponent from "@/components/tab/TabsComponent.vue";
 
 export default {
   name: 'HomeView',
-  components: {SliderComponent, ButtonComponent},
+  components: {TabsComponent, SplineComponent, SliderComponent, ButtonComponent},
   beforeRouteUpdate(to, from, next) {
     // Vérifiez si la route actuelle a une ancre
     if (to.hash) {
@@ -87,7 +86,7 @@ export default {
       const element = document.querySelector(hash);
       if (element) {
         // Utilisez la fonction scrollTo pour effectuer le défilement
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({behavior: 'smooth'});
       }
     }
   }
@@ -96,17 +95,61 @@ export default {
 </script>
 <style scoped lang="scss">
 #accueil {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../public/Img/datacenter-son-role.png');
+  background-color: #283783;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
-  color: #ffff;
+  color: #f5f7fa;
+  position: relative;
 
+  .titre {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    margin-left: 64px;
+
+    h1 {
+      font-size: 64px;
+      text-align: start;
+
+      @media screen and (max-width: 920px) {
+        font-size: 38px;
+        margin-left: 16px;
+      }
+    }
+
+    @media screen and (max-width: 920px) {
+      color: white;
+      z-index: 2;
+      position: absolute;
+      margin: 0;
+      left: 16px;
+      height: fit-content;
+      bottom: 20%;
+      font-size: 38px;
+      width: 80%;
+
+    }
+
+  }
+
+  .spline {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    @media screen and (max-width: 920px) {
+      width: 100%;
+      z-index: 1;
+      height: 80%;
+    }
+  }
 
   .buton-link {
     position: absolute;
@@ -116,14 +159,7 @@ export default {
     right: 20px;
   }
 
-  h1 {
-    font-family: Orbitron, sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    font-optical-sizing: auto;
-    text-align: center;
-    width: 60%;
-  }
+
 }
 
 #qui-sommes-nous {

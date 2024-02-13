@@ -3,7 +3,6 @@
   <router-view/>
   <footer-components/>
 </template>
-
 <style>
 
 $color-primary: white;

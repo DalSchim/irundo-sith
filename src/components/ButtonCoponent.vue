@@ -10,7 +10,6 @@ export default {
     },
     type:{
       type: String,
-      default: 'button'
     },
   },
   computed: {
@@ -30,7 +29,6 @@ export default {
 
 <style scoped lang="scss">
 .btn {
-
   padding: 12px 25px;
   border-radius: 8px;
   font-family: Orbitron, sans-serif;

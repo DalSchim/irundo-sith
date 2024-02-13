@@ -23,7 +23,7 @@ export default {
           </ul>
         </div>
         <div class="buton">
-          <button-component color="blue" path="/form" text="contactez-nous"/>
+          <button-component color="blue" path="/form" text="contacter-nous"/>
         </div>
       </div>
     </div>

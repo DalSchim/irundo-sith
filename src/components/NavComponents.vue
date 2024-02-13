@@ -71,7 +71,7 @@ export default {
           </li>
 
           <li>
-            <router-link to="/#qui-sommes-nous">Qui sommes-nous</router-link>
+            <router-link to="/#nos-fonctionnalites">Nos fonctionnalités</router-link>
           </li>
 
           <li>
@@ -86,9 +86,6 @@ export default {
             <router-link to="/#nos-partenaires">Nos partenaires</router-link>
           </li>
 
-          <li>
-            <router-link class="link" to="fonctionalitees">Nos fonctionalitées</router-link>
-          </li>
 
           <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
         </ul>
@@ -186,10 +183,11 @@ nav ul li a {
     position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 9999;
   }
 
   .head-responce {
-    z-index: 10;
+    z-index: 9999;
     position: fixed;
     display: flex;
     align-items: center;
@@ -261,7 +259,7 @@ nav ul li a {
     background-color: rgba(0, 0, 0, 0.56);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    z-index: 2;
+    z-index: 999;
 
     nav {
       display: flex;

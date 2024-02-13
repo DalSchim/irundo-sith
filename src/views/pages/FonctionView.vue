@@ -33,7 +33,7 @@ export default {
                         description="Déploiement automatique de Windows 10, 11 et GNU/Linux Debian avec intégration automatisée au domaine des postes"/>
         <card-component title="Configuration des profil et des station" image="mdi:number-8-circle"
                         description="Configuration simplifiée des profils et des stations par GPO via interface Web. Aucun client ou agent n’est à déployer sur les postes"/>
-        <card-component title="Configuration des drois et permition" image="mdi:number-9-circle"
+        <card-component title="Configuration des droits et permissions" image="mdi:number-9-circle"
                         description="Configuration des rôles et droits sur les différents parcs de machines pour des utilisateurs / groupes d'utilisateurs"/>
       </div>
     </div>
@@ -48,7 +48,6 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../public/Img/datacenter-son-role.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

@@ -1,19 +1,20 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import FormView from "../views/FormView.vue";
-import FonctionView from "@/views/FonctionView.vue";
+import FormView from "../views/pages/FormView.vue";
+
 const routes = [
     {
         path: '/',
         name: 'home',
         component: HomeView,
+        redirect: '/home',
         children: [
             {
-                path:'/#section1',
-                name: 'section1',
-                component: HomeView
-            },
+                path: '/home',
+                name: 'home',
+                component: HomeView,
 
+            },
         ]
     },
 
@@ -27,11 +28,7 @@ const routes = [
         name: 'not-found',
         component: () => import(/* webpackChunkName: "not-found" */ '../views/NotFoundView.vue')
     },
-    {
-        path:'/fonctionalitees',
-        name: 'fonctionalitees',
-        component: FonctionView
-    },
+
 
 ]
 
