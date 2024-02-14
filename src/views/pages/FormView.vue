@@ -106,6 +106,7 @@ export default {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     @media screen and (max-width: 920px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
+      padding: 8px 40px;
     }
     padding: 20px 80px;
     max-width: 1200px;
