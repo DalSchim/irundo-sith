@@ -2,6 +2,7 @@
   <nav-components/>
   <router-view/>
   <footer-components/>
+  <SpeedInsights />
 </template>
 <style>
 
@@ -66,5 +67,6 @@ li{
 <script setup>
 import NavComponents from "@/components/NavComponents.vue";
 import FooterComponents from "@/components/FooterComponents.vue";
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 
 </script>
