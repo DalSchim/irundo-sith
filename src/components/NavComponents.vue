@@ -66,8 +66,9 @@ export default {
       </div>
       <nav>
         <ul>
+
           <li>
-            <router-link class="link" to="/#accueil">Accueil</router-link>
+            <router-link to="/#notre-solutions">Notre solution</router-link>
           </li>
 
           <li>
@@ -78,9 +79,7 @@ export default {
             <router-link to="/#nos-objectifs">Nos objectifs</router-link>
           </li>
 
-          <li>
-            <router-link to="/#nos-solutions">Notre solution</router-link>
-          </li>
+
 
           <li>
             <router-link to="/#nos-partenaires">Nos partenaires</router-link>

@@ -37,134 +37,164 @@ export default {
 </script>
 <template>
   <!-- form : nom, prenom, email, nom de la collectivité ou de l'entreprise, telephone fonction éxercée -->
-  <div class="form"  >
-    <h2>Formulaire de contact</h2>
-    <form @submit.prevent="submitForm">
-      <input type="hidden" name="contact_number">
-      <div class="section-name">
-        <div class="form-group">
-          <label for="nom">Nom</label>
-          <input type="text" v-model="nom" id="nom" placeholder="Nom">
+  <div class="form">
+    <div class="container">
+      <div class="info">
+        <h2>
+          Curieux ? Formu-lez-nous !
+        </h2>
+        <div class="text">
+          <p>
+            Posez-nous toutes vos questions et plongez dans la découverte de notre solution ! Fournissez-nous vos
+            coordonnées, et on vous rappliquera entre 9h30 et 18h30 du lundi au vendredi, ou aussi vite que possible en
+            dehors de ces heures. On est là pour vous ! 🚀
+          </p>
         </div>
-        <div class="form-group">
-          <label for="prenom">Prénom</label>
-          <input type="text" v-model="prenom" id="prenom" placeholder="Prénom">
-        </div>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" v-model="email" id="email" placeholder="Email">
+      <div class="formulaire-containeur">
+        <form @submit.prevent="submitForm">
+          <input type="hidden" name="contact_number">
+          <div class="section-name">
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" v-model="nom" id="nom" placeholder="Nom">
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input type="text" v-model="prenom" id="prenom" placeholder="Prénom">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" v-model="email" id="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="collectivite">Nom de la collectivité ou de l'entreprise</label>
+            <input type="text" id="collectivite" v-model="collectivite"
+                   placeholder="Nom de la collectivité ou de l'entreprise">
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" v-model="telephone" placeholder="Téléphone">
+          </div>
+          <div class="form-group">
+            <label for="fonction">Fonction éxercée</label>
+            <input type="text" id="fonction" v-model="fonction" placeholder="Fonction éxercée">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" v-model="message" placeholder="Message"></textarea>
+          </div>
+          <hr>
+          <span>{{ error }}</span>
+          <button class=".btn" type="submit">Envoyer</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="collectivite">Nom de la collectivité ou de l'entreprise</label>
-        <input type="text" id="collectivite" v-model="collectivite" placeholder="Nom de la collectivité ou de l'entreprise">
-      </div>
-      <div class="form-group">
-        <label for="telephone">Téléphone</label>
-        <input type="tel" id="telephone" v-model="telephone" placeholder="Téléphone">
-      </div>
-      <div class="form-group">
-        <label for="fonction">Fonction éxercée</label>
-        <input type="text" id="fonction" v-model="fonction" placeholder="Fonction éxercée">
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" v-model="message" placeholder="Message"></textarea>
-      </div>
-      <hr>
-      <span>{{error}}</span>
-      <button class=".btn" type="submit">Envoyer</button>
-    </form>
+    </div>
   </div>
-
 </template>
 
 <style scoped lang="scss">
-h1 {
-  margin-bottom: 20px;
-  margin-top: 12px;
-}
 
-.form {
-  padding: 125px 0px;
-  margin: 0px 32px;
-}
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-}
+.form{
+  padding-top: 100px;
+  grid-column: span 12/span 12;
 
-.section-name {
-  display: flex;
-  gap: 20px;
-  width: 100%;
-}
 
-.form-group {
-  margin-bottom: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
+  .container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @media screen and (max-width: 920px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    padding: 20px 80px;
+    max-width: 1200px;
+    display: grid;
+    margin: auto;
+    .info{
+      h2 {
+        font-size: 40px;
+        font-family: Orbitron, sans-serif;
+        font-weight: 600;
+        font-optical-sizing: auto;
+        margin-bottom: 32px;
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
+      }
+      .text{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 18px;
+        line-height:24px;
+        font-weight: 300;
+        @media screen and (max-width: 920px) {
+          font-size: 16px;
+          padding-bottom: 20px;
+        }
+      }
+    }
 
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+    .formulaire-containeur{
+      form {
+        display: flex;
+        flex-direction: column;
+        background-color: #f5f7fa;
+        border-radius: 8px;
+        padding: 24px;
+        gap: 20px;
+        .section-name {
+          display: flex;
+          gap: 20px;
+          input {
+            width: 50%;
+          }
+        }
+        .form-group {
+          label {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            font-optical-sizing: auto;
+            margin-bottom: 8px;
+          }
+          input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-weight: 300;
+            font-optical-sizing: auto;
+            border: none;
+            border-bottom: 1px solid #f5f7fa;
+            transition: all 0.3s;
+            &:focus {
+              outline: none;
+              border-bottom: 1px solid #2d3e50;
+            }
+          }
+        }
+        button {
+          padding: 10px 32px;
+          font-size: 16px;
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-weight: 300;
+          background-color: #2d3e50;
+          color: #f5f7fa;
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            background-color: #f5f7fa;
+            color: #2d3e50;
+          }
+        }
+      }
+    }
 
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: none;
-  height: 150px;
-}
-
-hr {
-  border: 1px solid #e0e0e0;
-}
-
-button {
-  max-width: fit-content;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-family: Orbitron, sans-serif;
-  font-weight: 600;
-  font-optical-sizing: auto;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: transparent;
-  border: #283783 1px solid;
-  color: #283783;
-
-  &:hover {
-    background-color: #283783;
-    color: white;
   }
-
-
 }
 
-@media screen and (min-width: 768px) {
-  .form {
-    padding: 125px 0px;
-    margin: 0px 32px;
-  }
 
-}
+//responsive
+
 
 
 </style>

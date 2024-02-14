@@ -1,5 +1,54 @@
 <!-- TabC.vue -->
+<script>
+import {Icon} from "@iconify/vue";
+
+export default {
+  name: "TabC",
+  components: {Icon},
+  data() {
+    return {
+      selectedTab: 0,
+    };
+  },
+  props: {
+    tabs: {
+      type: Array,
+      required: true,
+    },
+    title: {
+      type: Array,
+      required: true,
+    },
+    icon: {
+      type: Array,
+      required: true,
+    },
+  },
+  methods: {
+    isSelectedTab(index) {
+      return this.selectedTab === index;
+    },
+    selectTab(index) {
+      this.selectedTab = index;
+      this.$emit("tab-changed", index);
+      this.scrollToContent(index);
+      this.$nextTick(() => {
+        this.scrollToContent(index);
+      });
+      // Récupérer l'élément du contenu associé à l'index sélectionné
+
+    },
+    scrollToContent(index) {
+      const contentElement = this.$el.querySelector(`#content-${index}`);
+      if (contentElement) {
+        contentElement.scrollIntoView({behavior: "smooth"});
+      }
+    },
+  },
+};
+</script>
 <template>
+
   <section>
     <div class="tab-buttons">
       <div class="card-wrapper">
@@ -52,54 +101,7 @@
   </section>
 </template>
 
-<script>
-import {Icon} from "@iconify/vue";
 
-export default {
-  name: "TabC",
-  components: {Icon},
-  data() {
-    return {
-      selectedTab: 0,
-    };
-  },
-  props: {
-    tabs: {
-      type: Array,
-      required: true,
-    },
-    title: {
-      type: Array,
-      required: true,
-    },
-    icon: {
-      type: Array,
-      required: true,
-    },
-  },
-  methods: {
-    isSelectedTab(index) {
-      return this.selectedTab === index;
-    },
-    selectTab(index) {
-      this.selectedTab = index;
-      this.$emit("tab-changed", index);
-      this.scrollToContent(index);
-      this.$nextTick(() => {
-        this.scrollToContent(index);
-      });
-      // Récupérer l'élément du contenu associé à l'index sélectionné
-
-    },
-    scrollToContent(index) {
-      const contentElement = this.$el.querySelector(`#content-${index}`);
-      if (contentElement) {
-        contentElement.scrollIntoView({behavior: "smooth"});
-      }
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .content-navigation {
@@ -136,10 +138,11 @@ export default {
   border: 1px solid #ccc;
   border-radius: 8px;
   text-align: center;
-  transition: 2ms ease-in-out;
-
+  transition: all 0.3s ease;
   &:hover {
     background-color: #f0f0f0;
+    transform: translateY(-5px);
+    cursor: pointer;
   }
 }
 
@@ -204,12 +207,16 @@ export default {
   }
 }
 
-@media screen and (max-width: 920px) {
-  .tab-content {
-    height: auto;
+@media (max-width: 920px) {
+  .tab-buttons {
+    position: static;
+   .card{
+     width: 100%;
+   }
+
   }
-  .buton-nav {
-    padding-top: 0;
+  .buton-nav{
+    display: none;
   }
 }
 </style>

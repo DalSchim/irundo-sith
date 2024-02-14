@@ -1,28 +1,14 @@
 <template>
-  <header id="accueil">
 
-    <div class="titre">
-      <h1>Irundo : Révolutionnez l'Éducation en Toute Liberté</h1>
-      <p class="desciption"></p>
-    </div>
-
-    <div class="spline">
-      <spline-component/>
-    </div>
-
-    <div class="buton-link">
-      <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
-      <button-component class="buton" color="white" text="En savoir plus" path="/about"></button-component>
-    </div>
-  </header>
-  <section id="nos-solutions">
-    <div class="container">
-      <div class="wrapper">
+  <header class="home" id="notre-solutions">
+    <div class="description">
+      <div class="titre">
+        <h1>Irundo : Révolutionnez l'Éducation en Toute Liberté</h1>
         <div class="desciption">
-          <h2>Notre solution</h2>
           <p>Irundo est une solution open source libre et souveraine qui a pour but d’offrir une interface web
             centralisée de déploiement et d’infogérance de l'ensemble des établissements scolaires de la
             collectivité.</p>
+          <br>
           <ul>
             <li>POC réalisé et fonctionnel</li>
             <li>MCO ccompétitif</li>
@@ -31,12 +17,16 @@
             <li>Une sécurité numérique rendorcée pour la collectivité</li>
           </ul>
         </div>
-        <div class="image-qsn">
-          <img src="../../public/Img/Fichier3.png" alt="nos solutions">
-        </div>
       </div>
     </div>
-  </section>
+    <div class="spline">
+      <spline-component/>
+    </div>
+    <div class="buton-link">
+      <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
+      <button-component class="buton" color="white" text="En savoir plus" path="/about"></button-component>
+    </div>
+  </header>
   <tabs-component/>
   <section id="nos-objectifs">
     <div class="container">
@@ -94,60 +84,53 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-#accueil {
+
+.spline {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.home {
   width: 100%;
   display: flex;
   height: 100vh;
-  background-color: #283783;
+  background-color: #2d3e50;
   background-size: cover;
   background-position: center;
   color: #f5f7fa;
   position: relative;
 
-  .titre {
+  .description {
+    width: 50%;
     display: flex;
-    justify-content: start;
-    align-items: start;
     flex-direction: column;
-    width: 40%;
-    height: 100%;
-    margin-left: 64px;
+    justify-content: start;
+    padding: 80px 30px;
 
-    h1 {
-      font-size: 64px;
-      text-align: start;
+    .titre {
+      padding-top: 64px;
+      h1 {
+        font-size: 64px;
+        font-family: Orbitron, sans-serif;
 
-      @media screen and (max-width: 920px) {
+      }
+      h2 {
         font-size: 38px;
-        margin-left: 16px;
+        font-family: Orbitron, sans-serif;
+        font-weight: 600;
+        font-optical-sizing: auto;
+        margin-bottom: 32px;
       }
     }
 
-    @media screen and (max-width: 920px) {
-      color: white;
-      z-index: 2;
-      position: absolute;
-      margin: 0;
-      left: 16px;
-      height: fit-content;
-      bottom: 20%;
-      font-size: 38px;
-      width: 80%;
-
-    }
-
-  }
-
-  .spline {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 100%;
-    @media screen and (max-width: 920px) {
-      width: 100%;
-      z-index: 1;
-      height: 80%;
+    p {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 18px;
+      line-height:24px;
+      font-weight: 300;
     }
   }
 
@@ -195,7 +178,7 @@ export default {
 }
 
 #nos-objectifs {
-  background: #283783;
+  background: #2d3e50;
   padding: 80px 30px;
 
   .container {
@@ -232,52 +215,44 @@ export default {
   }
 }
 
-#nos-solutions {
-  background-color: #f5f7fa;
-  padding: 80px 30px;
-
-  .container {
-    margin: 0px auto;
-    max-width: 940px;
-    width: 100%;
-
-    .wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .desciption {
-        width: 50%;
-        color: black;
-
-        ul {
-          margin-top: 32px;
-          margin-left: 16px;
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-        }
-      }
-
-      .image-qsn {
-        width: 40%;
-        max-width: 46%;
-
-        img {
-          width: 70%;
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 920px) {
-  #accueil {
-    h1 {
-      font-size: 38px;
-      width: 80%;
+  .home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+    .description {
+      width: 100%;
+      padding: 30px;
+
+      .titre {
+
+        h1 {
+          font-size: 24px;
+
+        }
+        h2 {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .buton-link {
+      position: static;
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .spline {
+      position: static;
+      width: 100%;
+      margin: 20px 0;
     }
   }
+
+
   #qui-sommes-nous {
     .container {
       .wrapper {
@@ -336,5 +311,4 @@ export default {
     }
   }
 }
-
 </style>
