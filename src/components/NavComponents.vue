@@ -182,7 +182,7 @@ nav ul li a {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 9999;
+    z-index: 9;
   }
 
   .head-responce {

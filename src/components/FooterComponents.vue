@@ -1,23 +1,22 @@
 <script>
-
 import ButtonComponent from "@/components/ButtonCoponent.vue";
 
 export default {
   components: {ButtonComponent}
 }
-
 </script>
-
 <template>
   <footer>
-    <div class="conatin">
+    <div class="contain">
       <div class="wrappers">
         <img src="../../public/Img/Fichier3.png" alt="">
         <div class="info">
           <h2>Irundo</h2>
           <ul>
             <li>Accueil</li>
-            <li>Qui sommes-nous</li>
+            <li>
+              <router-link to="/qui-sommes-nous">Qui sommes-nous</router-link>
+            </li>
             <li>Nos objectifs</li>
             <li>Nos solutions</li>
           </ul>
@@ -40,7 +39,7 @@ footer {
   background-color: #f5f7fa;
   color: black;
 
-  .wrappers{
+  .wrappers {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -59,7 +58,7 @@ footer {
     justify-content: end;
   }
 
-  .conatin {
+  .contain {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -85,7 +84,8 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      li{
+
+      li {
         list-style: none;
       }
     }
@@ -99,7 +99,8 @@ footer {
     margin-top: 80px;
     border: 1px solid #e0e0e0;
   }
-  p{
+
+  p {
     font-family: "Orbitron", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -115,7 +116,7 @@ footer {
     background-color: #f5f7fa;
     color: black;
 
-    .wrappers{
+    .wrappers {
       display: flex;
       flex-direction: column;
       justify-content: start;
@@ -163,7 +164,8 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        li{
+
+        li {
           font-family: "Plus Jakarta Sans", sans-serif;
           font-size: 16px;
           list-style: none;
@@ -179,7 +181,8 @@ footer {
       margin-top: 80px;
       border: 1px solid #e0e0e0;
     }
-    p{
+
+    p {
       text-align: center;
       font-family: "Orbitron", sans-serif;
       font-size: 16px;

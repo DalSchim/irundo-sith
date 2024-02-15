@@ -3,26 +3,208 @@ export default {
   name: "QuiSommeNousView"
 }
 </script>
-
 <template>
-  <section id="qui-sommes-nous">
+  <section class="hero">
+    <div class="info">
+      <div class="titre">
+        <h1>Qui sommes-nous</h1>
+        <p>Des entrepreneurs spécialisés dans les domaines de l'éducation, des infrastructures, des logiciels et de
+          l'interfaçage collaborent pour mettre en commun leurs compétences ainsi que celles de leurs entreprises dans
+          le cadre d'un projet novateur.</p>
+      </div>
+      <div class="image">
+        <img src="../../../public/Img/Coworking-amico.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="notre-histoire">
     <div class="container">
       <div class="wrapper">
-        <div class="desciption">
-          <h2>Qui sommes-nous ?</h2>
-          <p>Des entrepreneurs, experts du monde l’éducation, des infrastructures, des logiciels, de l’interfaçage
-            mettent en commun leurs compétences et celles de leurs sociétés dans un projet innovant.</p>
-        </div>
         <div class="image-qsn">
-          <img class="image-1" src="../../../public/Img/Coworking-amico.png" alt="qui-sommes-nous">
+          <img src="../../../public/Img/Reading-glasses-bro.svg" alt="notre histoire">
+        </div>
+        <div class="desciption">
+          <h2>Notre histoire</h2>
+          <p>En 2023, Irundo, fondée par des entrepreneurs experts en éducation, infrastructures, logiciels et
+            interfaçage, a créé un projet novateur. Leur objectif est de fournir une solution centralisée, libre et
+            évolutive pour la gestion de solutions éducatives en multi-sites, avec une approche numérique responsable.
+            Ils aspirent à intégrer un cloud souverain tout en garantissant une reprise d'actifs, s'appuyant sur un
+            produit éprouvé avec 650 serveurs en production.</p>
         </div>
       </div>
     </div>
   </section>
-
 </template>
 
 <style scoped lang="scss">
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f7fa;
+  color: black;
+
+  .info {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+
+    .titre {
+      width: 50%;
+
+      h1 {
+        font-family: Orbitron, sans-serif;
+        font-size: 40px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        line-height: 1.5;
+      }
+    }
+
+    .image {
+      width: 50%;
+
+      img {
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.notre-histoire {
+  padding: 100px 0;
+  background-color: #283783;
+  color: white;
+
+  .container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      .image-qsn {
+        width: 50%;
+
+        img {
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .desciption {
+        width: 50%;
+
+        h2 {
+          font-family: Orbitron, sans-serif;
+          font-size: 40px;
+          font-weight: 600;
+          font-optical-sizing: auto;
+          margin-bottom: 32px;
+        }
+
+        p {
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .hero {
+    .info {
+      flex-direction: column;
+      gap: 20px;
+
+      .titre {
+        width: 100%;
+        text-align: center;
+      }
+
+      .image {
+        width: 100%;
+      }
+    }
+  }
+  .notre-histoire {
+    .container {
+      .wrapper {
+        flex-direction: column;
+        gap: 20px;
+
+        .image-qsn {
+          width: 100%;
+        }
+
+        .desciption {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 
 
+//mobile
+@media screen and (max-width: 920px) {
+  .hero {
+    .info {
+      flex-direction: column;
+      gap: 20px;
+
+      .titre {
+        width: 100%;
+        text-align: center;
+      }
+
+      .image {
+        width: 100%;
+      }
+    }
+  }
+  .notre-histoire {
+    .container {
+      .wrapper {
+        flex-direction: column;
+        gap: 20px;
+
+        .image-qsn {
+          width: 100%;
+        }
+
+        .desciption {
+          width: 100%;
+
+          p {
+            padding: 20px 8px;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

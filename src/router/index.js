@@ -15,6 +15,7 @@ const routes = [
                 component: HomeView,
 
             },
+
         ]
     },
 
@@ -28,6 +29,11 @@ const routes = [
         name: 'not-found',
         component: () => import(/* webpackChunkName: "not-found" */ '../views/NotFoundView.vue')
     },
+    {
+        path:'/qui-sommes-nous',
+        name: 'qui-sommes-nous',
+        component: () => import(/* webpackChunkName: "qui-sommes-nous" */ '../views/pages/QuiSommeNousView.vue')
+    }
 
 
 ]
