@@ -11,11 +11,12 @@ const routes = [
         children: [
             {
                 path: '/home',
+
+
+
                 name: 'home',
                 component: HomeView,
-
             },
-
         ]
     },
 
@@ -34,8 +35,6 @@ const routes = [
         name: 'qui-sommes-nous',
         component: () => import(/* webpackChunkName: "qui-sommes-nous" */ '../views/pages/QuiSommeNousView.vue')
     }
-
-
 ]
 
 const router = createRouter({
