@@ -38,6 +38,7 @@ export default {
 
 <style scoped lang="scss">
 .hero {
+
   display: flex;
   justify-content: center;
   align-items: center;

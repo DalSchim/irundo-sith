@@ -41,13 +41,13 @@ export default {
     <div class="container">
       <div class="info">
         <h2>
-          Curieux ? Formu-lez-nous !
+          Curieux ? vous pouvez nous contacter
         </h2>
         <div class="text">
           <p>
             Posez-nous toutes vos questions et plongez dans la découverte de notre solution ! Fournissez-nous vos
-            coordonnées, et on vous rappliquera entre 9h30 et 18h30 du lundi au vendredi, ou aussi vite que possible en
-            dehors de ces heures. On est là pour vous ! 🚀
+            coordonnées, et nous vous recontacterons entre 9 h 30 et 18 h 30 du lundi au vendredi. On est là pour vous !
+            🚀
           </p>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default {
 <style scoped lang="scss">
 
 
-.form{
+.form {
   padding-top: 100px;
   grid-column: span 12/span 12;
 
@@ -112,7 +112,8 @@ export default {
     max-width: 1200px;
     display: grid;
     margin: auto;
-    .info{
+
+    .info {
       h2 {
         font-size: 40px;
         font-family: Orbitron, sans-serif;
@@ -121,10 +122,11 @@ export default {
         margin-bottom: 32px;
 
       }
-      .text{
+
+      .text {
         font-family: "Plus Jakarta Sans", sans-serif;
         font-size: 18px;
-        line-height:24px;
+        line-height: 24px;
         font-weight: 300;
         @media screen and (max-width: 920px) {
           font-size: 16px;
@@ -133,7 +135,7 @@ export default {
       }
     }
 
-    .formulaire-containeur{
+    .formulaire-containeur {
       form {
         display: flex;
         flex-direction: column;
@@ -141,13 +143,16 @@ export default {
         border-radius: 8px;
         padding: 24px;
         gap: 20px;
+
         .section-name {
           display: flex;
           gap: 20px;
+
           input {
             width: 50%;
           }
         }
+
         .form-group {
           label {
             font-family: "Plus Jakarta Sans", sans-serif;
@@ -156,6 +161,7 @@ export default {
             font-optical-sizing: auto;
             margin-bottom: 8px;
           }
+
           input, textarea {
             width: 100%;
             padding: 10px;
@@ -166,12 +172,14 @@ export default {
             border: none;
             border-bottom: 1px solid #f5f7fa;
             transition: all 0.3s;
+
             &:focus {
               outline: none;
               border-bottom: 1px solid #2d3e50;
             }
           }
         }
+
         button {
           padding: 10px 32px;
           font-size: 16px;
@@ -182,6 +190,7 @@ export default {
           border: none;
           cursor: pointer;
           transition: all 0.3s;
+
           &:hover {
             background-color: #f5f7fa;
             color: #2d3e50;
@@ -195,7 +204,6 @@ export default {
 
 
 //responsive
-
 
 
 </style>
