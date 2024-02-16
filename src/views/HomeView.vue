@@ -119,7 +119,7 @@ export default {
       h1 {
         font-size: 56px;
         font-family: Orbitron, sans-serif;
-
+        margin-bottom: 32px;
       }
       h2 {
         font-size: 38px;

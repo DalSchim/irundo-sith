@@ -55,38 +55,67 @@ export default {
           <div class="card-f-wraper">
             <card-component title="Controle domaine"
                             image="mdi:number-1-circle"
-                            description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (Pronote/EDT, Siecle/STS ou les ENT)"/>
-            <card-component title="Serveur de fichier"
+                            description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (GPEI / Pronote / EDT  / Siecle / STS / ENT)"/>
+
+
+
+            <card-component title="Serveur DHCP"
                             image="mdi:number-2-circle"
-                            description="Serveur de fichiers SMB, NFS4 avec séparation des réseaux "/>
-            <card-component title="Reservation dhcp et ip"
+                            description="Définition des plages IP des serveurs locaux"/>
+
+            <card-component title="Serveur DNS"
                             image="mdi:number-3-circle"
-                            description="DHCP et réservations IP Multi-réseaux et multi-VLANs"/>
-            <card-component title="Gestion parcs"
-                            image="mdi:number-4-circle"
-                            description="Gestion des parcs, des salles Extinction automatique, démarrage automatique, réinstallation, déploiements"/>
+                            description=" Serveur DNS pour les serveurs locaux et les serveurs hebergés "/>
+
+            <card-component title="Serveur Cloud"
+                            image="mdi:number-3-circle"
+                            description="Hebergement des données échanges des élèves et des professeurs"/>
+
+            <card-component title="Serveur de métriques"
+                            image="mdi:number-3-circle"
+                            description="Permet de collecter et d'aggreger des metriques pour faciliter  la gestion  de l'activité informatique des serveur"/>
+
+
+
           </div>
         </div>
         <div class="content" v-if="selectedTab === 1" ref="content1" id="content-1" key="1">
 
           <div class="card-f-wraper">
+
+            <card-component title="Serveur de fichier"
+                            image="mdi:number-1-circle"
+                            description="Serveur de fichiers SMB, NFS4 avec séparation des réseaux "/>
+
+            <card-component title="Reservation dhcp et ip"
+                            image="mdi:number-2-circle"
+                            description="DHCP et réservations IP Multi-réseaux et multi-VLANs"/>
+
             <card-component title="Serveur impression"
-                            image="mdi:number-5-circle"
+                            image="mdi:number-3-circle"
                             description="Serveur d'impression SMB/CUPS. Les imprimantes sont déployées de façon native avec des stratégies de groupe (GPO)"/>
+
+
             <card-component title="Déploiment automatique d'application"
-                            image="mdi:number-6-circle"
+                            image="mdi:number-4-circle"
                             description="Déploiement automatique d’applications. Plus de 200 applications sont disponibles et maintenues à jour directement dans SambaÉdu"/>
+
             <card-component title="Déploiment automatique d'os"
-                            image="mdi:number-7-circle"
+                            image="mdi:number-5-circle"
                             description="Déploiement automatique de Windows 10, 11 et GNU/Linux Debian avec intégration automatisée au domaine des postes"/>
+
             <card-component title="Configuration des profil et des station"
-                            image="mdi:number-8-circle"
+                            image="mdi:number-6-circle"
                             description="Configuration simplifiée des profils et des stations par GPO via interface Web. Aucun client ou agent n’est à déployer sur les postes"/>
+
           </div>
         </div>
         <div class="content" v-if="selectedTab === 2" ref="content2" id="content-2" key="2">
 
           <div class="card-f-wraper">
+            <card-component title="Gestion parcs"
+                            image="mdi:number-4-circle"
+                            description="Gestion des parcs, des salles Extinction automatique, démarrage automatique, réinstallation, déploiements"/>
             <card-component title="Configuration des droits et permissions"
                             image="mdi:number-9-circle"
                             description="Configuration des rôles et droits sur les différents parcs de machines pour des utilisateurs / groupes d'utilisateurs"/>
