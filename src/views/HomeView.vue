@@ -10,11 +10,10 @@
             collectivité.</p>
           <br>
           <ul>
-
             <li>Coformité RGPD</li>
-            <li>Respect du SDET</li>
-            <li>Une sécurité numérique renforcée pour la collectivité</li>
-            <li>MCO compétitif</li>
+            <li>Respect du schéma directeur des ENT (SDET)</li>
+            <li>Une sécurisation de l'environnement IT pour la collectivité</li>
+            <li>MCO Performant, fiable et sécurisé</li>
           </ul>
         </div>
       </div>
