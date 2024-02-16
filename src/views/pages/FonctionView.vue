@@ -91,7 +91,7 @@ export default {
 }
 
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 920px) {
   .head {
     h1 {
       text-align: center;

@@ -21,9 +21,22 @@ export default {
     isDesktop() {
       return window.innerWidth > 920;
     },
+    //si on clique sur un lien de la nav on ferme le menu
+  closeNav() {
+      this.hiden = true;
+    }
+
 
   },
   mounted() {
+    //si on clique sur un lien de la nav on ferme le menu
+    document.querySelectorAll('.link').forEach(link => {
+      link.addEventListener('click', () => {
+        this.closeNav();
+      });
+    });
+
+
     if (this.isMobile()) {
       this.hiden = false;
     }
@@ -68,25 +81,21 @@ export default {
         <ul>
 
           <li>
-            <router-link to="/#notre-solutions">Notre solution</router-link>
+            <router-link class="link" to="/#notre-solutions">Notre solution</router-link>
           </li>
 
           <li>
-            <router-link to="/#nos-fonctionnalites">Nos fonctionnalités</router-link>
+            <router-link class="link"  to="/#nos-fonctionnalites">Nos fonctionnalités</router-link>
           </li>
 
           <li>
-            <router-link to="/#nos-objectifs">Nos objectifs</router-link>
+            <router-link class="link"  to="/#nos-objectifs">Nos objectifs</router-link>
           </li>
-
-
 
           <li>
-            <router-link to="/#nos-partenaires">Nos partenaires</router-link>
+            <router-link class="link"  to="/#nos-partenaires">Nos partenaires</router-link>
           </li>
-
-
-          <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
+          <button-component class="buton link" color="white" text="Contact" path="/form"></button-component>
         </ul>
       </nav>
     </div>

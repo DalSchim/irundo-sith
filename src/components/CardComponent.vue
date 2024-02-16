@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="card">
+  <div class="cardf">
     <Icon :icon="image" width="64px" />
     <h3>{{ title }}</h3>
     <p>{{ description }}</p>
@@ -25,7 +25,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.card {
+.cardf {
   max-width: 300px;
   width: 100%;
   display: flex;

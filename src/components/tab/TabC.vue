@@ -1,10 +1,11 @@
 <!-- TabC.vue -->
 <script>
 import {Icon} from "@iconify/vue";
+import CardComponent from "@/components/CardComponent.vue";
 
 export default {
   name: "TabC",
-  components: {Icon},
+  components: {CardComponent, Icon},
   data() {
     return {
       selectedTab: 0,
@@ -25,6 +26,7 @@ export default {
     },
   },
   methods: {
+
     isSelectedTab(index) {
       return this.selectedTab === index;
     },
@@ -39,20 +41,23 @@ export default {
 
     },
     scrollToContent(index) {
-      const contentElement = this.$el.querySelector(`#content-${index}`);
+      const contentElement = this.$refs[`content${index}`];
       if (contentElement) {
         contentElement.scrollIntoView({behavior: "smooth"});
       }
+
     },
   },
 };
 </script>
-<template>
 
+
+<template>
   <section>
     <div class="tab-buttons">
       <div class="card-wrapper">
-        <div class="card" @click="selectTab(index) && scrollToContent(index)" v-for="(tab, index) in tabs" :key="index"
+        <div class="card" @click="selectTab(index) && scrollToContent(index)" v-for="(tab, index) in tabs"
+             :key="index"
              :class="{ 'selected-tab': isSelectedTab(index) }">
           <Icon :icon="icon[index].icon"/>
           <h3>{{ title[index].titre }}</h3>
@@ -60,35 +65,67 @@ export default {
         </div>
       </div>
     </div>
-
     <div>
       <!-- Boutons de navigation dans le contenu -->
       <div class="tab-content" id="nos-fonctionnalites">
-        <div class="content" v-show="selectedTab === 0" id="content-0">
+        <div class="content" v-if="selectedTab === 0" ref="content0" id="content-0" key="0">
           <div class="buton-nav">
             <button v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)"
                     :class="{ 'selected-tab': isSelectedTab(index) }">
               {{ tab.label }}
             </button>
           </div>
+          <div class="card-f-wraper">
+            <card-component title="Controle domaine"
+                            image="mdi:number-1-circle"
+                            description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (Pronote/EDT, Siecle/STS ou les ENT)"/>
+            <card-component title="Serveur de fichier"
+                            image="mdi:number-2-circle"
+                            description="Serveur de fichiers SMB, NFS4 avec séparation des réseaux "/>
+            <card-component title="Reservation dhcp et ip"
+                            image="mdi:number-3-circle"
+                            description="DHCP et réservations IP Multi-réseaux et multi-VLANs"/>
+            <card-component title="Gestion parcs"
+                            image="mdi:number-4-circle"
+                            description="Gestion des parcs, des salles Extinction automatique, démarrage automatique, réinstallation, déploiements"/>
+          </div>
         </div>
-        <div class="content" v-show="selectedTab === 1" id="content-1">
+        <div class="content" v-if="selectedTab === 1" ref="content1" id="content-1" key="1">
           <div class="buton-nav">
             <button v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)"
                     :class="{ 'selected-tab': isSelectedTab(index) }">
               {{ tab.label }}
             </button>
           </div>
+          <div class="card-f-wraper">
+            <card-component title="Serveur impression"
+                            image="mdi:number-5-circle"
+                            description="Serveur d'impression SMB/CUPS. Les imprimantes sont déployées de façon native avec des stratégies de groupe (GPO)"/>
+            <card-component title="Déploiment automatique d'application"
+                            image="mdi:number-6-circle"
+                            description="Déploiement automatique d’applications. Plus de 200 applications sont disponibles et maintenues à jour directement dans SambaÉdu"/>
+            <card-component title="Déploiment automatique d'os"
+                            image="mdi:number-7-circle"
+                            description="Déploiement automatique de Windows 10, 11 et GNU/Linux Debian avec intégration automatisée au domaine des postes"/>
+            <card-component title="Configuration des profil et des station"
+                            image="mdi:number-8-circle"
+                            description="Configuration simplifiée des profils et des stations par GPO via interface Web. Aucun client ou agent n’est à déployer sur les postes"/>
+          </div>
         </div>
-        <div class="content" v-show="selectedTab === 2" id="content-2">
+        <div class="content" v-if="selectedTab === 2" ref="content2" id="content-2" key="2">
           <div class="buton-nav">
             <button v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)"
                     :class="{ 'selected-tab': isSelectedTab(index) }">
               {{ tab.label }}
             </button>
           </div>
+          <div class="card-f-wraper">
+            <card-component title="Configuration des droits et permissions"
+                            image="mdi:number-9-circle"
+                            description="Configuration des rôles et droits sur les différents parcs de machines pour des utilisateurs / groupes d'utilisateurs"/>
+          </div>
         </div>
-        <div class="content" v-show="selectedTab === 3" id="content-3">
+        <div class="content" v-if="selectedTab === 3" ref="content3" id="content-3" key="3">
           <div class="buton-nav">
             <button v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)"
                     :class="{ 'selected-tab': isSelectedTab(index) }">
@@ -102,8 +139,17 @@ export default {
 </template>
 
 
-
 <style scoped lang="scss">
+.slide-enter-active, .slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-enter, .slide-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+
 .content-navigation {
   display: flex;
   justify-content: center;
@@ -139,6 +185,7 @@ export default {
   border-radius: 8px;
   text-align: center;
   transition: all 0.3s ease;
+
   &:hover {
     background-color: #f0f0f0;
     transform: translateY(-5px);
@@ -158,7 +205,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  padding: 20px;
 }
 
 .buton-nav {
@@ -207,15 +254,29 @@ export default {
   }
 }
 
+.card-f-wraper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
 @media (max-width: 920px) {
   .tab-buttons {
     position: static;
-   .card{
-     width: 100%;
-   }
+
+    .card {
+      width: 100%;
+    }
 
   }
-  .buton-nav{
+  .buton-nav {
     display: none;
   }
 }

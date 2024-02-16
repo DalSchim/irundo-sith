@@ -6,7 +6,7 @@ name: 'SplineComponent',
   mounted() {
     const canvas = document.getElementById('canvas3d');
     const app = new Application(canvas);
-    app.load('https://prod.spline.design/ttR0x8HFSAPA5cIC/scene.splinecode');
+    app.load('https://prod.spline.design/Jm3nh-nLnnSa-uKk/scene.splinecode');
   }
 
 }

@@ -10,11 +10,11 @@
             collectivité.</p>
           <br>
           <ul>
-            <li>POC réalisé et fonctionnel</li>
-            <li>MCO ccompétitif</li>
+
             <li>Coformité RGPD</li>
             <li>Respect du SDET</li>
-            <li>Une sécurité numérique rendorcée pour la collectivité</li>
+            <li>Une sécurité numérique renforcée pour la collectivité</li>
+            <li>MCO compétitif</li>
           </ul>
         </div>
       </div>
@@ -113,7 +113,7 @@ export default {
     .titre {
       padding-top: 64px;
       h1 {
-        font-size: 64px;
+        font-size: 56px;
         font-family: Orbitron, sans-serif;
 
       }
@@ -254,6 +254,7 @@ export default {
     .spline {
       position: static;
       width: 100%;
+      height: 400px;
       margin: 20px 0;
     }
   }
