@@ -16,24 +16,19 @@ export default {
   },
   data() {
     return {
-      icon: [
-        { icon: "solar:pen-bold" },
-        { icon: "bx:bx-user" },
-        { icon: "bx:bx-message" },
-        { icon: "bx:bx-heart" },
-      ],
+
 
       titre: [
-        { titre: "Onglet 1", icon: "solar:pen-bold" },
-        { titre: "Onglet 2", icon: "bx:bx-user" },
-        { titre: "Onglet 3", icon: "bx:bx-message" },
-        { titre: "Onglet 4", icon: "bx:bx-heart" },
+        { titre: "Serveurs hebergés"  },
+        { titre: "Serveurs Locaux"  },
+        { titre: "Administration"  },
+        { titre: "Support" },
       ],
       tabs: [
-        { label: "Onglet 1", description: "Description de l'onglet 1" },
-        { label: "Onglet 2", description: "Description de l'onglet 2" },
-        { label: "Onglet 3", description: "Description de l'onglet 3" },
-        { label: "Onglet 4", description: "Description de l'onglet 4" },
+        {  description: "La solution repose sur des services en data-center pour une gestion performante" },
+        {  description: "Une réplication pour offrir des services spécifiques ainsi qu'une haute disponibilité" },
+        {  description: "Une interface visant a gérer, configurer, maintenir, et surveiller les serveurs rattachés " },
+        {  description: "Surveiller et gérer vos appareils réseau sans agent ou client"},
       ],
       selectedTabIndex: 0,
     };

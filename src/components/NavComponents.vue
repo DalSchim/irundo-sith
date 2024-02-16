@@ -81,11 +81,11 @@ export default {
         <ul>
 
           <li>
-            <router-link class="link" to="/#notre-solutions">Notre solution</router-link>
+            <router-link class="link" to="/#notre-solutions">La solution</router-link>
           </li>
 
           <li>
-            <router-link class="link"  to="/#nos-fonctionnalites">Nos fonctionnalités</router-link>
+            <router-link class="link"  to="/#nos-fonctionnalites">Fonctionnalités</router-link>
           </li>
 
           <li>

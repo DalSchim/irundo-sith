@@ -1,11 +1,10 @@
 <!-- TabC.vue -->
 <script>
-import {Icon} from "@iconify/vue";
 import CardComponent from "@/components/CardComponent.vue";
 
 export default {
   name: "TabC",
-  components: {CardComponent, Icon},
+  components: {CardComponent,},
   data() {
     return {
       selectedTab: 0,
@@ -20,10 +19,7 @@ export default {
       type: Array,
       required: true,
     },
-    icon: {
-      type: Array,
-      required: true,
-    },
+
   },
   methods: {
 
@@ -33,24 +29,12 @@ export default {
     selectTab(index) {
       this.selectedTab = index;
       this.$emit("tab-changed", index);
-      this.scrollToContent(index);
-      this.$nextTick(() => {
-        this.scrollToContent(index);
-      });
       // Récupérer l'élément du contenu associé à l'index sélectionné
-
-    },
-    scrollToContent(index) {
-      const contentElement = this.$refs[`content${index}`];
-      if (contentElement) {
-        contentElement.scrollIntoView({behavior: "smooth"});
-      }
 
     },
   },
 };
 </script>
-
 
 <template>
   <section>
@@ -59,7 +43,6 @@ export default {
         <div class="card" @click="selectTab(index) && scrollToContent(index)" v-for="(tab, index) in tabs"
              :key="index"
              :class="{ 'selected-tab': isSelectedTab(index) }">
-          <Icon :icon="icon[index].icon"/>
           <h3>{{ title[index].titre }}</h3>
           <p>{{ tab.description }}</p>
         </div>
@@ -69,12 +52,6 @@ export default {
       <!-- Boutons de navigation dans le contenu -->
       <div class="tab-content" id="nos-fonctionnalites">
         <div class="content" v-if="selectedTab === 0" ref="content0" id="content-0" key="0">
-          <div class="buton-nav">
-            <button v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)"
-                    :class="{ 'selected-tab': isSelectedTab(index) }">
-              {{ tab.label }}
-            </button>
-          </div>
           <div class="card-f-wraper">
             <card-component title="Controle domaine"
                             image="mdi:number-1-circle"
@@ -91,12 +68,7 @@ export default {
           </div>
         </div>
         <div class="content" v-if="selectedTab === 1" ref="content1" id="content-1" key="1">
-          <div class="buton-nav">
-            <button v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)"
-                    :class="{ 'selected-tab': isSelectedTab(index) }">
-              {{ tab.label }}
-            </button>
-          </div>
+
           <div class="card-f-wraper">
             <card-component title="Serveur impression"
                             image="mdi:number-5-circle"
@@ -113,12 +85,7 @@ export default {
           </div>
         </div>
         <div class="content" v-if="selectedTab === 2" ref="content2" id="content-2" key="2">
-          <div class="buton-nav">
-            <button v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)"
-                    :class="{ 'selected-tab': isSelectedTab(index) }">
-              {{ tab.label }}
-            </button>
-          </div>
+
           <div class="card-f-wraper">
             <card-component title="Configuration des droits et permissions"
                             image="mdi:number-9-circle"
@@ -126,12 +93,6 @@ export default {
           </div>
         </div>
         <div class="content" v-if="selectedTab === 3" ref="content3" id="content-3" key="3">
-          <div class="buton-nav">
-            <button v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)"
-                    :class="{ 'selected-tab': isSelectedTab(index) }">
-              {{ tab.label }}
-            </button>
-          </div>
         </div>
       </div>
     </div>
@@ -140,6 +101,15 @@ export default {
 
 
 <style scoped lang="scss">
+
+
+.selected-tab {
+  background-color: #283783 !important;
+  color: white;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
 .slide-enter-active, .slide-leave-active {
   transition: all 0.3s ease;
 }
@@ -149,7 +119,11 @@ export default {
   opacity: 0;
 }
 
-
+h3{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
 .content-navigation {
   display: flex;
   justify-content: center;
@@ -179,6 +153,8 @@ export default {
 
 .card {
   background: white;
+  max-width: 250px;
+  width: 100%;
   margin: 10px;
   padding: 15px;
   border: 1px solid #ccc;
