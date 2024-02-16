@@ -73,7 +73,7 @@ export default {
 
             <card-component title="Serveur de métriques"
                             image="mdi:number-3-circle"
-                            description="Permet de collecter et d'aggreger des metriques pour faciliter  la gestion  de l'activité informatique des serveur"/>
+                            description="Permet de collecter et d'aggreger des metriques pour faciliter  la gestion  de l'activité informatique des serveurs"/>
 
 
 
