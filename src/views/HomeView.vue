@@ -86,9 +86,10 @@ export default {
 <style scoped lang="scss">
 
 .spline {
-  width: 50%;
+  width: 100%;
   height: 100%;
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
 }
@@ -97,14 +98,18 @@ export default {
   width: 100%;
   display: flex;
   height: 100vh;
-  background-color: #2d3e50;
+  background-color: #253441;
   background-size: cover;
   background-position: center;
   color: #f5f7fa;
   position: relative;
 
   .description {
+    position: absolute;
+    top: 10%;
+    left: 10px;
     width: 50%;
+    z-index: 12;
     display: flex;
     flex-direction: column;
     justify-content: start;
