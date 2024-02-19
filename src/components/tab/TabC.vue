@@ -293,7 +293,8 @@ h3 {
 
   .card {
     width: 100%;
-    max-width: 100%;
+    max-width: 90%;
+    margin: 0;
 
   }
 

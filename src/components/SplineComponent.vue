@@ -15,11 +15,20 @@ export default {
 </script>
 <template>
   <div class="spline-containe">
+    <div class="filter"></div>
     <canvas id="canvas3d"></canvas>
   </div>
 </template>
 
 <style scoped lang="scss">
+.filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
 .spline-containe {
   width: 100%;
   height: 100%;

@@ -29,6 +29,7 @@ export default {
     font-size: 24px;
     font-weight: 600;
     margin-top: 20px;
+    text-align: center;
   }
 
 }
