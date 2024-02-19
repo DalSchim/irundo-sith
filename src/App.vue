@@ -1,10 +1,25 @@
 <template>
-  <nav-components/>
-  <router-view/>
-  <footer-components/>
-  <SpeedInsights/>
+  <transition name="fade" v-if="loading">
+    <div>
+      <LoadingScreen/>
+      <spline-component/>
+    </div>
+  </transition>
+  <div v-else>
+    <NavComponents/>
+    <router-view/>
+    <FooterComponents/>
+  </div>
 </template>
 <style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 
 $color-primary: white;
 $color-secondary: #283783;
@@ -68,9 +83,33 @@ li {
 }
 
 </style>
-<script setup>
-import NavComponents from "@/components/NavComponents.vue";
+<script>
 import FooterComponents from "@/components/FooterComponents.vue";
-import {SpeedInsights} from "@vercel/speed-insights/vue"
+import NavComponents from "@/components/NavComponents.vue";
+import LoadingScreen from "@/components/LoadingScreen.vue";
+import SplineComponent from "@/components/SplineComponent.vue";
+
+export default {
+  name: "App",
+  components: {
+    SplineComponent,
+    NavComponents,
+    FooterComponents,
+    LoadingScreen,
+  },
+  data() {
+    return {
+      loading: true,
+    };
+  },
+  mounted() {
+    // verify si la page est chargée ou non
+    setTimeout(() => {
+      this.loading = false;
+    }, 8000);
+  },
+
+};
+
 
 </script>

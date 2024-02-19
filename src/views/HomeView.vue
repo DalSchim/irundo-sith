@@ -214,7 +214,6 @@ export default {
           margin-left: 16px;
         }
       }
-
       .image-qsn {
         width: 40%;
         max-width: 46%;
