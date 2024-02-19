@@ -1,7 +1,7 @@
 <!-- App.vue -->
 <template>
   <div id="app">
-    <TabC :tabs="tabs" :title="titre" :icon="icon" >
+    <TabC :tabs="tabs" :title="titre" >
       <!-- Contenu de l'onglet -->
     </TabC>
   </div>
@@ -16,7 +16,6 @@ export default {
   },
   data() {
     return {
-
 
       titre: [
         { titre: "Serveurs hebergés"  },

@@ -1,6 +1,7 @@
 <script>
 
 import ButtonComponent from "@/components/ButtonCoponent.vue";
+
 export default {
   name: 'NavComponents',
   components: {
@@ -22,7 +23,7 @@ export default {
       return window.innerWidth > 920;
     },
     //si on clique sur un lien de la nav on ferme le menu
-  closeNav() {
+    closeNav() {
       this.hiden = true;
     }
 
@@ -72,11 +73,14 @@ export default {
         </div>
       </div>
     </div>
+
     <div v-show="hiden" class="nav-head">
-      <div class="logo">
-        <img src="../../public/Img/Vector.png" alt="logo"/>
-        <h1>Irundo</h1>
-      </div>
+      <router-link class="link" to="/">
+        <div class="logo">
+          <img src="../../public/Img/Vector.png" alt="logo"/>
+          <h1>Irundo</h1>
+        </div>
+      </router-link>
       <nav>
         <ul>
 
@@ -85,15 +89,15 @@ export default {
           </li>
 
           <li>
-            <router-link class="link"  to="/#nos-fonctionnalites">Fonctionnalités</router-link>
+            <router-link class="link" to="/#nos-fonctionnalites">Fonctionnalités</router-link>
           </li>
 
           <li>
-            <router-link class="link"  to="/#nos-objectifs">Nos objectifs</router-link>
+            <router-link class="link" to="/#nos-objectifs">Nos objectifs</router-link>
           </li>
 
           <li>
-            <router-link class="link"  to="/#nos-partenaires">Nos partenaires</router-link>
+            <router-link class="link" to="/#nos-partenaires">Nos partenaires</router-link>
           </li>
           <button-component class="buton link" color="white" text="Contact" path="/form"></button-component>
         </ul>
@@ -103,6 +107,15 @@ export default {
 </template>
 
 <style scoped lang="scss">
+
+
+.link{
+  text-decoration: none;
+
+
+}
+
+
 .burger {
   display: none;
 }
@@ -162,6 +175,9 @@ nav ul li a {
 nav ul li a {
   position: relative;
   transition: all 0.3s ease;
+
+
+
   &:after {
     content: '';
     position: absolute;
@@ -182,6 +198,7 @@ nav ul li a {
     }
   }
 }
+
 @media screen and (max-width: 920px) {
   .logo-burgeur {
     display: block;
@@ -200,7 +217,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 0  0 10px 0;
+    border-radius: 0 0 10px 0;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.56);
 
@@ -224,7 +241,8 @@ nav ul li a {
         background-color: #ffff;
         position: absolute;
         transition: all 0.3s ease;
-        border-radius:32px;
+        border-radius: 32px;
+
         &:nth-child(1) {
           top: 0;
         }

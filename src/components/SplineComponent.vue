@@ -13,7 +13,6 @@ name: 'SplineComponent',
 
 
 </script>
-
 <template>
 <div class="spline-containe">
     <canvas id="canvas3d"></canvas>
@@ -31,6 +30,4 @@ canvas {
     height: 100%;
   }
 }
-
-
 </style>

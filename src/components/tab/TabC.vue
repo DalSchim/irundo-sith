@@ -58,24 +58,24 @@ export default {
                             description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (GPEI / Pronote / EDT  / Siecle / STS / ENT)"/>
 
             <card-component title="Serveur de Sauvegarde"
-                            image="mdi:number-3-circle"
+                            image="mdi:number-2-circle"
                             description="Serveur de sauvegarde pour une reprise d'activité rapide des serveurs locaux et des serveurs hebergés"/>
 
             <card-component title="Serveur DHCP"
-                            image="mdi:number-2-circle"
+                            image="mdi:number-3-circle"
                             description="Définition des plages IP des serveurs locaux"/>
 
 
             <card-component title="Serveur DNS"
-                            image="mdi:number-3-circle"
+                            image="mdi:number-4-circle"
                             description=" Serveur DNS pour les serveurs locaux et les serveurs hebergés "/>
 
             <card-component title="Serveur Cloud"
-                            image="mdi:number-3-circle"
+                            image="mdi:number-5-circle"
                             description="Hebergement des données échanges des élèves et des professeurs"/>
 
             <card-component title="Serveur de métriques"
-                            image="mdi:number-3-circle"
+                            image="mdi:number-6-circle"
                             description="Permet de collecter et d'aggreger des metriques pour faciliter  la gestion  de l'activité informatique des serveurs"/>
 
 
@@ -91,22 +91,20 @@ export default {
                             description="L'annuaire est répliqué dans l'ensemble des établissements pour une question de résilience"/>
 
             <card-component title="Serveur de fichiers"
-                            image="mdi:number-1-circle"
+                            image="mdi:number-2-circle"
                             description="Serveur de fichiers SMB, NFS4 avec séparation du réseaux administratif et pédagogique"/>
 
             <card-component title="Reservation DHCP et ip"
-                            image="mdi:number-2-circle"
+                            image="mdi:number-3-circle"
                             description="DHCP et réservations IP Multi-réseaux et multi-VLANs"/>
 
             <card-component title="Serveur impression"
-                            image="mdi:number-3-circle"
+                            image="mdi:number-4-circle"
                             description="Serveur d'impression SMB/CUPS. Les imprimantes sont déployées de façon native avec des stratégies de groupe (GPO)"/>
 
             <card-component title="Serveur d'application"
-                            image="mdi:number-3-circle"
+                            image="mdi:number-5-circle"
                             description="Permettre de lancer des application exécutable depuis les serveurs"/>
-
-
 
           </div>
         </div>
@@ -285,14 +283,23 @@ h3{
 @media (max-width: 920px) {
   .tab-buttons {
     position: static;
+    max-width: 100%;
+  }
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
 
     .card {
       width: 100%;
+      max-width: 100%;
+
     }
 
   }
   .buton-nav {
     display: none;
   }
-}
+
 </style>
