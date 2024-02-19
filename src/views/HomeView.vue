@@ -105,7 +105,6 @@ export default {
 
   .description {
     position: absolute;
-    top: 10%;
     left: 10px;
     width: 50%;
     z-index: 12;
@@ -230,11 +229,14 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;
+    height: 100vh;
 
     .description {
+      position: absolute;
       width: 100%;
-      padding: 30px;
+      padding: 15px;
+      bottom: 90px;
+      left: 0;
 
       .titre {
 
@@ -249,17 +251,19 @@ export default {
     }
 
     .buton-link {
-      position: static;
+      position: absolute;
+      bottom: 50px;
+      z-index: 10;
       display: flex;
       gap: 20px;
       margin-top: 20px;
     }
 
     .spline {
-      position: static;
       width: 100%;
-      height: 400px;
-      margin: 20px 0;
+      height: 100vh;
+      margin: 0;
+
     }
   }
 
