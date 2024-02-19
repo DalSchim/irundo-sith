@@ -290,16 +290,12 @@ h3 {
     align-items: center;
   }
 
-
   .card {
     width: 100%;
     max-width: 90%;
     margin: 0;
-
   }
-
 }
-
 .buton-nav {
   display: none;
 }

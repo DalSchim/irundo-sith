@@ -21,13 +21,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.filter {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
+
 
 .spline-containe {
   width: 100%;
@@ -39,5 +33,16 @@ export default {
     width: 100%;
     height: 100%;
   }
+}
+
+@media screen and (max-width: 920px) {
+  .filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
 }
 </style>
