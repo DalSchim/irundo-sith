@@ -1,8 +1,8 @@
 <script>
-import { Application } from '@splinetool/runtime';
+import {Application} from '@splinetool/runtime';
 
 export default {
-name: 'SplineComponent',
+  name: 'SplineComponent',
   mounted() {
     const canvas = document.getElementById('canvas3d');
     const app = new Application(canvas);
@@ -14,9 +14,9 @@ name: 'SplineComponent',
 
 </script>
 <template>
-<div class="spline-containe">
+  <div class="spline-containe">
     <canvas id="canvas3d"></canvas>
-</div>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -25,7 +25,8 @@ name: 'SplineComponent',
   height: 100%;
   margin: 0 auto;
   position: relative;
-canvas {
+
+  canvas {
     width: 100%;
     height: 100%;
   }

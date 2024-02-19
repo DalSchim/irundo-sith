@@ -6,6 +6,7 @@ export default {
 }
 </script>
 <template>
+
   <footer>
     <div class="contain">
       <div class="wrappers">
@@ -32,8 +33,9 @@ export default {
     </div>
   </footer>
 </template>
-
 <style scoped lang="scss">
+
+
 footer {
   padding: 80px 30px;
   background-color: #f5f7fa;
@@ -111,6 +113,11 @@ footer {
 }
 
 @media screen and (max-width: 920px) {
+
+  .down {
+    display: none;
+  }
+
   footer {
     padding: 80px 30px;
     background-color: #f5f7fa;

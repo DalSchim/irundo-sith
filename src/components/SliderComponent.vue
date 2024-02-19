@@ -42,9 +42,7 @@ export default ({
     Splide,
     SplideSlide,
   },
-  methods: {
-
-  },
+  methods: {},
 
   setup() {
     return {
@@ -77,11 +75,12 @@ export default ({
 </script>
 <style scoped lang="scss">
 
-section{
+section {
   background-color: #ffff;
   padding: 80px 30px;
 }
-.container{
+
+.container {
   max-width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -96,6 +95,7 @@ section{
   .wraper {
     margin: 0px auto;
     max-width: 940px;
+
     h2 {
       font-family: Orbitron, sans-serif;
       font-size: 24px;
@@ -104,6 +104,7 @@ section{
       margin-bottom: 32px;
       text-align: center;
     }
+
     .slide {
 
       img {
@@ -118,9 +119,11 @@ section{
 @media (max-width: 920px) {
   .container {
     padding: 0;
+
     .wraper {
       padding: 0;
-      .splide{
+
+      .splide {
         padding: 0;
       }
     }

@@ -1,7 +1,7 @@
 <!-- App.vue -->
 <template>
   <div id="app">
-    <TabC :tabs="tabs" :title="titre" >
+    <TabC :tabs="tabs" :title="titre">
       <!-- Contenu de l'onglet -->
     </TabC>
   </div>
@@ -18,16 +18,16 @@ export default {
     return {
 
       titre: [
-        { titre: "Serveurs hebergés"  },
-        { titre: "Serveurs Locaux"  },
-        { titre: "Administration"  },
-        { titre: "Support" },
+        {titre: "Serveurs hebergés"},
+        {titre: "Serveurs Locaux"},
+        {titre: "Administration"},
+        {titre: "Support"},
       ],
       tabs: [
-        {  description: "La solution repose sur des services en data-center pour une gestion performante" },
-        {  description: "Une réplication pour offrir des services spécifiques ainsi qu'une haute disponibilité" },
-        {  description: "Une interface visant a gérer, configurer, maintenir, et surveiller les serveurs rattachés " },
-        {  description: "Surveiller et gérer vos appareils réseau sans agent ou client"},
+        {description: "La solution repose sur des services en data-center pour une gestion performante"},
+        {description: "Une réplication pour offrir des services spécifiques ainsi qu'une haute disponibilité"},
+        {description: "Une interface visant a gérer, configurer, maintenir, et surveiller les serveurs rattachés "},
+        {description: "Surveiller et gérer vos appareils réseau sans agent ou client"},
       ],
       selectedTabIndex: 0,
     };

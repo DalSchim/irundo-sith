@@ -50,7 +50,7 @@ export default {
     </div>
     <div>
       <!-- Boutons de navigation dans le contenu -->
-      <div class="tab-content" >
+      <div class="tab-content">
         <div class="content" v-if="selectedTab === 0" ref="content0" id="content-0" key="0">
           <div class="card-f-wraper">
             <card-component title="Controle domaine"
@@ -77,7 +77,6 @@ export default {
             <card-component title="Serveur de métriques"
                             image="mdi:number-6-circle"
                             description="Permet de collecter et d'aggreger des metriques pour faciliter  la gestion  de l'activité informatique des serveurs"/>
-
 
 
           </div>
@@ -156,11 +155,12 @@ export default {
   opacity: 0;
 }
 
-h3{
+h3 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .content-navigation {
   display: flex;
   justify-content: center;
@@ -291,15 +291,16 @@ h3{
   }
 
 
-    .card {
-      width: 100%;
-      max-width: 100%;
-
-    }
+  .card {
+    width: 100%;
+    max-width: 100%;
 
   }
-  .buton-nav {
-    display: none;
-  }
+
+}
+
+.buton-nav {
+  display: none;
+}
 
 </style>

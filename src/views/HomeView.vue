@@ -115,11 +115,13 @@ export default {
 
     .titre {
       padding-top: 64px;
+
       h1 {
         font-size: 56px;
         font-family: Orbitron, sans-serif;
         margin-bottom: 32px;
       }
+
       h2 {
         font-size: 38px;
         font-family: Orbitron, sans-serif;
@@ -127,7 +129,8 @@ export default {
         font-optical-sizing: auto;
         margin-bottom: 32px;
       }
-      ul{
+
+      ul {
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -138,7 +141,7 @@ export default {
     p {
       font-family: "Plus Jakarta Sans", sans-serif;
       font-size: 18px;
-      line-height:24px;
+      line-height: 24px;
       font-weight: 300;
     }
   }
@@ -244,6 +247,7 @@ export default {
           font-size: 24px;
 
         }
+
         h2 {
           font-size: 18px;
         }

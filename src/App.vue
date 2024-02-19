@@ -2,7 +2,7 @@
   <nav-components/>
   <router-view/>
   <footer-components/>
-  <SpeedInsights />
+  <SpeedInsights/>
 </template>
 <style>
 
@@ -30,32 +30,36 @@ nav {
   padding: 30px;
 }
 
-h1{
+h1 {
   font-family: Orbitron, sans-serif;
   font-size: 64px;
 }
-h2{
+
+h2 {
   font-family: Orbitron, sans-serif;
   font-size: 38px;
   font-weight: 600;
   font-optical-sizing: auto;
   margin-bottom: 32px;
 }
-p{
+
+p {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-optical-sizing: auto;
   line-height: 1.5;
 }
-label{
+
+label {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
   font-optical-sizing: auto;
   line-height: 1.5;
 }
-li{
+
+li {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -67,6 +71,6 @@ li{
 <script setup>
 import NavComponents from "@/components/NavComponents.vue";
 import FooterComponents from "@/components/FooterComponents.vue";
-import { SpeedInsights } from "@vercel/speed-insights/vue"
+import {SpeedInsights} from "@vercel/speed-insights/vue"
 
 </script>

@@ -109,7 +109,7 @@ export default {
 <style scoped lang="scss">
 
 
-.link{
+.link {
   text-decoration: none;
 
 
@@ -177,7 +177,6 @@ nav ul li a {
   transition: all 0.3s ease;
 
 
-
   &:after {
     content: '';
     position: absolute;
@@ -197,6 +196,7 @@ nav ul li a {
       transform-origin: left;
     }
   }
+
 }
 
 @media screen and (max-width: 920px) {
@@ -299,6 +299,7 @@ nav ul li a {
         align-items: center;
       }
     }
+
   }
 }
 </style>
