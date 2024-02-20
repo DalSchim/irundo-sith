@@ -10,6 +10,7 @@ export default {
       selectedTab: 0,
     };
   },
+
   props: {
     tabs: {
       type: Array,
@@ -22,15 +23,22 @@ export default {
 
   },
   methods: {
-
     isSelectedTab(index) {
       return this.selectedTab === index;
     },
     selectTab(index) {
       this.selectedTab = index;
       this.$emit("tab-changed", index);
-      // Récupérer l'élément du contenu associé à l'index sélectionné
-
+      this.scrollToContent(index);
+    },
+    //scroll  to tab content
+    scrollToContent(index) {
+      this.$nextTick(() => {
+        const contentElement = this.$refs[`content${index}`];
+        if (contentElement) {
+          contentElement.scrollIntoView({behavior: "smooth", block: "start"});
+        }
+      });
     },
   },
 };
@@ -296,6 +304,7 @@ h3 {
     margin: 0;
   }
 }
+
 .buton-nav {
   display: none;
 }

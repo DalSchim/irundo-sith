@@ -1,15 +1,17 @@
 <script>
 
 import ButtonComponent from "@/components/ButtonCoponent.vue";
+import DropdownMenu from "@/components/DropDown.vue";
 
 export default {
   name: 'NavComponents',
   components: {
+    DropdownMenu,
     ButtonComponent
   },
   data() {
     return {
-      hiden: true
+      hiden: true,
     }
   },
   methods: {
@@ -22,11 +24,9 @@ export default {
     isDesktop() {
       return window.innerWidth > 920;
     },
-    //si on clique sur un lien de la nav on ferme le menu
     closeNav() {
       this.hiden = true;
-    }
-
+    },
 
   },
   mounted() {
@@ -36,6 +36,7 @@ export default {
         this.closeNav();
       });
     });
+    window.addEventListener('scroll', this.gestionScroll);
 
 
     if (this.isMobile()) {
@@ -57,7 +58,6 @@ export default {
     });
 
   },
-
 }
 </script>
 
@@ -83,13 +83,13 @@ export default {
       </router-link>
       <nav>
         <ul>
-
           <li>
             <router-link class="link" to="/#notre-solutions">La solution</router-link>
           </li>
 
           <li>
-            <router-link class="link" to="/#nos-fonctionnalites">Fonctionnalités</router-link>
+            <dropdown-menu/>
+
           </li>
 
           <li>
@@ -100,6 +100,7 @@ export default {
             <router-link class="link" to="/#nos-partenaires">Nos partenaires</router-link>
           </li>
           <button-component class="buton link" color="white" text="Contact" path="/form"></button-component>
+
         </ul>
       </nav>
     </div>
@@ -107,7 +108,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-
 
 .link {
   text-decoration: none;
@@ -125,6 +125,8 @@ export default {
 }
 
 .nav-head {
+  transition: transform 0.3s ease;
+  transform: translateY(0); // Position initiale
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -133,8 +135,11 @@ export default {
   align-items: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.56);
-  height: 90px;
+  height: 70px;
   width: 100vw;
+  &.cache {
+    transform: translateY(-100%);
+  }
 }
 
 .logo {

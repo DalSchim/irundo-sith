@@ -4,19 +4,24 @@
     <TabC :tabs="tabs" :title="titre">
       <!-- Contenu de l'onglet -->
     </TabC>
+    <DropdownMenu :tabs="tabs" :titre="titre">
+      <!-- Contenu du menu déroulant -->
+    </DropdownMenu>
   </div>
 </template>
 
 <script>
 import TabC from "@/components/tab/TabC.vue";
+import DropdownMenu from "@/components/DropDown.vue";
+
 
 export default {
   components: {
+    DropdownMenu,
     TabC,
   },
   data() {
     return {
-
       titre: [
         {titre: "Serveurs hebergés"},
         {titre: "Serveurs Locaux"},
@@ -32,6 +37,7 @@ export default {
       selectedTabIndex: 0,
     };
   },
+
   methods: {
     updateSelectedTab(index) {
       this.selectedTabIndex = index;

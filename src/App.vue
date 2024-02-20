@@ -106,7 +106,7 @@ export default {
     // verify si la page est chargée ou non
     setTimeout(() => {
       this.loading = false;
-    }, 8000);
+    }, 0);
   },
 
 };
