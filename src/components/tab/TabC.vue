@@ -56,6 +56,7 @@ export default {
         </div>
       </div>
     </div>
+
     <div>
       <!-- Boutons de navigation dans le contenu -->
       <div class="tab-content">
@@ -118,25 +119,53 @@ export default {
         <div class="content" v-if="selectedTab === 2" ref="content2" id="content-2" key="2">
 
           <div class="card-f-wraper">
-            <card-component title="Déploiment automatique d'application"
+            <card-component title="Déploiment automatique d'application "
                             image="mdi:number-1-circle"
-                            description="Déploiement automatique d’applications. Plus de 200 applications sont disponibles et maintenues à jour directement dans SambaÉdu"/>
-            <card-component title="Gestion parcs"
+                            description="Déploiement automatique d’applications pédagogique. Plus de 200 applications sont disponibles et maintenues à jour directement dans SambaÉdu."/>
+
+            <card-component title="Gestion des parcs et des salles"
                             image="mdi:number-2-circle"
-                            description="Gestion des parcs, des salles Extinction automatique, démarrage automatique, réinstallation, déploiements"/>
+                            description="Inventaire des machines, états des logiciels installés, déploiement et configuration de nouveaux appareils."/>
+
             <card-component title="Configuration des droits et permissions"
                             image="mdi:number-3-circle"
-                            description="Configuration des rôles et droits sur les différents parcs de machines pour des utilisateurs / groupes d'utilisateurs"/>
+                            description="Configuration des rôles et droits sur les différents parcs de machines pour des utilisateurs / groupes d'utilisateurs."/>
 
-            <card-component title="Configuration des profil et des station"
+            <card-component title="Configuration des espaces de travail"
+                            image="mdi:number-4-circle"
+                            description="Configuration simplifiée des profils et des stations via l'interface Web. Aucun client ou agent n’est à déployer sur les postes."/>
+
+            <card-component title="Ergonomie et simplicité"
+                            image="mdi:number-5-circle"
+                            description="Espace de travail optimisé en fonction du type d'enseignement, matière. les racourcis et applications sont définient en fonction de chaque salle"/>
+
+            <card-component title="Green IT"
                             image="mdi:number-6-circle"
-                            description="Configuration simplifiée des profils et des stations par GPO via interface Web. Aucun client ou agent n’est à déployer sur les postes"/>
+                            description="Avec une architecture réseau scalable, une gestion des dispositifs d'économie d'énergie, le démarrage automatique pour les mises à jour à horaire décalée, et un extinction automatique des postes "/>
+
+            <card-component title="Déploiement automatique de poste"
+                            image="mdi:number-7-circle"
+                            description="Déploiement automatique de Windows 10, 11 et GNU/Linux Debian avec intégration automatisée au domaine des postes"/>
+
           </div>
         </div>
         <div class="content" v-if="selectedTab === 3" ref="content3" id="content-3" key="3">
-          <card-component title="Déploiment automatique d'os"
-                          image="mdi:number-5-circle"
-                          description="Déploiement automatique de Windows 10, 11 et GNU/Linux Debian avec intégration automatisée au domaine des postes"/>
+
+          <div class="card-f-wraper">
+            <card-component title="Support a distance"
+                            image="mdi:number-1-circle"
+                            description="Éffectuez la maintenance, vérifiez les problèmes et fournissez une assitance rapide."/>
+
+            <card-component title="Réinstallation de poste"
+                            image="mdi:number-2-circle"
+                            description="Gagnez du temps et économisez des déplacements grâce à notre solution de réinstallation et d'integration au domaine des postes clients."/>
+
+            <card-component title="Automatisation et maintenance"
+                            image="mdi:number-3-circle"
+                            description="Augmentez la productivité à l'aide de l'automatisation des tâches reproductibles"/>
+
+
+          </div>
         </div>
       </div>
     </div>
