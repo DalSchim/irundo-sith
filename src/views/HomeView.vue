@@ -1,9 +1,9 @@
 <template>
-
+<point-nav-componenet/>
   <header class="home" id="notre-solutions">
     <div class="description">
       <div class="titre">
-        <h1>Irundo : Révolutionnez l'Éducation en Toute Liberté</h1>
+        <h1>Irundo : une alternative pour le SI des collectivités</h1>
         <div class="desciption">
           <p>Irundo est une solution open source libre et souveraine qui a pour but d’offrir une interface web
             centralisée de déploiement et d’infogérance de l'ensemble des établissements scolaires de la
@@ -26,7 +26,7 @@
       <button-component class="buton" color="white" text="En savoir plus" path="/about"></button-component>
     </div>
   </header>
-  <tabs-component/>
+  <tab-c/>
   <section id="nos-objectifs">
     <div class="container">
       <div class="wrapper">
@@ -57,11 +57,12 @@
 import ButtonComponent from "@/components/ButtonCoponent.vue";
 import SliderComponent from "@/components/SliderComponent.vue";
 import SplineComponent from "@/components/SplineComponent.vue";
-import TabsComponent from "@/components/tab/TabsComponent.vue";
+import TabC from "@/components/tab/TabC.vue";
+import PointNavComponenet from "@/components/PointNavComponenet.vue";
 
 export default {
   name: 'HomeView',
-  components: {TabsComponent, SplineComponent, SliderComponent, ButtonComponent},
+  components: {PointNavComponenet, TabC, SplineComponent, SliderComponent, ButtonComponent},
   beforeRouteUpdate(to, from, next) {
     // Vérifiez si la route actuelle a une ancre
     if (to.hash) {

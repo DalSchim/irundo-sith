@@ -1,57 +1,82 @@
 <!-- TabC.vue -->
 <script>
 import CardComponent from "@/components/CardComponent.vue";
+import {Icon} from '@iconify/vue';
 
 export default {
   name: "TabC",
-  components: {CardComponent,},
+  components: {CardComponent, Icon},
   data() {
     return {
+      selectedTabDropdown: 0,
       selectedTab: 0,
-    };
+      titre: [
+        {titre: "Serveurs hebergés"},
+        {titre: "Serveurs Locaux"},
+        {titre: "Administration"},
+        {titre: "Support"},
+      ],
+      tabs: [
+        {description: "La solution repose sur des services en data-center pour une gestion performante"},
+        {description: "Une réplication pour offrir des services spécifiques ainsi qu'une haute disponibilité"},
+        {description: "Une interface visant a gérer, configurer, maintenir, et surveiller les serveurs rattachés "},
+        {description: "Surveiller et gérer vos appareils réseau sans agent ou client"},
+      ],
+      selectedTabIndex: 0,
+    }
   },
 
-  props: {
-    tabs: {
-      type: Array,
-      required: true,
-    },
-    title: {
-      type: Array,
-      required: true,
-    },
-
-  },
   methods: {
+
+    handleTabChanged(index) {
+      this.selectedTabIndex = index;
+      console.log(index);
+    },
+
     isSelectedTab(index) {
       return this.selectedTab === index;
     },
     selectTab(index) {
       this.selectedTab = index;
       this.$emit("tab-changed", index);
-      this.scrollToContent(index);
+      this.scrolltoid();
     },
-    //scroll  to tab content
-    scrollToContent(index) {
-      this.$nextTick(() => {
-        const contentElement = this.$refs[`content${index}`];
-        if (contentElement) {
-          contentElement.scrollIntoView({behavior: "smooth", block: "start"});
-        }
+
+    scrolltoid() {
+      const element = document.getElementById('nos-fonctionnalites');
+      const offset = 100;  // Décalage de 32 pixels
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
       });
     },
+
+    //retour en haut de nos fonctionnalités
+    up() {
+      const element = document.getElementById('nos-fonctionnalites');
+      const offset = 100;  // Décalage de 32 pixels
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    },
+
+
   },
 };
+
 </script>
 
 <template>
-  <section>
+  <section class="text">
     <div class="tab-buttons" id="nos-fonctionnalites">
       <div class="card-wrapper">
         <div class="card" @click="selectTab(index)" v-for="(tab, index) in tabs"
              :key="index"
              :class="{ 'selected-tab': isSelectedTab(index) }">
-          <h3>{{ title[index].titre }}</h3>
+          <h3>{{ titre[index].titre }}</h3>
           <p>{{ tab.description }}</p>
         </div>
       </div>
@@ -62,6 +87,8 @@ export default {
       <div class="tab-content">
         <div class="content" v-if="selectedTab === 0" ref="content0" id="content-0" key="0">
           <div class="card-f-wraper">
+
+
             <card-component title="Controle domaine"
                             image="mdi:number-1-circle"
                             description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (GPEI / Pronote / EDT  / Siecle / STS / ENT)"/>
@@ -90,7 +117,8 @@ export default {
 
           </div>
         </div>
-        <div class="content" v-if="selectedTab === 1" ref="content1" id="content-1" key="1">
+        <div class="content" v-if="selectedTab === 1" ref="content1" id="content-1"
+             key="1">
 
           <div class="card-f-wraper">
 
@@ -116,7 +144,8 @@ export default {
 
           </div>
         </div>
-        <div class="content" v-if="selectedTab === 2" ref="content2" id="content-2" key="2">
+        <div class="content" v-if="selectedTab === 2" ref="content2" id="content-2"
+             key="2">
 
           <div class="card-f-wraper">
             <card-component title="Déploiment automatique d'application "
@@ -149,7 +178,8 @@ export default {
 
           </div>
         </div>
-        <div class="content" v-if="selectedTab === 3" ref="content3" id="content-3" key="3">
+        <div class="content" v-if="selectedTab === 3" ref="content3" id="content-3"
+             key="3">
 
           <div class="card-f-wraper">
             <card-component title="Support a distance"
@@ -163,10 +193,12 @@ export default {
             <card-component title="Automatisation et maintenance"
                             image="mdi:number-3-circle"
                             description="Augmentez la productivité à l'aide de l'automatisation des tâches reproductibles"/>
-
-
           </div>
         </div>
+        <bouton class="back-to-top" @click="up">
+          <Icon width="64px" color="#283783" icon="line-md:chevron-up-circle"/>
+        </bouton>
+
       </div>
     </div>
   </section>
@@ -174,6 +206,14 @@ export default {
 
 
 <style scoped lang="scss">
+
+.text {
+  margin-top: 60px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 
 
 .selected-tab {

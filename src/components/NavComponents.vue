@@ -1,20 +1,30 @@
 <script>
 
 import ButtonComponent from "@/components/ButtonCoponent.vue";
-import DropdownMenu from "@/components/DropDown.vue";
 
 export default {
   name: 'NavComponents',
   components: {
-    DropdownMenu,
     ButtonComponent
   },
   data() {
     return {
       hiden: true,
     }
+
   },
   methods: {
+    scrolltoid() {
+      const element = document.getElementById('nos-fonctionnalites');
+      const offset = 100;  // Décalage de 32 pixels
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    },
+
+
     toggleNav() {
       this.hiden = !this.hiden;
     },
@@ -36,7 +46,10 @@ export default {
         this.closeNav();
       });
     });
-    window.addEventListener('scroll', this.gestionScroll);
+
+
+    // si le lien est #nos-fonctionnalites on scroll vers la section 100 px audessus
+
 
 
     if (this.isMobile()) {
@@ -88,8 +101,10 @@ export default {
           </li>
 
           <li>
-            <dropdown-menu/>
+            <div>
+              <router-link @click="scrolltoid" to="/#nos-fonctionnalites">Nos objectifs</router-link>
 
+            </div>
           </li>
 
           <li>
@@ -111,7 +126,6 @@ export default {
 
 .link {
   text-decoration: none;
-
 
 }
 

@@ -4,10 +4,15 @@ import {Application} from '@splinetool/runtime';
 export default {
   name: 'SplineComponent',
   mounted() {
-    const canvas = document.getElementById('canvas3d');
-    const app = new Application(canvas);
-    app.load('https://prod.spline.design/Jm3nh-nLnnSa-uKk/scene.splinecode');
-  }
+    async function loadSpline() {
+      const canvas = document.getElementById('canvas3d');
+      const app = new Application(canvas);
+      app.load('https://prod.spline.design/Jm3nh-nLnnSa-uKk/scene.splinecode');
+    }
+    loadSpline()
+
+  },
+
 
 }
 
@@ -19,7 +24,6 @@ export default {
     <canvas id="canvas3d"></canvas>
   </div>
 </template>
-
 <style scoped lang="scss">
 
 

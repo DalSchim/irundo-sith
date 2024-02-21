@@ -6,8 +6,8 @@
     </div>
   </transition>
   <div v-else>
-    <NavComponents/>
-    <router-view/>
+    <NavComponents class="nav" @tab-selected="changeTab"/>
+    <router-view :selectedTabIndex="selectedTabIndex" @tab-changed="changeTab"/>
     <FooterComponents/>
   </div>
 </template>
@@ -100,6 +100,7 @@ export default {
   data() {
     return {
       loading: true,
+      selectTabindex: 0,
     };
   },
   mounted() {
@@ -107,6 +108,11 @@ export default {
     setTimeout(() => {
       this.loading = false;
     }, 0);
+  },
+  methods: {
+    changeTab(index) {
+      this.selectedTabIndex = index;
+    },
   },
 
 };
