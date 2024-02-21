@@ -1,8 +1,14 @@
 <script>
 import ButtonComponent from "@/components/ButtonCoponent.vue";
+import {Icon} from "@iconify/vue";
 
 export default {
-  components: {ButtonComponent}
+  components: {Icon, ButtonComponent},
+  methods: {
+    up() {
+      window.scrollTo(0, 0);
+    }
+  }
 }
 </script>
 <template>
@@ -31,6 +37,9 @@ export default {
     <div class="conatin">
       <p>© 2021 Irundo. Tous droits réservés.</p>
     </div>
+    <div class="ruturn-top">
+      <Icon @click="up" width="64px" color="#283783" icon="line-md:chevron-up-circle"/>
+    </div>
   </footer>
 </template>
 <style scoped lang="scss">
@@ -40,6 +49,14 @@ footer {
   padding: 80px 30px;
   background-color: #f5f7fa;
   color: black;
+
+  .ruturn-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+  }
 
   .wrappers {
     display: flex;
@@ -113,6 +130,7 @@ footer {
 }
 
 @media screen and (max-width: 920px) {
+
 
   .down {
     display: none;

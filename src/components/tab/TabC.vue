@@ -195,9 +195,8 @@ export default {
                             description="Augmentez la productivité à l'aide de l'automatisation des tâches reproductibles"/>
           </div>
         </div>
-        <bouton class="back-to-top" @click="up">
-          <Icon width="64px" color="#283783" icon="line-md:chevron-up-circle"/>
-        </bouton>
+
+          <Icon @click="up" width="64px" color="#283783" icon="line-md:chevron-up-circle"/>
 
       </div>
     </div>

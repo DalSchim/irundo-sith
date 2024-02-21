@@ -38,7 +38,6 @@ export default {
   cursor: pointer;
   transition: all 0.3s ease;
 
-
   &.white {
     background-color: transparent;
     border: white 1px solid;

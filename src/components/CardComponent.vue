@@ -9,7 +9,6 @@ export default {
     description: String,
     image: String,
   },
-  methods: {},
 };
 
 </script>
@@ -20,7 +19,6 @@ export default {
     <h3>{{ title }}</h3>
     <p>{{ description }}</p>
   </div>
-
 </template>
 
 <style scoped lang="scss">
