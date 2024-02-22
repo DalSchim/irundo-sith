@@ -46,8 +46,7 @@ export default {
         <div class="text">
           <p>
             Posez-nous toutes vos questions et plongez dans la découverte de notre solution ! Fournissez-nous vos
-            coordonnées, et nous vous recontacterons entre 9 h 30 et 18 h 30 du lundi au vendredi. On est là pour vous !
-            🚀
+            coordonnées, et nous vous recontacterons.
           </p>
         </div>
       </div>

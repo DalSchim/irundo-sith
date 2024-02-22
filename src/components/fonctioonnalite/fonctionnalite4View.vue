@@ -11,7 +11,7 @@ export default {
 
   <div class="content">
     <div class="card-f-wraper">
-      <card-component title="Support a distance"
+      <card-component title="Support à distance"
                       image="mdi:number-1-circle"
                       description="Éffectuez la maintenance, vérifiez les problèmes et fournissez une assitance rapide."/>
 

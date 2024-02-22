@@ -35,7 +35,7 @@ export default {
     </div>
     <hr>
     <div class="conatin">
-      <p>© 2021 Irundo. Tous droits réservés.</p>
+      <p>© 2024 Irundo. Tous droits réservés.</p>
     </div>
     <div class="ruturn-top">
       <Icon @click="up" width="64px" color="#283783" icon="line-md:chevron-up-circle"/>
