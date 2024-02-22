@@ -6,8 +6,8 @@
     </div>
   </transition>
   <div v-else>
-    <NavComponents class="nav" @tab-selected="changeTab"/>
-    <router-view :selectedTabIndex="selectedTabIndex" @tab-changed="changeTab"/>
+    <nav-components/>
+    <router-view />
     <FooterComponents/>
   </div>
 </template>
@@ -85,15 +85,15 @@ li {
 </style>
 <script>
 import FooterComponents from "@/components/FooterComponents.vue";
-import NavComponents from "@/components/NavComponents.vue";
 import LoadingScreen from "@/components/LoadingScreen.vue";
 import SplineComponent from "@/components/SplineComponent.vue";
+import NavComponents from "@/components/NavComponents.vue";
 
 export default {
   name: "App",
   components: {
-    SplineComponent,
     NavComponents,
+    SplineComponent,
     FooterComponents,
     LoadingScreen,
   },

@@ -1,0 +1,63 @@
+<script>
+import CardComponent from "@/components/CardComponent.vue";
+
+export default {
+  name: "fonctionnalite1View",
+  components: {CardComponent}
+}
+</script>
+
+<template>
+  <div class="content"  ref="content1" id="content-1"
+       key="1">
+
+    <div class="card-f-wraper">
+
+      <card-component title="Controleur de domaine"
+                      image="mdi:number-1-circle"
+                      description="L'annuaire est répliqué sur le contrôleur de domaine local des établissements pour une question de résilience"/>
+
+      <card-component title="Serveur de fichiers"
+                      image="mdi:number-2-circle"
+                      description="Serveur de fichiers SMB, NFS4 avec séparation des réseaux administratif et pédagogique"/>
+
+      <card-component title="Reservation DHCP et ip"
+                      image="mdi:number-3-circle"
+                      description="DHCP et réservations IP Multi-réseaux et multi-VLANs"/>
+
+      <card-component title="Serveur impression"
+                      image="mdi:number-4-circle"
+                      description="Serveur d'impression SMB/CUPS. Les imprimantes sont déployées de façon native avec des stratégies de groupe (GPO)"/>
+
+      <card-component title="Serveur d'application"
+                      image="mdi:number-5-circle"
+                      description="lancement des application exécutable directement depuis le serveur"/>
+
+    </div>
+  </div>
+
+</template>
+
+<style scoped lang="scss">
+.content{
+  margin: 150px 20px;
+  @media (max-width: 920px) {
+    margin: 30px 20px;
+  }
+}
+.card-f-wraper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px 80px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  @media (max-width: 920px) {
+    margin: 20px 20px;
+  }
+}
+</style>

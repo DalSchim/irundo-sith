@@ -1,5 +1,5 @@
 <template>
-<point-nav-componenet/>
+
   <header class="home" id="notre-solutions">
     <div class="description">
       <div class="titre">
@@ -26,7 +26,46 @@
       <button-component class="buton" color="white" text="En savoir plus" path="/about"></button-component>
     </div>
   </header>
-  <tab-c/>
+  <section>
+    <div class="tab-buttons" id="nos-fonctionnalites">
+      <div class="card-wrapper">
+        <router-link class="tab" to="fonctionnalite1">
+          <div class="card">
+            <h3> serveurs hebergés</h3>
+            <p>La solution repose sur des services en data-center pour une gestion performante</p>
+          </div>
+        </router-link>
+        <router-link class="tab" to="fonctionnalite2">
+          <div class="card">
+            <h3>Serveurs Locaux</h3>
+            <p>Une réplication pour offrir des services spécifiques ainsi qu'une haute disponibilité</p>
+          </div>
+        </router-link>
+        <router-link class="tab" to="fonctionnalite3">
+          <div class="card">
+            <h3>Administration</h3>
+            <p>Une interface visant a gérer, configurer, maintenir, et surveiller les serveurs rattachés</p>
+          </div>
+        </router-link>
+        <router-link class="tab" to="fonctionnalite4">
+          <div class="card">
+            <h3>Support</h3>
+            <p>Surveiller et gérer vos appareils réseau sans agent ou client</p>
+          </div>
+        </router-link>
+      </div>
+    </div>
+    <div class="tab-content">
+
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component"/>
+        </transition>
+      </router-view>
+
+    </div>
+
+  </section>
   <section id="nos-objectifs">
     <div class="container">
       <div class="wrapper">
@@ -37,11 +76,10 @@
           <h2>Nos objectifs</h2>
           <ul>
             <li>Apporter une solution disruptive, libre et évolutive de centralisation de serveurs</li>
-            <li>Développée pour les besoins des équipes qui doivent gérer des solutions éducatives en multi-sites.</li>
-            <li>Mettre en place une démarche numérique responsable</li>
-            <li>Basé sur un produit unique éprouvé (650 serveurs en production)</li>
-            <li>Une garantie de pérennité, une reprise d’actifs possible.</li>
-            <li>Intégration d'un cloud souverain</li>
+            <li>Offrir un  produit développé pour les besoins des équipes qui doivent gérer des solutions éducatives en multi-sites.</li>
+            <li>Aider à  mettre en place une démarche numérique responsable</li>
+            <li>Garantir  le fonctionnement grâce à un produit unique éprouvé (650 serveurs en production)</li>
+            <li>Permettre  l'utilisation d'un cloud souverain</li>
           </ul>
         </div>
       </div>
@@ -49,19 +87,14 @@
   </section>
   <slider-component/>
 </template>
-
 <script>
-
-
 import ButtonComponent from "@/components/ButtonCoponent.vue";
 import SliderComponent from "@/components/SliderComponent.vue";
 import SplineComponent from "@/components/SplineComponent.vue";
-import TabC from "@/components/tab/TabC.vue";
-import PointNavComponenet from "@/components/PointNavComponenet.vue";
 
 export default {
   name: 'HomeView',
-  components: {PointNavComponenet, TabC, SplineComponent, SliderComponent, ButtonComponent},
+  components: {SplineComponent, SliderComponent, ButtonComponent},
   beforeRouteUpdate(to, from, next) {
     // Vérifiez si la route actuelle a une ancre
     if (to.hash) {
@@ -83,6 +116,79 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.tab {
+  text-decoration: none;
+}
+
+fade-enter-from, fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+
+
+
+
+.tab-buttons {
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -80px;
+  width: 100%;
+  @media screen and (max-width: 920px) {
+    position: static;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: black;
+  width: 100%;
+
+  .card {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    max-height: 305px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+    h3 {
+
+      font-family: Orbitron, sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #283783;
+    }
+
+    p {
+
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 1rem;
+      color: #283783;
+    }
+  }
+
+}
+
+@media screen and (max-width: 920px) {
+  .card-wrapper {
+    padding: 80px 30px;
+
+  }
+}
+
 
 .spline {
   width: 100%;
@@ -214,6 +320,7 @@ export default {
           margin-left: 16px;
         }
       }
+
       .image-qsn {
         width: 40%;
         max-width: 46%;

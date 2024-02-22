@@ -10,20 +10,26 @@ export default {
   data() {
     return {
       hiden: true,
+      show: false
     }
-
   },
+
   methods: {
     scrolltoid() {
-      const element = document.getElementById('nos-fonctionnalites');
-      const offset = 100;  // Décalage de 32 pixels
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: 'smooth'
+      this.$nextTick(() => {
+        const element = document.getElementById('nos-fonctionnalites');
+
+        if (element) {
+          const offset = 100;  // Décalage de 100 pixels
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+
+          window.scrollTo({
+            top: elementPosition - offset,
+            behavior: "smooth"
+          });
+        }
       });
     },
-
 
     toggleNav() {
       this.hiden = !this.hiden;
@@ -37,6 +43,21 @@ export default {
     closeNav() {
       this.hiden = true;
     },
+    indiv() {
+      this.show = true;
+    },
+    outdiv() {
+      this.show = false;
+    }
+
+
+
+
+  //__________
+
+
+
+
 
   },
   mounted() {
@@ -46,10 +67,7 @@ export default {
         this.closeNav();
       });
     });
-
-
     // si le lien est #nos-fonctionnalites on scroll vers la section 100 px audessus
-
 
 
     if (this.isMobile()) {
@@ -101,16 +119,19 @@ export default {
           </li>
 
           <li>
-            <div>
-              <router-link @click="scrolltoid" to="/#nos-fonctionnalites">Nos objectifs</router-link>
-
+            <div class="links" @mouseover="indiv" @mouseleave="outdiv">
+              <router-link @click="scrolltoid" to="/#nos-fonctionnalites">Nos fonctionalites</router-link>
+              <div class="dropdown" v-if="show">
+                <router-link @click="scrolltoid" class="link" to="/fonctionnalite1#nos-fonctionnalites">Serveur hebergés</router-link>
+                <router-link @click="scrolltoid" class="link" to="/fonctionnalite2#nos-fonctionnalites">Serveurs Locaux</router-link>
+                <router-link @click="scrolltoid" class="link" to="/fonctionnalite3#nos-fonctionnalites">Administration</router-link>
+                <router-link @click="scrolltoid" class="link" to="/fonctionnalite4#nos-fonctionnalites">Support</router-link>
+              </div>
             </div>
           </li>
-
           <li>
             <router-link class="link" to="/#nos-objectifs">Nos objectifs</router-link>
           </li>
-
           <li>
             <router-link class="link" to="/#nos-partenaires">Nos partenaires</router-link>
           </li>
@@ -124,11 +145,29 @@ export default {
 
 <style scoped lang="scss">
 
+.links{
+  @media screen  and (max-width: 920px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.dropdown{
+  background-color: rgba(0, 0, 0, 0.56);
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 920px) {
+    position: static;
+
+  }
+}
+
 .link {
   text-decoration: none;
 
 }
-
 
 .burger {
   display: none;
@@ -151,6 +190,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.56);
   height: 70px;
   width: 100vw;
+
   &.cache {
     transform: translateY(-100%);
   }
