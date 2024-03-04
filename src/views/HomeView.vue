@@ -165,8 +165,12 @@ fade-enter-from, fade-leave-active {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #283783;
+    transition: all 0.3s ease;
 
-
+    &:hover {
+     transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
     h3 {
 
       font-family: Orbitron, sans-serif;
@@ -174,12 +178,10 @@ fade-enter-from, fade-leave-active {
       font-size: 1.5rem;
 
     }
-
     p {
 
       font-family: "Plus Jakarta Sans", sans-serif;
       font-size: 1rem;
-
     }
   }
 
