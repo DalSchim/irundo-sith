@@ -73,25 +73,9 @@ router.beforeEach((to, from, next) => {
     }
     next();
 });
-router.beforeEach((to, from, next) => {
-    // Check if the destination route is the root route
-    const isReturningToRoot = to.path === '/';
 
-    // Check if the previous route is either /form or /qui-sommes-nous
-    const isComingFromSpecificRoutes = from.path === '/form' || from.path === '/qui-sommes-nous';
 
-    if (isReturningToRoot && isComingFromSpecificRoutes) {
-        // Scroll to the top of the page after a delay
-        setTimeout(() => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Optional: Add smooth scrolling behavior
-            });
-        }, 50);
-    }
 
-    next();
-});
 
 
 
