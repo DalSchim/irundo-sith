@@ -49,35 +49,50 @@ router.afterEach((to) => {
     if (routesWithScrollTop.includes(to.path)) {
         setTimeout(() => {
             window.scrollTo(0, 0);
-        },50);
+        }, 50);
     }
 });
 
 // scroll to #fonctionnalite si la route est fonctionnalite1#nos-fonctionnalites au dessu de 100px
 router.beforeEach((to, from, next) => {
     if (to.hash === '#nos-fonctionnalites') {
-        setTimeout(() => {
-            const targetElement = document.querySelector('#nos-fonctionnalites');
 
-            if (targetElement) {
-                const targetPosition = targetElement.offsetTop - 100;
-                if (targetPosition < 0) {
-                    return;
+        // si  la media query est mobile
+        if (window.innerWidth < 768) {
+            setTimeout(() => {
+                const targetElement2 = document.querySelector('#content');
+                if (targetElement2) {
+                    const targetPosition = targetElement2.offsetTop - 100;
+                    if (targetPosition < 0) {
+                        return;
+                    }
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth' // Optional: Add smooth scrolling behavior
+                    });
                 }
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth' // Optional: Add smooth scrolling behavior
-                });
             }
-        }, 50);
+                , 50);
+
+        } else {
+            setTimeout(() => {
+                const targetElement = document.querySelector('#nos-fonctionnalites');
+
+                if (targetElement) {
+                    const targetPosition = targetElement.offsetTop - 100;
+                    if (targetPosition < 0) {
+                        return;
+                    }
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth' // Optional: Add smooth scrolling behavior
+                    });
+                }
+            }, 50);
+        }
     }
     next();
 });
-
-
-
-
-
 
 
 export default router

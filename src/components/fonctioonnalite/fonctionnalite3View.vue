@@ -8,9 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="content"  ref="content2" id="content-2"
-       key="2">
-
+  <div class="content" id="content" >
     <div class="card-f-wraper">
       <card-component title="Déploiment automatique d'applications "
                       image="fluent--tasks-app-28-regular"

@@ -8,8 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="content"  ref="content1" id="content-1"
-       key="1">
+  <div class="content"  id="content" key="1">
 
     <div class="card-f-wraper">
 

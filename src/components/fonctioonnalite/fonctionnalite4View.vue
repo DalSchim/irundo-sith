@@ -9,7 +9,7 @@ export default {
 
 <template>
 
-  <div class="content">
+  <div class="content" id="content">
     <div class="card-f-wraper">
       <card-component title="Support à distance"
                       image="streamline--customer-support-1"

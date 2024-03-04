@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <div class="content"  ref="content0" id="content-0" key="0">
+  <div class="content"  ref="content0" id="content"  key="0">
     <div class="card-f-wraper">
       <card-component title="Controle domaine"
                       image="mdi--domain"
