@@ -45,13 +45,13 @@ export default {
   h3 {
     font-family: Orbitron, sans-serif;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 18px;
     color: #283783;
   }
 
   p {
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 14px;
     color: #283783;
   }
 

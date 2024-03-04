@@ -11,7 +11,7 @@ export default {
 <template>
   <div class="content"  ref="content0" id="content"  key="0">
     <div class="card-f-wraper">
-      <card-component title="Controle domaine"
+      <card-component title="Contrôleur de domaine"
                       image="mdi--domain"
                       description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (GPEI / Pronote / EDT  / Siecle / STS / ENT)"/>
 

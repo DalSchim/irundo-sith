@@ -27,13 +27,13 @@
       <div class="card-wrapper">
         <router-link class="tab" to="/fonctionnalite1#nos-fonctionnalites">
           <div class="card">
-            <h3> serveurs hebergés</h3>
-            <p>La solution repose sur des services en data-center pour une gestion performante</p>
+            <h3> Serveurs hébergés</h3>
+            <p>Une solution reposant sur des services en data-center pour une performance maximum</p>
           </div>
         </router-link>
         <router-link class="tab" to="/fonctionnalite2#nos-fonctionnalites">
           <div class="card">
-            <h3>Serveurs Locaux</h3>
+            <h3>Serveurs locaux</h3>
             <p>Une réplication pour offrir des services spécifiques ainsi qu'une haute disponibilité</p>
           </div>
         </router-link>
