@@ -1,17 +1,8 @@
 <script>
-import {Application} from '@splinetool/runtime';
 
 export default {
   name: 'SplineComponent',
-  mounted() {
-    async function loadSpline() {
-      const canvas = document.getElementById('canvas3d');
-      const app = new Application(canvas);
-      app.load('https://prod.spline.design/Jm3nh-nLnnSa-uKk/scene.splinecode');
-    }
-    loadSpline()
 
-  },
 
 
 }
@@ -21,7 +12,7 @@ export default {
 <template>
   <div class="spline-containe">
     <div class="filter"></div>
-    <canvas id="canvas3d"></canvas>
+    <img src="../../public/Img/bg.png" alt="">
   </div>
 </template>
 <style scoped lang="scss">
@@ -33,7 +24,8 @@ export default {
   margin: 0 auto;
   position: relative;
 
-  canvas {
+  img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }

@@ -21,33 +21,29 @@
     <div class="spline">
       <spline-component/>
     </div>
-    <div class="buton-link">
-      <button-component class="buton" color="white" text="Contact" path="/form"></button-component>
-      <button-component class="buton" color="white" text="En savoir plus" path="/about"></button-component>
-    </div>
   </header>
   <section>
     <div class="tab-buttons" id="nos-fonctionnalites">
       <div class="card-wrapper">
-        <router-link class="tab" to="fonctionnalite1">
+        <router-link class="tab" to="/fonctionnalite1#nos-fonctionnalites">
           <div class="card">
             <h3> serveurs hebergés</h3>
             <p>La solution repose sur des services en data-center pour une gestion performante</p>
           </div>
         </router-link>
-        <router-link class="tab" to="fonctionnalite2">
+        <router-link class="tab" to="/fonctionnalite2#nos-fonctionnalites">
           <div class="card">
             <h3>Serveurs Locaux</h3>
             <p>Une réplication pour offrir des services spécifiques ainsi qu'une haute disponibilité</p>
           </div>
         </router-link>
-        <router-link class="tab" to="fonctionnalite3">
+        <router-link class="tab" to="/fonctionnalite3#nos-fonctionnalites">
           <div class="card">
             <h3>Administration</h3>
             <p>Une interface visant a gérer, configurer, maintenir, et surveiller les serveurs rattachés</p>
           </div>
         </router-link>
-        <router-link class="tab" to="fonctionnalite4">
+        <router-link class="tab" to="/fonctionnalite4#nos-fonctionnalites">
           <div class="card">
             <h3>Support</h3>
             <p>Surveiller et gérer vos appareils réseau sans agent ou client</p>
@@ -120,6 +116,11 @@ export default {
   text-decoration: none;
 }
 
+.tab.router-link-active .card {
+  background-color: #283783;
+  color: white;
+}
+
 fade-enter-from, fade-leave-active {
   transition: opacity 0.5s;
 }
@@ -157,11 +158,13 @@ fade-enter-from, fade-leave-active {
     align-items: center;
     gap: 20px;
     height: 100%;
+    text-align: center;
     max-height: 305px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #283783;
 
 
     h3 {
@@ -169,14 +172,14 @@ fade-enter-from, fade-leave-active {
       font-family: Orbitron, sans-serif;
       font-weight: 700;
       font-size: 1.5rem;
-      color: #283783;
+
     }
 
     p {
 
       font-family: "Plus Jakarta Sans", sans-serif;
       font-size: 1rem;
-      color: #283783;
+
     }
   }
 
