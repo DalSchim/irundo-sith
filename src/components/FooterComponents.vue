@@ -24,7 +24,7 @@ export default {
             <li><router-link  to="/#nos-fonctionnalites">Nos fonctionalites</router-link></li>
             <li><router-link to="/qui-sommes-nous">Qui sommes-nous</router-link></li>
             <li><router-link to="/#nos-objectifs">Nos objectifs</router-link></li>
-            <li><router-link to="/#nos-partenaires">Nos objectifs</router-link></li>
+            <li><router-link to="/#nos-partenaires">Nos partenaires</router-link></li>
           </ul>
         </div>
         <div class="buton">
