@@ -65,9 +65,9 @@
           <ul>
             <li>Apporter une solution disruptive, libre et évolutive de centralisation de serveurs</li>
             <li>Offrir un produit développé pour les besoins des équipes qui doivent gérer des solutions éducatives en
-              multi-sites.
+              multi-sites.(avec MCO performant et avantageux)
             </li>
-            <li>Aider à mettre en place une démarche numérique responsable</li>
+            <li>Aider à mettre en place une démarche numérique responsable dans le  respect du SDET et conforme du RGPD</li>
             <li>Garantir le fonctionnement grâce à un produit unique éprouvé (650 serveurs en production)</li>
             <li>Permettre l'utilisation d'un cloud souverain</li>
           </ul>
