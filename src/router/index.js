@@ -35,13 +35,65 @@ const routes = [
     {
         path: '/qui-sommes-nous',
         name: 'qui-sommes-nous',
-        component: () => import(/* webpackChunkName: "qui-sommes-nous" */ '../views/pages/QuiSommeNousView.vue')
+        component: () => import(/* webpackChunkName: "qui-sommes-nous" */ '../views/pages/QuiSommeNousView.vue'),
     }
 ]
-
+// crée un scroll to top pour les route qui sommes nous et form
 const router = createRouter({
     history: createWebHistory(),
     routes,
+});
 
-})
+router.afterEach((to) => {
+    const routesWithScrollTop = ['/form', '/qui-sommes-nous'];
+    if (routesWithScrollTop.includes(to.path)) {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        },50);
+    }
+});
+
+// scroll to #fonctionnalite si la route est fonctionnalite1#nos-fonctionnalites au dessu de 100px
+router.beforeEach((to, from, next) => {
+    if (to.hash === '#nos-fonctionnalites') {
+        setTimeout(() => {
+            const targetElement = document.querySelector('#nos-fonctionnalites');
+
+            if (targetElement) {
+                const targetPosition = targetElement.offsetTop - 100;
+                if (targetPosition < 0) {
+                    return;
+                }
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth' // Optional: Add smooth scrolling behavior
+                });
+            }
+        }, 50);
+    }
+    next();
+});
+router.beforeEach((to, from, next) => {
+    // Check if the destination route is the root route
+    const isReturningToRoot = to.path === '/';
+
+    // Check if the previous route is either /form or /qui-sommes-nous
+    const isComingFromSpecificRoutes = from.path === '/form' || from.path === '/qui-sommes-nous';
+
+    if (isReturningToRoot && isComingFromSpecificRoutes) {
+        // Scroll to the top of the page after a delay
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Optional: Add smooth scrolling behavior
+            });
+        }, 50);
+    }
+
+    next();
+});
+
+
+
+
 export default router

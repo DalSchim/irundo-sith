@@ -1,9 +1,7 @@
 <script>
-import {Icon} from '@iconify/vue';
 
 export default {
   name: 'CardComponent',
-  components: {Icon},
   props: {
     title: String,
     description: String,
@@ -15,7 +13,10 @@ export default {
 
 <template>
   <div class="cardf">
-    <Icon :icon="image" width="64px"/>
+    <img
+        :src="require(`../../public/icon/${image}.svg`)"
+        :alt="title"
+    >
     <h3>{{ title }}</h3>
     <p>{{ description }}</p>
   </div>
@@ -37,8 +38,8 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 42px;
+    height: 42px;
   }
 
   h3 {

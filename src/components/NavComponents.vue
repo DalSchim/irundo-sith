@@ -15,22 +15,6 @@ export default {
   },
 
   methods: {
-    scrolltoid() {
-      this.$nextTick(() => {
-        const element = document.getElementById('nos-fonctionnalites');
-
-        if (element) {
-          const offset = 100;  // Décalage de 100 pixels
-          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-
-          window.scrollTo({
-            top: elementPosition - offset,
-            behavior: "smooth"
-          });
-        }
-      });
-    },
-
     toggleNav() {
       this.hiden = !this.hiden;
     },
@@ -49,15 +33,6 @@ export default {
     outdiv() {
       this.show = false;
     }
-
-
-
-
-  //__________
-
-
-
-
 
   },
   mounted() {

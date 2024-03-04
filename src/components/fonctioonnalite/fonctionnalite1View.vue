@@ -12,27 +12,27 @@ export default {
   <div class="content"  ref="content0" id="content-0" key="0">
     <div class="card-f-wraper">
       <card-component title="Controle domaine"
-                      image="mdi:number-1-circle"
+                      image="mdi--domain"
                       description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (GPEI / Pronote / EDT  / Siecle / STS / ENT)"/>
 
       <card-component title="Serveur de Sauvegarde"
-                      image="mdi:number-2-circle"
+                      image="clarity--backup-solid"
                       description="Serveur de sauvegarde pour une reprise d'activité rapide des serveurs locaux et des serveurs hebergés"/>
 
       <card-component title="Serveur DHCP"
-                      image="mdi:number-3-circle"
+                      image="mdi--ip-network-outline"
                       description="Définition des plages IP des serveurs locaux"/>
 
       <card-component title="Serveur DNS"
-                      image="mdi:number-4-circle"
+                      image="eos-icons--dns"
                       description=" Serveur DNS pour les serveurs locaux et les serveurs hebergés "/>
 
       <card-component title="Serveur Cloud"
-                      image="mdi:number-5-circle"
+                      image="tabler--cloud-upload"
                       description="Hebergement des données-échanges des élèves et des professeurs"/>
 
       <card-component title="Serveur de métriques"
-                      image="mdi:number-6-circle"
+                      image="material-symbols--health-metrics-outline-rounded"
                       description="Permet de collecter et d'aggreger des metriques pour faciliter  la gestion  de l'activité informatique des serveurs"/>
     </div>
   </div>

@@ -20,12 +20,11 @@ export default {
         <div class="info">
           <h2>Irundo</h2>
           <ul>
-            <li>Accueil</li>
-            <li>
-              <router-link to="/qui-sommes-nous">Qui sommes-nous</router-link>
-            </li>
-            <li>Nos objectifs</li>
-            <li>Nos solutions</li>
+             <li><router-link  to="/#notre-solutions">La solution</router-link></li>
+            <li><router-link  to="/#nos-fonctionnalites">Nos fonctionalites</router-link></li>
+            <li><router-link to="/qui-sommes-nous">Qui sommes-nous</router-link></li>
+            <li><router-link to="/#nos-objectifs">Nos objectifs</router-link></li>
+            <li><router-link to="/#nos-partenaires">Nos objectifs</router-link></li>
           </ul>
         </div>
         <div class="buton">
@@ -43,7 +42,6 @@ export default {
   </footer>
 </template>
 <style scoped lang="scss">
-
 
 footer {
   padding: 80px 30px;
@@ -106,6 +104,33 @@ footer {
 
       li {
         list-style: none;
+        a{
+          text-decoration: none;
+          color: #283783;
+          font-size: 16px;
+          font-family: Orbitron, sans-serif;
+          font-weight: 600;
+          position: relative;
+          transition: all 0.3s ease;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #283783;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+          }
+          &:hover {
+            &:after {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
       }
     }
   }

@@ -12,16 +12,19 @@ export default {
   <div class="content">
     <div class="card-f-wraper">
       <card-component title="Support à distance"
-                      image="mdi:number-1-circle"
+                      image="streamline--customer-support-1"
                       description="Éffectuez la maintenance, vérifiez les problèmes et fournissez une assitance rapide."/>
 
       <card-component title="Réinstallation de poste"
-                      image="mdi:number-2-circle"
+                      image="gala--display-reaload"
                       description="Gagnez du temps et économisez des déplacements grâce à notre solution de réinstallation et d'intégration au domaine des postes clients."/>
 
       <card-component title="Automatisation et maintenance"
-                      image="mdi:number-3-circle"
+                      image="mdi--account-wrench"
                       description="Augmentez la productivité à l'aide de l'automatisation des tâches reproductibles"/>
+      <card-component title="Sécurité"
+                      image="mdi--shield-user"
+                      description="Gardez le contrôle sur vos infrastructures."/>
     </div>
   </div>
 </template>

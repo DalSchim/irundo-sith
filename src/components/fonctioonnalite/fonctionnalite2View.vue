@@ -13,26 +13,25 @@ export default {
 
     <div class="card-f-wraper">
 
-      <card-component title="Controleur de domaine"
-                      image="mdi:number-1-circle"
+      <card-component title="Replication AD"
+                      image="carbon--directory-domain"
                       description="L'annuaire est répliqué sur le contrôleur de domaine local des établissements pour une question de résilience"/>
 
       <card-component title="Serveur de fichiers"
-                      image="mdi:number-2-circle"
+                      image="material-symbols--folder-data-outline"
                       description="Serveur de fichiers SMB, NFS4 avec séparation des réseaux administratif et pédagogique"/>
 
       <card-component title="Reservation DHCP et ip"
-                      image="mdi:number-3-circle"
+                      image="carbon--tcp-ip-service"
                       description="DHCP et réservations IP Multi-réseaux et multi-VLANs"/>
 
       <card-component title="Serveur impression"
-                      image="mdi:number-4-circle"
+                      image="streamline--printer"
                       description="Serveur d'impression SMB/CUPS. Les imprimantes sont déployées de façon native avec des stratégies de groupe (GPO)"/>
 
       <card-component title="Serveur d'application"
-                      image="mdi:number-5-circle"
+                      image="healthicons--desktop-app-outline"
                       description="lancement des application exécutable directement depuis le serveur"/>
-
     </div>
   </div>
 
