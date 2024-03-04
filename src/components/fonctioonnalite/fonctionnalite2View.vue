@@ -20,17 +20,17 @@ export default {
                       image="material-symbols--folder-data-outline"
                       description="Serveur de fichiers SMB, NFS4 avec séparation des réseaux administratif et pédagogique"/>
 
-      <card-component title="Reservation DHCP et ip"
+      <card-component title="Réservation DHCP et IP"
                       image="carbon--tcp-ip-service"
-                      description="DHCP et réservations IP Multi-réseaux et multi-VLANs"/>
+                      description="DHCP et réservations IP multi-réseaux et multi-VLANs"/>
 
-      <card-component title="Serveur impression"
+      <card-component title="Serveur d'impression"
                       image="streamline--printer"
                       description="Serveur d'impression SMB/CUPS. Les imprimantes sont déployées de façon native avec des stratégies de groupe (GPO)"/>
 
-      <card-component title="Serveur d'application"
+      <card-component title="Serveur d'applications"
                       image="healthicons--desktop-app-outline"
-                      description="lancement des application exécutable directement depuis le serveur"/>
+                      description="Lancement des applications exécutables directement depuis le serveur"/>
     </div>
   </div>
 

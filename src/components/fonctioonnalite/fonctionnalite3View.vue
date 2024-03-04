@@ -12,19 +12,19 @@ export default {
     <div class="card-f-wraper">
       <card-component title="Déploiment automatique d'applications "
                       image="fluent--tasks-app-28-regular"
-                      description="Déploiement automatique d’applications pédagogiques. Plus de 200 applications sont disponibles et maintenues à jour."/>
+                      description="Déploiement automatique d’applications pédagogiques. Plus de 200 applications sont disponibles et maintenues à jour"/>
 
       <card-component title="Gestion des parcs et des salles"
                       image="icon-park-outline--setting-computer"
-                      description="Inventaire des machines, état des logiciels installés, déploiement et configuration de nouveaux appareils."/>
+                      description="Inventaire des machines, état des logiciels installés, déploiement et configuration de nouveaux appareils"/>
 
       <card-component title="Configuration des droits et permissions"
                       image="icon-park-outline--permissions"
-                      description="Configuration des rôles et droits sur les différents parcs de machines pour des utilisateurs / groupes d'utilisateurs."/>
+                      description="Configuration des rôles et droits sur les différents parcs de machines pour des utilisateurs / groupes d'utilisateurs"/>
 
       <card-component title="Configuration des espaces de travail"
                       image="fluent--desktop-edit-20-regular"
-                      description="Configuration simplifiée des profils et des stations via l'interface Web. Aucun client ou agent n’est à déployer sur les postes."/>
+                      description="Configuration simplifiée des profils et des stations via l'interface Web. Aucun client ou agent n’est à déployer sur les postes"/>
 
       <card-component title="Ergonomie et simplicité"
                       image="gala--display-eye"
@@ -32,7 +32,7 @@ export default {
 
       <card-component title="Green IT"
                       image="cryptocurrency--ppc"
-                      description="Architecture réseau scalable, gestion des dispositifs d'économie d'énergie, démarrage automatique pour les mises à jour à horaire décalé, extinction automatique des postes "/>
+                      description="Architecture réseau scalable, gestion des dispositifs d'économie d'énergie, démarrage automatique pour les mises à jour à horaire décalé, extinction automatique des postes"/>
 
       <card-component title="Déploiement automatique de poste"
                       image="icon-park-outline--download-computer"

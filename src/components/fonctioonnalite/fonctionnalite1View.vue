@@ -13,7 +13,7 @@ export default {
     <div class="card-f-wraper">
       <card-component title="Contrôleur de domaine"
                       image="mdi--domain"
-                      description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (GPEI / Pronote / EDT  / Siecle / STS / ENT)"/>
+                      description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (GPEI / Pronote / EDT  / Siècle / STS / ENT)"/>
 
       <card-component title="Serveur de Sauvegarde"
                       image="clarity--backup-solid"
@@ -29,11 +29,11 @@ export default {
 
       <card-component title="Serveur Cloud"
                       image="tabler--cloud-upload"
-                      description="Hebergement des données-échanges des élèves et des professeurs"/>
+                      description="Hébergement des données-échanges des élèves et des professeurs"/>
 
       <card-component title="Serveur de métriques"
                       image="material-symbols--health-metrics-outline-rounded"
-                      description="Permet de collecter et d'aggreger des metriques pour faciliter  la gestion  de l'activité informatique des serveurs"/>
+                      description="Permet de collecter et d'agréger des métriques pour faciliter  la gestion  de l'activité informatique des serveurs"/>
     </div>
   </div>
 

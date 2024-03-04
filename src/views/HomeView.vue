@@ -5,16 +5,8 @@
       <div class="titre">
         <h1>Irundo : une alternative pour le SI des collectivités</h1>
         <div class="desciption">
-          <p>Irundo est une solution open source libre et souveraine qui a pour but d’offrir une interface web
-            centralisée de déploiement et d’infogérance de l'ensemble des établissements scolaires de la
-            collectivité.</p>
-          <br>
-          <ul>
-            <li>Conformité RGPD</li>
-            <li>Respect du schéma directeur des ENT (SDET)</li>
-            <li>Sécurisation de l'environnement IT pour la collectivité</li>
-            <li>MCO Performant, fiable et sécurisé</li>
-          </ul>
+          <p>Irundo est une solution souvraine open source. Son interface web permet la centralisations et  l'infogérance de l'ensemble du SI des établissements scolaires de la collectivité.
+          </p>
         </div>
       </div>
     </div>
@@ -40,7 +32,7 @@
         <router-link class="tab" to="/fonctionnalite3#nos-fonctionnalites">
           <div class="card">
             <h3>Administration</h3>
-            <p>Une interface visant a gérer, configurer, maintenir, et surveiller les serveurs rattachés</p>
+            <p>Une interface pour gérer, configurer, maintenir, et surveiller les serveurs rattachés</p>
           </div>
         </router-link>
         <router-link class="tab" to="/fonctionnalite4#nos-fonctionnalites">
@@ -72,10 +64,12 @@
           <h2>Nos objectifs</h2>
           <ul>
             <li>Apporter une solution disruptive, libre et évolutive de centralisation de serveurs</li>
-            <li>Offrir un  produit développé pour les besoins des équipes qui doivent gérer des solutions éducatives en multi-sites.</li>
-            <li>Aider à  mettre en place une démarche numérique responsable</li>
-            <li>Garantir  le fonctionnement grâce à un produit unique éprouvé (650 serveurs en production)</li>
-            <li>Permettre  l'utilisation d'un cloud souverain</li>
+            <li>Offrir un produit développé pour les besoins des équipes qui doivent gérer des solutions éducatives en
+              multi-sites.
+            </li>
+            <li>Aider à mettre en place une démarche numérique responsable</li>
+            <li>Garantir le fonctionnement grâce à un produit unique éprouvé (650 serveurs en production)</li>
+            <li>Permettre l'utilisation d'un cloud souverain</li>
           </ul>
         </div>
       </div>
@@ -126,9 +120,6 @@ fade-enter-from, fade-leave-active {
 }
 
 
-
-
-
 .tab-buttons {
   z-index: 4;
   display: flex;
@@ -168,9 +159,10 @@ fade-enter-from, fade-leave-active {
     transition: all 0.3s ease;
 
     &:hover {
-     transform: scale(1.05);
+      transform: scale(1.05);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
+
     h3 {
 
       font-family: Orbitron, sans-serif;
@@ -178,6 +170,7 @@ fade-enter-from, fade-leave-active {
       font-size: 1.5rem;
 
     }
+
     p {
 
       font-family: "Plus Jakarta Sans", sans-serif;
@@ -228,7 +221,7 @@ fade-enter-from, fade-leave-active {
       padding-top: 64px;
 
       h1 {
-        font-size: 56px;
+        font-size: 32px;
         font-family: Orbitron, sans-serif;
         margin-bottom: 32px;
       }
