@@ -32,21 +32,30 @@ export default {
     },
     outdiv() {
       this.show = false;
+    },
+
+    closelink(){
+      document.querySelectorAll('.link').forEach(link => {
+        link.addEventListener('click', () => {
+          this.hiden = false;
+        });
+      });
     }
+
+
+
 
   },
   mounted() {
+
     //si on clique sur un lien de la nav on ferme le menu
-    document.querySelectorAll('.link').forEach(link => {
-      link.addEventListener('click', () => {
-        this.hiden = false;
-      });
-    });
+
     // si le lien est #nos-fonctionnalites on scroll vers la section 100 px audessus
 
 
     if (this.isMobile()) {
       this.hiden = false;
+      this.closelink();
     }
 
     if (this.isDesktop()) {
