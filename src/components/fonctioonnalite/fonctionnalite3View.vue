@@ -1,9 +1,10 @@
 <script>
 import CardComponent from "@/components/CardComponent.vue";
+import {Icon} from "@iconify/vue";
 
 export default {
   name: "fonctionnalite1View",
-  components: {CardComponent}
+  components: {Icon, CardComponent}
 }
 </script>
 
@@ -39,6 +40,9 @@ export default {
                       description="Déploiement automatique de Windows 10, 11 et GNU/Linux Debian avec intégration automatisée au domaine des postes"/>
 
     </div>
+    <router-link to="/fonctionnalite3#nos-fonctionnalites" class="buton-link">
+      <Icon width="32px" color="#283783" icon="line-md:chevron-up-circle"/>
+    </router-link>
   </div>
 
 </template>

@@ -8,29 +8,13 @@ export default {
     <div class="info">
       <div class="titre">
         <h1>Qui sommes-nous</h1>
-        <p>Des entrepreneurs spécialisés dans les domaines de l'éducation, des infrastructures, des logiciels et de
-          l'interfaçage collaborent pour mettre en commun leurs compétences ainsi que celles de leurs entreprises dans
-          le cadre d'un projet novateur.</p>
+        <p>Fondée par des entrepreneurs experts en éducation, infrastructures, logiciels et interfaçage, la société Irundo offre une solution disruptive et novatrice.
+          Elle permet une gestion simple et centralisée de solutions éducatives en multi-sites et la maîtrise totale du SI des établissement de la collectivité.
+          Le coeur de l'engagement d'Irundo repose sur des produits développés pour les besoins spécifiques du monde de l'éducation.
+          Aujourd'hui près d'une trentaine de collaborateurs participent à la mise en œuvre des produits Irundo, en interne ou au sein des sociétés partenaires.</p>
       </div>
       <div class="image">
         <img src="../../../public/Img/Coworking-amico.png" alt="">
-      </div>
-    </div>
-  </section>
-  <section class="notre-histoire">
-    <div class="container">
-      <div class="wrapper">
-        <div class="image-qsn">
-          <img src="../../../public/Img/Reading-glasses-bro.svg" alt="notre histoire">
-        </div>
-        <div class="desciption">
-          <h2>Notre histoire</h2>
-          <p>En 2023, Irundo, fondée par des entrepreneurs experts en éducation, infrastructures, logiciels et
-            interfaçage, a créé un projet novateur. Leur objectif est de fournir une solution centralisée, libre et
-            évolutive pour la gestion de solutions éducatives en multi-sites, avec une approche numérique responsable.
-            Ils aspirent à intégrer un cloud souverain tout en garantissant une reprise d'actifs, s'appuyant sur un
-            produit éprouvé avec 650 serveurs en production.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -38,7 +22,6 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,9 +118,11 @@ export default {
 
 @media screen and (max-width: 920px) {
   .hero {
+    height: 140vh;
     .info {
       flex-direction: column;
       gap: 20px;
+
 
       .titre {
         width: 100%;

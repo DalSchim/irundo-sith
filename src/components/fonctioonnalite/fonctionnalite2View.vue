@@ -1,9 +1,10 @@
 <script>
 import CardComponent from "@/components/CardComponent.vue";
+import {Icon} from "@iconify/vue";
 
 export default {
   name: "fonctionnalite1View",
-  components: {CardComponent}
+  components: {Icon, CardComponent}
 }
 </script>
 
@@ -30,8 +31,10 @@ export default {
                       image="healthicons--desktop-app-outline"
                       description="Lancement des applications exécutables directement depuis le serveur"/>
     </div>
+    <router-link to="/fonctionnalite2#nos-fonctionnalites" class="buton-link">
+      <Icon width="32px" color="#283783" icon="line-md:chevron-up-circle"/>
+    </router-link>
   </div>
-
 </template>
 
 <style scoped lang="scss">

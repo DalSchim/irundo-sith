@@ -1,11 +1,11 @@
 <template>
-
   <header class="home" id="notre-solutions">
     <div class="description">
       <div class="titre">
         <h1>Irundo : une alternative pour le SI des collectivités</h1>
         <div class="desciption">
-          <p>Irundo est une solution souveraine open source. Son interface web permet la centralisations et l'infogérance
+          <p>Irundo est une solution souveraine open source. Son interface web permet la centralisations et
+            l'infogérance
             de l'ensemble du SI des établissements scolaires de la collectivité.
           </p>
         </div>
@@ -51,9 +51,9 @@
           <component :is="Component"/>
         </transition>
       </router-view>
-
     </div>
-
+    <div>
+    </div>
   </section>
   <section id="nos-objectifs">
     <div class="container">
@@ -83,10 +83,11 @@
 import ButtonComponent from "@/components/ButtonCoponent.vue";
 import SliderComponent from "@/components/SliderComponent.vue";
 import SplineComponent from "@/components/SplineComponent.vue";
+import {Icon} from "@iconify/vue";
 
 export default {
   name: 'HomeView',
-  components: {SplineComponent, SliderComponent, ButtonComponent},
+  components: {Icon, SplineComponent, SliderComponent, ButtonComponent},
   beforeRouteUpdate(to, from, next) {
     // Vérifiez si la route actuelle a une ancre
     if (to.hash) {
