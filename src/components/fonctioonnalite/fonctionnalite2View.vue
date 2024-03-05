@@ -31,9 +31,9 @@ export default {
                       image="healthicons--desktop-app-outline"
                       description="Lancement des applications exécutables directement depuis le serveur"/>
     </div>
-    <router-link to="/fonctionnalite2#nos-fonctionnalites" class="buton-link">
+    <a href="#nos-fonctionnalites" class="buton-link">
       <Icon width="32px" color="#283783" icon="line-md:chevron-up-circle"/>
-    </router-link>
+    </a>
   </div>
 </template>
 

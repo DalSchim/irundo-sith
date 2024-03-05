@@ -27,19 +27,20 @@ export default {
                       image="mdi--shield-user"
                       description="Gardez le contrôle sur vos infrastructures"/>
     </div>
-    <router-link to="/fonctionnalite4#nos-fonctionnalites" class="buton-link">
+    <a href="#nos-fonctionnalites" class="buton-link">
       <Icon width="32px" color="#283783" icon="line-md:chevron-up-circle"/>
-    </router-link>
+    </a>
   </div>
 </template>
 
 <style scoped lang="scss">
-.content{
+.content {
   margin: 150px 20px;
   @media (max-width: 920px) {
     margin: 30px 20px;
   }
 }
+
 .card-f-wraper {
   display: flex;
   flex-wrap: wrap;

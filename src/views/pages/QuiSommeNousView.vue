@@ -9,7 +9,7 @@ export default {
       <div class="titre">
         <h1>Qui sommes-nous</h1>
         <p>Fondée par des entrepreneurs experts en éducation, infrastructures, logiciels et interfaçage, la société Irundo offre une solution disruptive et novatrice.
-          Elle permet une gestion simple et centralisée de solutions éducatives en multi-sites et la maîtrise totale du SI des établissement de la collectivité.
+          Elle permet une gestion simple et centralisée de solutions éducatives en multi-sites et la maîtrise totale du SI des établissements de la collectivité.
           Le coeur de l'engagement d'Irundo repose sur des produits développés pour les besoins spécifiques du monde de l'éducation.
           Aujourd'hui près d'une trentaine de collaborateurs participent à la mise en œuvre des produits Irundo, en interne ou au sein des sociétés partenaires.</p>
       </div>
