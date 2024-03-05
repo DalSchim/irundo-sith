@@ -8,10 +8,8 @@ export default {
 </script>
 
 <template>
-  <div class="content"  id="content" key="1">
-
+  <div class="content" id="content" key="1">
     <div class="card-f-wraper">
-
       <card-component title="Replication AD"
                       image="carbon--directory-domain"
                       description="L'annuaire est répliqué sur le contrôleur de domaine local des établissements pour une question de résilience"/>
@@ -37,12 +35,13 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.content{
+.content {
   margin: 150px 20px;
   @media (max-width: 920px) {
     margin: 30px 20px;
   }
 }
+
 .card-f-wraper {
   display: flex;
   flex-wrap: wrap;

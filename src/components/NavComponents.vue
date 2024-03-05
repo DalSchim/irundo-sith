@@ -95,12 +95,12 @@ export default {
 
           <li>
             <div class="links" @mouseover="indiv" @mouseleave="outdiv">
-              <router-link @click="scrolltoid" to="/#nos-fonctionnalites">Nos fonctionalites</router-link>
+              <router-link to="/#nos-fonctionnalites">Nos fonctionalites</router-link>
               <div class="dropdown" v-if="show">
-                <router-link @click="scrolltoid" class="link" to="/fonctionnalite1#nos-fonctionnalites">Serveur hebergés</router-link>
-                <router-link @click="scrolltoid" class="link" to="/fonctionnalite2#nos-fonctionnalites">Serveurs Locaux</router-link>
-                <router-link @click="scrolltoid" class="link" to="/fonctionnalite3#nos-fonctionnalites">Administration</router-link>
-                <router-link @click="scrolltoid" class="link" to="/fonctionnalite4#nos-fonctionnalites">Support</router-link>
+                <router-link class="link" to="/fonctionnalite1#nos-fonctionnalites">Serveur hebergés</router-link>
+                <router-link class="link" to="/fonctionnalite2#nos-fonctionnalites">Serveurs Locaux</router-link>
+                <router-link class="link" to="/fonctionnalite3#nos-fonctionnalites">Administration</router-link>
+                <router-link class="link" to="/fonctionnalite4#nos-fonctionnalites">Support</router-link>
               </div>
             </div>
           </li>
@@ -111,7 +111,6 @@ export default {
             <router-link class="link" to="/#nos-partenaires">Nos partenaires</router-link>
           </li>
           <button-component class="buton link" color="white" text="Contact" path="/form"></button-component>
-
         </ul>
       </nav>
     </div>
@@ -120,14 +119,15 @@ export default {
 
 <style scoped lang="scss">
 
-.links{
-  @media screen  and (max-width: 920px) {
+.links {
+  @media screen and (max-width: 920px) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-.dropdown{
+
+.dropdown {
   background-color: rgba(0, 0, 0, 0.56);
   padding: 20px;
   position: absolute;

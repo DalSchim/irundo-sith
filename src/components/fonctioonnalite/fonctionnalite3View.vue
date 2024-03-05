@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="content" id="content" >
+  <div class="content" id="content">
     <div class="card-f-wraper">
       <card-component title="Déploiment automatique d'applications "
                       image="fluent--tasks-app-28-regular"
@@ -44,12 +44,13 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.content{
+.content {
   margin: 150px 20px;
   @media (max-width: 920px) {
     margin: 30px 20px;
   }
 }
+
 .card-f-wraper {
   display: flex;
   flex-wrap: wrap;
