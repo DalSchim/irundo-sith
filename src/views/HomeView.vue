@@ -66,7 +66,7 @@
           <ul>
             <li>Apporter une solution disruptive, libre et évolutive de centralisation de serveurs</li>
             <li>Offrir un produit développé pour les besoins des équipes qui doivent gérer des solutions éducatives en
-              multi-sites.(avec un MCO compétitif)
+              multi-sites (avec un MCO compétitif)
             </li>
             <li>Aider à mettre en place une démarche numérique responsable dans le respect du SDET et conforme au RGPD
             </li>

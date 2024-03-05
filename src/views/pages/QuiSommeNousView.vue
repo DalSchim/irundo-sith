@@ -123,7 +123,6 @@ export default {
       flex-direction: column;
       gap: 20px;
 
-
       .titre {
         width: 100%;
         text-align: center;
