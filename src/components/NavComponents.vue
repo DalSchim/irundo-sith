@@ -39,7 +39,7 @@ export default {
     //si on clique sur un lien de la nav on ferme le menu
     document.querySelectorAll('.link').forEach(link => {
       link.addEventListener('click', () => {
-        this.closeNav();
+        this.hiden = false;
       });
     });
     // si le lien est #nos-fonctionnalites on scroll vers la section 100 px audessus
@@ -95,7 +95,7 @@ export default {
 
           <li>
             <div class="links" @mouseover="indiv" @mouseleave="outdiv">
-              <router-link to="/#nos-fonctionnalites">Nos fonctionalites</router-link>
+              <router-link class="link" to="/#nos-fonctionnalites">Nos fonctionalites</router-link>
               <div class="dropdown" v-if="show">
                 <router-link class="link" to="/fonctionnalite1#nos-fonctionnalites">Serveur hebergés</router-link>
                 <router-link class="link" to="/fonctionnalite2#nos-fonctionnalites">Serveurs Locaux</router-link>

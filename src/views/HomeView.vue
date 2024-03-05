@@ -5,7 +5,7 @@
       <div class="titre">
         <h1>Irundo : une alternative pour le SI des collectivités</h1>
         <div class="desciption">
-          <p>Irundo est une solution souvraine open source. Son interface web permet la centralisations et l'infogérance
+          <p>Irundo est une solution souveraine open source. Son interface web permet la centralisations et l'infogérance
             de l'ensemble du SI des établissements scolaires de la collectivité.
           </p>
         </div>
@@ -66,9 +66,9 @@
           <ul>
             <li>Apporter une solution disruptive, libre et évolutive de centralisation de serveurs</li>
             <li>Offrir un produit développé pour les besoins des équipes qui doivent gérer des solutions éducatives en
-              multi-sites.(avec MCO performant et avantageux)
+              multi-sites.(avec un MCO compétitif)
             </li>
-            <li>Aider à mettre en place une démarche numérique responsable dans le respect du SDET et conforme du RGPD
+            <li>Aider à mettre en place une démarche numérique responsable dans le respect du SDET et conforme au RGPD
             </li>
             <li>Garantir le fonctionnement grâce à un produit unique éprouvé (650 serveurs en production)</li>
             <li>Permettre l'utilisation d'un cloud souverain</li>

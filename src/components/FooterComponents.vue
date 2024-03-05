@@ -7,12 +7,11 @@ export default {
   methods: {
     up() {
       window.scrollTo(0, 0);
-    }
+    },
   }
 }
 </script>
 <template>
-
   <footer>
     <div class="contain">
       <div class="wrappers">
@@ -20,15 +19,27 @@ export default {
         <div class="info">
           <h2>Irundo</h2>
           <ul>
-             <li><router-link  to="/#notre-solutions">La solution</router-link></li>
-            <li><router-link  to="/#nos-fonctionnalites">Nos fonctionalites</router-link></li>
-            <li><router-link to="/qui-sommes-nous">Qui sommes-nous</router-link></li>
-            <li><router-link to="/#nos-objectifs">Nos objectifs</router-link></li>
-            <li><router-link to="/#nos-partenaires">Nos partenaires</router-link></li>
+            <li>
+              <router-link to="/#notre-solutions">La solution</router-link>
+            </li>
+            <li>
+              <router-link to="/#nos-fonctionnalites">Nos fonctionalites</router-link>
+            </li>
+            <li>
+              <router-link to="/#nos-objectifs">Nos objectifs</router-link>
+            </li>
+            <li>
+              <router-link to="/#nos-partenaires">Nos partenaires</router-link>
+            </li>
           </ul>
         </div>
         <div class="buton">
           <button-component color="blue" path="/form" text="contacter-nous"/>
+          <ul class ="footer-2">
+            <li>
+              <router-link to="/qui-sommes-nous">Qui sommes-nous</router-link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -37,7 +48,7 @@ export default {
       <p>© 2024 Irundo. Tous droits réservés.</p>
     </div>
     <div class="ruturn-top">
-      <Icon @click="up" width="64px" color="#283783" icon="line-md:chevron-up-circle"/>
+      <Icon @click="up" width="32px" color="#283783" icon="line-md:chevron-up-circle"/>
     </div>
   </footer>
 </template>
@@ -48,13 +59,7 @@ footer {
   background-color: #f5f7fa;
   color: black;
 
-  .ruturn-top{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    cursor: pointer;
-  }
+
 
   .wrappers {
     display: flex;
@@ -73,6 +78,7 @@ footer {
     display: flex;
     align-self: start;
     justify-content: end;
+    flex-direction: column;
   }
 
   .contain {
@@ -104,7 +110,8 @@ footer {
 
       li {
         list-style: none;
-        a{
+
+        a {
           text-decoration: none;
           color: #283783;
           font-size: 16px;
@@ -112,6 +119,7 @@ footer {
           font-weight: 600;
           position: relative;
           transition: all 0.3s ease;
+
           &:after {
             content: '';
             position: absolute;
@@ -129,6 +137,45 @@ footer {
               transform: scaleX(1);
               transform-origin: left;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-2{
+    margin-top:24px ;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: #283783;
+        font-size: 16px;
+        font-family: Orbitron, sans-serif;
+        font-weight: 600;
+        position: relative;
+        transition: all 0.3s ease;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #283783;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.3s ease;
+        }
+        &:hover {
+          &:after {
+            transform: scaleX(1);
+            transform-origin: left;
           }
         }
       }
@@ -154,9 +201,20 @@ footer {
 
 }
 
+.ruturn-top {
+ display: none;
+}
+
 @media screen and (max-width: 920px) {
 
-
+  .ruturn-top {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+  }
   .down {
     display: none;
   }
@@ -181,10 +239,14 @@ footer {
       object-fit: cover;
     }
 
+
+
+
     .buton {
       display: flex;
       align-self: center;
       justify-content: center;
+      flex-direction: column;
     }
 
     .conatin {
