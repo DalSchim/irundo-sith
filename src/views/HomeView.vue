@@ -4,10 +4,10 @@
       <div class="titre">
         <h1>Irundo : une alternative pour le SI des collectivités</h1>
         <div class="desciption">
-          <p>Irundo est une solution souveraine open source. Son interface web permet la centralisations et
+          <h2>Irundo est une solution souveraine open source. Son interface web permet la centralisations et
             l'infogérance
             de l'ensemble du SI des établissements scolaires de la collectivité.
-          </p>
+          </h2>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
       <div class="card-wrapper" id="cards">
         <router-link class="tab" to="/fonctionnalite1#nos-fonctionnalites">
           <div class="card">
-            <h3> Serveurs hébergés</h3>
+            <h3>Serveurs hébergés</h3>
             <p>Une solution reposant sur des services en data-center pour une performance maximum</p>
           </div>
         </router-link>
@@ -106,6 +106,8 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+
+
 .tab {
   text-decoration: none;
 }
@@ -118,7 +120,6 @@ export default {
 fade-enter-from, fade-leave-active {
   transition: opacity 0.5s;
 }
-
 
 .tab-buttons {
   z-index: 4;
@@ -164,11 +165,9 @@ fade-enter-from, fade-leave-active {
     }
 
     h3 {
-
       font-family: Orbitron, sans-serif;
       font-weight: 700;
       font-size: 1.5rem;
-
     }
 
     p {
@@ -227,7 +226,7 @@ fade-enter-from, fade-leave-active {
       }
 
       h2 {
-        font-size: 38px;
+        font-size: 20px;
         font-family: Orbitron, sans-serif;
         font-weight: 600;
         font-optical-sizing: auto;
