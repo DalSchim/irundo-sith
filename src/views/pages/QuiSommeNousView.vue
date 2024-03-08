@@ -7,7 +7,7 @@ export default {
   <section class="hero">
     <div class="info">
       <div class="titre">
-        <h1>Qui sommes-nous</h1>
+        <h1>Qui sommes-nous ?</h1>
         <p>Fondée par des entrepreneurs experts en éducation, infrastructures, logiciels et interfaçage, la société
           Irundo offre une solution disruptive et novatrice.
           Elle permet une gestion simple et centralisée de solutions éducatives en multi-sites et la maîtrise totale du

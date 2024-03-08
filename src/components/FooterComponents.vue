@@ -37,7 +37,7 @@ export default {
           <button-component color="blue" path="/form" text="contactez-nous"/>
           <ul class="footer-2">
             <li>
-              <router-link to="/qui-sommes-nous">Qui sommes-nous</router-link>
+              <router-link to="/qui-sommes-nous">À propos</router-link>
             </li>
           </ul>
         </div>
