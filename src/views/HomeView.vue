@@ -17,7 +17,7 @@
   </header>
   <section>
     <div class="tab-buttons" id="nos-fonctionnalites">
-      <div class="card-wrapper">
+      <div class="card-wrapper" id="cards">
         <router-link class="tab" to="/fonctionnalite1#nos-fonctionnalites">
           <div class="card">
             <h3> Serveurs hébergés</h3>
@@ -51,8 +51,6 @@
           <component :is="Component"/>
         </transition>
       </router-view>
-    </div>
-    <div>
     </div>
   </section>
   <section id="nos-objectifs">
@@ -105,7 +103,6 @@ export default {
       }
     }
   }
-  //creation  d'un scroll pour chaque #id
 }
 </script>
 <style scoped lang="scss">

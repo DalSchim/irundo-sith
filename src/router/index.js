@@ -6,6 +6,8 @@ import Fonctionnalite1View from "@/components/fonctioonnalite/fonctionnalite1Vie
 import Fonctionnalite3View from "@/components/fonctioonnalite/fonctionnalite3View.vue";
 import Fonctionnalite4View from "@/components/fonctioonnalite/fonctionnalite4View.vue";
 
+
+// Ajoute ici tes routes pour tes views
 const routes = [
     {
         path: '/',
@@ -43,6 +45,9 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 });
+
+
+// scroll to top pour les routes qui sommes nous et form
 
 router.afterEach((to) => {
     const routesWithScrollTop = ['/form', '/qui-sommes-nous'];

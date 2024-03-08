@@ -2,13 +2,11 @@
 
 export default {
   name: 'SplineComponent',
-
-
-
 }
 
 
 </script>
+
 <template>
   <div class="spline-containe">
     <div class="filter"></div>

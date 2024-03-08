@@ -26,27 +26,24 @@
 </template>
 
 <script>
+// import Splide library
 import {Splide, SplideSlide} from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
-
-// or other themes
 import '@splidejs/vue-splide/css/skyblue';
 import '@splidejs/vue-splide/css/sea-green';
-
-// or only core styles
 import '@splidejs/vue-splide/css/core';
 
 export default ({
   name: 'SliderComponent',
+  // import the slider library
   components: {
     Splide,
     SplideSlide,
   },
   methods: {},
-
   setup() {
     return {
-
+      // options for the slider library
       splideOptions: {
         type: 'loop',
         perPage: 3,
@@ -106,7 +103,6 @@ section {
     }
 
     .slide {
-
       img {
         max-width: 100%;
         height: 64px;
@@ -129,5 +125,4 @@ section {
     }
   }
 }
-
 </style>

@@ -8,10 +8,14 @@ export default {
     <div class="info">
       <div class="titre">
         <h1>Qui sommes-nous</h1>
-        <p>Fondée par des entrepreneurs experts en éducation, infrastructures, logiciels et interfaçage, la société Irundo offre une solution disruptive et novatrice.
-          Elle permet une gestion simple et centralisée de solutions éducatives en multi-sites et la maîtrise totale du SI des établissements de la collectivité.
-          Le coeur de l'engagement d'Irundo repose sur des produits développés pour les besoins spécifiques du monde de l'éducation.
-          Aujourd'hui près d'une trentaine de collaborateurs participent à la mise en œuvre des produits Irundo, en interne ou au sein des sociétés partenaires.</p>
+        <p>Fondée par des entrepreneurs experts en éducation, infrastructures, logiciels et interfaçage, la société
+          Irundo offre une solution disruptive et novatrice.
+          Elle permet une gestion simple et centralisée de solutions éducatives en multi-sites et la maîtrise totale du
+          SI des établissements de la collectivité.
+          Le coeur de l'engagement d'Irundo repose sur des produits développés pour les besoins spécifiques du monde de
+          l'éducation.
+          Aujourd'hui près d'une trentaine de collaborateurs participent à la mise en œuvre des produits Irundo, en
+          interne ou au sein des sociétés partenaires.</p>
       </div>
       <div class="image">
         <img src="../../../public/Img/Coworking-amico.png" alt="">
@@ -39,6 +43,7 @@ export default {
 
     .titre {
       width: 50%;
+      padding:  0 20px;
 
       h1 {
         font-family: Orbitron, sans-serif;
@@ -119,6 +124,7 @@ export default {
 @media screen and (max-width: 920px) {
   .hero {
     height: 140vh;
+
     .info {
       flex-direction: column;
       gap: 20px;

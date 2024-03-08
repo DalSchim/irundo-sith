@@ -1,16 +1,15 @@
 <script>
 import CardComponent from "@/components/CardComponent.vue";
-import {Icon} from "@iconify/vue";
 
 
 export default {
   name: "fonctionnalite1View",
-  components: {Icon, CardComponent,}
+  components: {CardComponent,}
 }
 </script>
 
 <template>
-  <div class="content"  ref="content0" id="content"  key="0">
+  <div class="content" ref="content0" id="content" key="0">
     <div class="card-f-wraper">
       <card-component title="Contrôleur de domaine"
                       image="mdi--domain"
@@ -36,20 +35,18 @@ export default {
                       image="material-symbols--health-metrics-outline-rounded"
                       description="Permet de collecter et d'agréger des métriques pour faciliter  la gestion  de l'activité informatique des serveurs"/>
     </div>
-    <a href="#nos-fonctionnalites" class="buton-link">
-      <Icon width="32px" color="#283783" icon="line-md:chevron-up-circle"/>
-    </a>
   </div>
 
 </template>
 
 <style scoped lang="scss">
-.content{
+.content {
   margin: 150px 20px;
   @media (max-width: 920px) {
     margin: 30px 20px;
   }
 }
+
 .card-f-wraper {
   display: flex;
   flex-wrap: wrap;
