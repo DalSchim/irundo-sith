@@ -261,38 +261,6 @@ fade-enter-from, fade-leave-active {
 
 }
 
-#qui-sommes-nous {
-  background-color: #f5f7fa;
-  padding: 80px 30px;
-
-  .container {
-    margin: 0px auto;
-    max-width: 940px;
-    width: 100%;
-
-    .wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .desciption {
-        width: 50%;
-        color: black;
-      }
-
-      .image-qsn {
-        width: 40%;
-        max-width: 46%;
-        overflow: hidden;
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-  }
-}
-
 #nos-objectifs {
   background: #2d3e50;
   padding: 80px 30px;
@@ -397,26 +365,6 @@ fade-enter-from, fade-leave-active {
     .container {
       .wrapper {
         flex-direction: column-reverse;
-
-        .desciption {
-          width: 100%;
-          margin-bottom: 32px;
-        }
-
-        .image-qsn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          max-width: 100%;
-        }
-      }
-    }
-  }
-  #nos-solutions {
-    .container {
-      .wrapper {
-        flex-direction: column;
 
         .desciption {
           width: 100%;
