@@ -25,7 +25,7 @@ export default {
                       description="Augmentez la productivité à l'aide de l'automatisation des tâches reproductibles"/>
       <card-component title="Sécurité"
                       image="mdi--shield-user"
-                      description="Gardez le contrôle sur vos infrastructures"/>
+                      description="Une très haute disponibilité des services et une surveillance continue des infrastructures "/>
     </div>
   </div>
 </template>

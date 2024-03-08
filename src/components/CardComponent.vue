@@ -43,6 +43,7 @@ export default {
   }
 
   h3 {
+    text-align: center;
     font-family: Orbitron, sans-serif;
     font-weight: 700;
     font-size: 18px;
