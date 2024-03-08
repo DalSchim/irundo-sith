@@ -35,7 +35,7 @@ export default {
         </div>
         <div class="buton">
           <button-component color="blue" path="/form" text="contactez-nous"/>
-          <ul class ="footer-2">
+          <ul class="footer-2">
             <li>
               <router-link to="/qui-sommes-nous">Qui sommes-nous</router-link>
             </li>
@@ -58,7 +58,6 @@ footer {
   padding: 80px 30px;
   background-color: #f5f7fa;
   color: black;
-
 
 
   .wrappers {
@@ -133,6 +132,7 @@ footer {
             transform-origin: right;
             transition: transform 0.3s ease;
           }
+
           &:hover {
             &:after {
               transform: scaleX(1);
@@ -144,14 +144,15 @@ footer {
     }
   }
 
-  .footer-2{
-    margin-top:24px ;
+  .footer-2 {
+    margin-top: 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 
     li {
       list-style: none;
+
       a {
         text-decoration: none;
         color: #283783;
@@ -173,6 +174,7 @@ footer {
           transform-origin: right;
           transition: transform 0.3s ease;
         }
+
         &:hover {
           &:after {
             transform: scaleX(1);
@@ -203,7 +205,7 @@ footer {
 }
 
 .ruturn-top {
- display: none;
+  display: none;
 }
 
 @media screen and (max-width: 920px) {
@@ -239,8 +241,6 @@ footer {
       height: 200px;
       object-fit: cover;
     }
-
-
 
 
     .buton {

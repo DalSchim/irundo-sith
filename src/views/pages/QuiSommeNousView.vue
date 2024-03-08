@@ -43,7 +43,7 @@ export default {
 
     .titre {
       width: 50%;
-      padding:  0 20px;
+      padding: 0 20px;
 
       h1 {
         font-family: Orbitron, sans-serif;

@@ -2,9 +2,9 @@
   <header class="home" id="notre-solutions">
     <div class="description">
       <div class="titre">
-        <h1>Irundo : une alternative pour le SI des collectivités</h1>
+        <h1>Irundo : la solution  pour les Systèmes d'Informations des collectivités</h1>
         <div class="desciption">
-          <h2>Irundo est une solution souveraine open source. Son interface web permet la centralisations et
+          <h2>Irundo est une solution souveraine open source. Son interface web permet la centralisation et
             l'infogérance
             de l'ensemble du SI des établissements scolaires de la collectivité.
           </h2>
@@ -256,8 +256,6 @@ fade-enter-from, fade-leave-active {
     gap: 20px;
     right: 20px;
   }
-
-
 }
 
 #nos-objectifs {

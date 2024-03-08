@@ -3,7 +3,6 @@
 
 export default {
   name: 'FormView',
-
   data() {
     return {
       nom: '',
@@ -15,6 +14,12 @@ export default {
       message: '',
       error: ''
     }
+  },
+
+  mounted() {
+
+
+
   },
 
   methods: {

@@ -15,7 +15,7 @@ export default {
                       image="mdi--domain"
                       description="Contrôleur de domaine AD, alimenté depuis les différentes bases disponibles (GPEI / Pronote / EDT  / Siècle / STS / ENT)"/>
 
-      <card-component title="Serveur de Sauvegarde"
+      <card-component title="Serveur de sauvegarde"
                       image="clarity--backup-solid"
                       description="Serveur de sauvegarde pour une reprise d'activité rapide des serveurs locaux et des serveurs hebergés"/>
 
@@ -27,7 +27,7 @@ export default {
                       image="eos-icons--dns"
                       description=" Serveur DNS pour les serveurs locaux et les serveurs hebergés "/>
 
-      <card-component title="Serveur Cloud"
+      <card-component title="Serveur cloud"
                       image="tabler--cloud-upload"
                       description="Hébergement des données-échanges des élèves et des professeurs"/>
 
