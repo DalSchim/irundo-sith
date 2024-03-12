@@ -7,7 +7,6 @@ export default {
   name: 'FormView',
   components: {FormComponents},
 }
-
 </script>
 <template>
   <!-- form : nom, prenom, email, nom de la collectivité ou de l'entreprise, telephone fonction éxercée -->
