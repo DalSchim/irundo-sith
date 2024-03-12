@@ -19,10 +19,10 @@ export default {
       this.hiden = !this.hiden;
     },
     isMobile() {
-      return window.innerWidth <= 920;
+      return window.innerWidth <= 1024;
     },
     isDesktop() {
-      return window.innerWidth > 920;
+      return window.innerWidth > 1024;
     },
     closeNav() {
       this.hiden = true;
@@ -129,7 +129,7 @@ export default {
 <style scoped lang="scss">
 
 .links {
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +142,7 @@ export default {
   position: absolute;
   display: flex;
   flex-direction: column;
-  @media (max-width: 920px) {
+  @media (max-width: 1024px) {
     position: static;
 
   }
@@ -242,7 +242,7 @@ nav ul li a {
 
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
   .logo-burgeur {
     display: block;
     width: 64px;

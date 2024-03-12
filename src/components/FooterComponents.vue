@@ -208,7 +208,7 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
 
   .ruturn-top {
     display: block;

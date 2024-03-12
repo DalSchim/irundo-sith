@@ -2,11 +2,12 @@
   <header class="home" id="notre-solutions">
     <div class="description">
       <div class="titre">
-        <h1>Irundo : la solution  pour les Systèmes d'Informations des collectivités</h1>
+        <h1>Irundo : la solution clé en main pour gérer vos établissements scolaires</h1>
         <div class="desciption">
-          <h2>Irundo est une solution souveraine open source. Son interface web permet la centralisation et
-            l'infogérance
-            de l'ensemble du SI des établissements scolaires de la collectivité.
+          <h2>Irundo est une solution souveraine open source. Elle permet le déploiement d'une infrastructure multi-sites et multi-établissements (serveurs, clients et réseaux).
+          </h2>
+          <h2>
+            Son interface web permet la centralisation et l'infogérance de l'ensemble du SI des établissements scolaires de la collectivité.
           </h2>
         </div>
       </div>
@@ -70,6 +71,7 @@
             </li>
             <li>Garantir le fonctionnement grâce à un produit unique éprouvé (650 serveurs en production)</li>
             <li>Permettre l'utilisation d'un cloud souverain</li>
+            <li>Contribuer au développement du logiciel libre éducatif notamment via le projet <a class="samba-link" href="https://sambaedu.org">SambaEdu</a></li>
           </ul>
         </div>
       </div>
@@ -107,6 +109,9 @@ export default {
 </script>
 <style scoped lang="scss">
 
+.samba-link{
+  color: white;
+}
 
 .tab {
   text-decoration: none;
@@ -128,7 +133,7 @@ fade-enter-from, fade-leave-active {
   position: absolute;
   bottom: -80px;
   width: 100%;
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1024px) {
     position: static;
   }
 }
@@ -179,7 +184,7 @@ fade-enter-from, fade-leave-active {
 
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
   .card-wrapper {
     padding: 80px 30px;
 
@@ -218,7 +223,6 @@ fade-enter-from, fade-leave-active {
 
     .titre {
       padding-top: 64px;
-
       h1 {
         font-size: 32px;
         font-family: Orbitron, sans-serif;
@@ -227,8 +231,9 @@ fade-enter-from, fade-leave-active {
 
       h2 {
         font-size: 20px;
-        font-family: Orbitron, sans-serif;
+        font-family: "Plus Jakarta Sans", sans-serif;
         font-weight: 600;
+        line-height: 32px;
         font-optical-sizing: auto;
         margin-bottom: 32px;
       }
@@ -238,6 +243,9 @@ fade-enter-from, fade-leave-active {
         flex-direction: column;
         gap: 16px;
         margin-left: 16px;
+        a{
+          text-decoration: none;
+        }
       }
     }
 
@@ -296,7 +304,7 @@ fade-enter-from, fade-leave-active {
   }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
   .home {
     flex-direction: column;
     align-items: center;

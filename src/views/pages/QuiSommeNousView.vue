@@ -121,7 +121,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width:1024px) {
   .hero {
     height: 140vh;
 
@@ -159,7 +159,7 @@ export default {
 
 
 //mobile
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
   .hero {
     .info {
       flex-direction: column;
