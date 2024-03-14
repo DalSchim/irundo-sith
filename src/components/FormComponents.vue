@@ -6,44 +6,47 @@ export default {
   data() {
     return {
       show: false,
-      status: 'Envoi en cours...'
+      status: 'Envoi en cours...',
+      errore: '',
     };
   },
   methods: {
     //submit form
     sendEmail() {
-      if (this.$refs.form.checkValidity() === false) {
-        alert('Veuillez remplir tous les champs')
-        return;
+      // verifier si les champs sont vides ou non si oui afficher un message d'erreur et  on mai les input en rouge
+      if (this.nom === '' || this.prenom === '' || this.email === '' || this.collectivite === '' || this.phone === '' || this.fonction === '' || this.message === '') {
+        this.errore = 'Veuillez remplir tous les champs';
+      } else {
+        this.show = true;
+        emailjs
+            .sendForm('service_1pv68d6', 'template_rdopjjl', this.$refs.form, {
+              publicKey: 'IxcCC4LpCtMe3xHFx',
+            })
+            .then(
+                () => {
+                  setTimeout(() => {
+                    this.show = false;
+                  }, 1000);
+                  //si le mail est envoyé avec succès on affiche un message de succès passer le délai remettre status à sa valeur initiale
+                  this.status = 'Message envoyé avec succès';
+                  this.$refs.form.reset();
+                  setTimeout(() => {
+                    this.status = 'Envoi en cours...';
+                  }, 3000);
+                },
+                (error) => {
+                  this.status = 'Une erreur est survenue, veuillez réessayer plus tard', error.text;
+                  this.$refs.form.reset();
+                  setTimeout(() => {
+                    this.status = 'Envoi en cours...';
+                  }, 3000);
+                },
+            );
       }
-      this.show = true;
-      emailjs
-          .sendForm('service_1pv68d6', 'template_rdopjjl', this.$refs.form, {
-            publicKey: 'IxcCC4LpCtMe3xHFx',
-          })
-          .then(
-              () => {
-                setTimeout(() => {
-                  this.show = false;
-                }, 1000);
-                //si le mail est envoyé avec succès on affiche un message de succès passer le délai remettre status à sa valeur initiale
-                this.status = 'Message envoyé avec succès';
-                this.$refs.form.reset();
-                setTimeout(() => {
-                  this.status = 'Envoi en cours...';
-                }, 3000);
-              },
-              (error) => {
-                this.status = 'Une erreur est survenue, veuillez réessayer plus tard', error.text;
-                this.$refs.form.reset();
-                setTimeout(() => {
-                  this.status = 'Envoi en cours...';
-                }, 3000);
-              },
-          );
-    },
-  },
+    }
+  }
 }
+
 
 </script>
 
@@ -51,45 +54,50 @@ export default {
   <div class="formulaire-containeur">
     <div class="loading" v-if="show">
       <span class="loader2"></span>
-      <h2>{{status}}</h2>
+      <h2>{{ status }}</h2>
     </div>
     <form ref="form" @submit.prevent="sendEmail">
       <input type="hidden" name="contact_number">
       <div class="section-name">
+
         <div class="form-group">
           <label for="nom">Nom</label>
-          <input type="text" name="nom" id="nom" placeholder="Nom">
+          <input type="text" name="nom" id="nom" placeholder="Nom" v-model="nom">
         </div>
+
         <div class="form-group">
           <label for="prenom">Prénom</label>
-          <input type="text" name="prenom" placeholder="Prénom">
+          <input type="text" name="prenom" placeholder="Prénom" id="prenom" v-model="prenom">
         </div>
       </div>
+
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="email" name="email" id="email" placeholder="Email" v-model="email">
       </div>
+
       <div class="form-group">
         <label for="collectivite">Nom de la collectivité ou de l'entreprise</label>
-        <input type="text" name="collectivite"
-               placeholder="Nom de la collectivité ou de l'entreprise">
+        <input type="text" name="collectivite" placeholder="Nom de la collectivité ou de l'entreprise" v-model="collectivite">
       </div>
 
       <div class="form-group">
         <label for="telephone">Téléphone</label>
-        <input type="tel" id="telephone" name="phone" placeholder="Téléphone">
+        <input type="tel" id="telephone" name="phone" placeholder="Téléphone" v-model="phone">
       </div>
 
       <div class="form-group">
         <label for="fonction">Fonction éxercée</label>
-        <input type="text" id="fonction" name="fonction" placeholder="Fonction éxercée">
+        <input type="text" id="fonction" name="fonction" placeholder="Fonction éxercée" v-model="fonction">
       </div>
 
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Message"></textarea>
+        <textarea id="message" name="message" placeholder="Message" v-model="message"></textarea>
       </div>
+
       <hr>
+      <p>{{ errore }}</p>
       <button class=".btn" type="submit">Envoyer</button>
     </form>
   </div>
@@ -113,8 +121,9 @@ export default {
     height: 100%;
     background-color: rgba(40, 55, 131, 0.59);
     z-index: 1000000000;
-    h2{
-      color:white ;
+
+    h2 {
+      color: white;
     }
 
     .loader2 {
@@ -167,8 +176,6 @@ export default {
         opacity: 0;
       }
     }
-
-
   }
 
 
