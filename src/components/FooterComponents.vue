@@ -23,7 +23,7 @@ export default {
               <router-link to="/#notre-solutions">La solution</router-link>
             </li>
             <li>
-              <router-link to="/#nos-fonctionnalites">Nos fonctionalites</router-link>
+              <router-link to="/#nos-fonctionnalites">Nos fonctionalités</router-link>
             </li>
             <li>
               <router-link to="/#nos-objectifs">Nos objectifs</router-link>

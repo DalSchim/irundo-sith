@@ -104,7 +104,7 @@ export default {
 
           <li>
             <div class="links" @mouseover="indiv" @mouseleave="outdiv">
-              <router-link class="link" to="/#nos-fonctionnalites">Nos fonctionalites</router-link>
+              <router-link class="link" to="/#nos-fonctionnalites">Nos fonctionalités</router-link>
               <div class="dropdown" v-if="show">
                 <router-link class="link" to="/fonctionnalite1#nos-fonctionnalites">Serveur hebergés</router-link>
                 <router-link class="link" to="/fonctionnalite2#nos-fonctionnalites">Serveurs Locaux</router-link>

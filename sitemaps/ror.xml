@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://irundo-site.vercel.app/</title>
+  <link>https://irundo-site.vercel.app/</link>
+
+<item>
+     <link>https://irundo-site.vercel.app/</link>
+     <title>Irundo-solutions-souveraines</title>
+     <description>Irundo est une solution souveraine open source. Son interfacegit
+     web permet la centralisations et l'infogérance
+     de l'ensemble du SI des établissements scolaires de la collectivité. </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

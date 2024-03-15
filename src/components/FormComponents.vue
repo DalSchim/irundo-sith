@@ -1,53 +1,61 @@
 <script>
 import emailjs from '@emailjs/browser';
-
 export default {
   name: "FormComponents",
   data() {
     return {
       show: false,
       status: 'Envoi en cours...',
-      errore: '',
+      error: '',
     };
   },
+
+  mounted() {
+    // Chargement du script reCAPTC
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  },
+
+
   methods: {
-    //submit form
     sendEmail() {
-      // verifier si les champs sont vides ou non si oui afficher un message d'erreur et  on mai les input en rouge
-      if (this.nom === '' || this.prenom === '' || this.email === '' || this.collectivite === '' || this.phone === '' || this.fonction === '' || this.message === '') {
-        this.errore = 'Veuillez remplir tous les champs';
+      var response = window.grecaptcha.getResponse();
+      if (response.length === 0) {
+        this.error = 'Veuillez cocher la case "Je ne suis pas un robot"';
+        return false;
       } else {
-        this.show = true;
-        emailjs
-            .sendForm('service_1pv68d6', 'template_rdopjjl', this.$refs.form, {
-              publicKey: 'IxcCC4LpCtMe3xHFx',
-            })
-            .then(
-                () => {
-                  setTimeout(() => {
-                    this.show = false;
-                  }, 1000);
-                  //si le mail est envoyé avec succès on affiche un message de succès passer le délai remettre status à sa valeur initiale
-                  this.status = 'Message envoyé avec succès';
-                  this.$refs.form.reset();
-                  setTimeout(() => {
-                    this.status = 'Envoi en cours...';
-                  }, 3000);
-                },
-                (error) => {
-                  this.status = 'Une erreur est survenue, veuillez réessayer plus tard', error.text;
-                  this.$refs.form.reset();
-                  setTimeout(() => {
-                    this.status = 'Envoi en cours...';
-                  }, 3000);
-                },
-            );
+        this.error = '';
       }
+      this.show = true;
+      emailjs.sendForm('service_1pv68d6', 'template_rdopjjl', this.$refs.form, { publicKey: 'IxcCC4LpCtMe3xHFx' })
+          .then(
+              () => {
+                setTimeout(() => {
+                  this.show = false;
+                }, 1000);
+                this.status = 'Message envoyé avec succès';
+                this.$refs.form.reset();
+                setTimeout(() => {
+                  this.status = 'Envoi en cours...';
+                }, 3000);
+              },
+              (error) => {
+                setTimeout(() => {
+                  this.show = false;
+                }, 1000);
+                this.status = 'Une erreur est survenue, veuillez réessayer plus tard : ' + error.text;
+                this.$refs.form.reset();
+                setTimeout(() => {
+                  this.status = 'Envoi en cours...';
+                }, 3000);
+              },
+          );
     }
   }
 }
-
-
 </script>
 
 <template>
@@ -58,8 +66,9 @@ export default {
     </div>
     <form ref="form" @submit.prevent="sendEmail">
       <input type="hidden" name="contact_number">
-      <div class="section-name">
 
+
+      <div class="section-name">
         <div class="form-group">
           <label for="nom">Nom</label>
           <input type="text" name="nom" id="nom" placeholder="Nom" v-model="nom">
@@ -78,7 +87,8 @@ export default {
 
       <div class="form-group">
         <label for="collectivite">Nom de la collectivité ou de l'entreprise</label>
-        <input type="text" name="collectivite" placeholder="Nom de la collectivité ou de l'entreprise" v-model="collectivite">
+        <input type="text" name="collectivite" placeholder="Nom de la collectivité ou de l'entreprise"
+               v-model="collectivite">
       </div>
 
       <div class="form-group">
@@ -95,13 +105,12 @@ export default {
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Message" v-model="message"></textarea>
       </div>
-
+      <div class="g-recaptcha" data-sitekey="6Lcf-JgpAAAAAOBo73s_DHd6CFfavrVhQzTV0ga5"></div>
       <hr>
       <p>{{ errore }}</p>
       <button class=".btn" type="submit">Envoyer</button>
     </form>
   </div>
-
 </template>
 
 <style scoped lang="scss">
