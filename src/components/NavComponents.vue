@@ -106,10 +106,10 @@ export default {
             <div class="links" @mouseover="indiv" @mouseleave="outdiv">
               <router-link class="link" to="/#nos-fonctionnalites">Nos fonctionnalités</router-link>
               <div class="dropdown" v-if="show">
-                <router-link class="link" to="/fonctionnalite1#nos-fonctionnalites">Serveur hebergés</router-link>
-                <router-link class="link" to="/fonctionnalite2#nos-fonctionnalites">Serveurs Locaux</router-link>
-                <router-link class="link" to="/fonctionnalite3#nos-fonctionnalites">Administration</router-link>
-                <router-link class="link" to="/fonctionnalite4#nos-fonctionnalites">Support</router-link>
+                <router-link class="link" to="/ServeursHeberges#nos-fonctionnalites">Serveur hebergés</router-link>
+                <router-link class="link" to="/ServeursLocaux#nos-fonctionnalites">Serveurs Locaux</router-link>
+                <router-link class="link" to="/Administration#nos-fonctionnalites">Administration</router-link>
+                <router-link class="link" to="/SuportFunctionView#nos-fonctionnalites">Support</router-link>
               </div>
             </div>
           </li>

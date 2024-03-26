@@ -1,10 +1,10 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import FormView from "../views/pages/FormView.vue";
-import Fonctionnalite2View from "@/components/fonctioonnalite/fonctionnalite2View.vue";
-import Fonctionnalite1View from "@/components/fonctioonnalite/fonctionnalite1View.vue";
-import Fonctionnalite3View from "@/components/fonctioonnalite/fonctionnalite3View.vue";
-import Fonctionnalite4View from "@/components/fonctioonnalite/fonctionnalite4View.vue";
+import ServeursHebergesView from "@/components/fonctioonnalite/ServeursHebergesView.vue";
+import ServeursLocauxView from "@/components/fonctioonnalite/ServeursLocauxView.vue";
+import AdministrationView from "@/components/fonctioonnalite/AdministrationView.vue";
+import SuportFunctionView from "@/components/fonctioonnalite/SuportFunctionView.vue";
 
 
 // Ajoute ici tes routes pour tes views
@@ -12,13 +12,13 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        redirect: '/fonctionnalite1',
+        redirect: '/ServeursHeberges',
         component: HomeView,
         children: [
-            {path: 'fonctionnalite1', name: 'fonctionnalite1', component: Fonctionnalite1View},
-            {path: 'fonctionnalite2', name: 'fonctionnalite2', component: Fonctionnalite2View},
-            {path: 'fonctionnalite3', name: 'fonctionnalite3', component: Fonctionnalite3View},
-            {path: 'fonctionnalite4', name: 'fonctionnalite4', component: Fonctionnalite4View},
+            {path: 'ServeursHeberges', name: 'ServeursHeberges', component: ServeursHebergesView},
+            {path: 'ServeursLocaux', name: 'ServeursLocaux', component: ServeursLocauxView},
+            {path: 'Administration', name: 'Administration', component: AdministrationView},
+            {path: 'SuportFunctionView', name: 'SuportFunctionView', component:SuportFunctionView },
 
             // Ajoute d'autres routes pour tes fonctionnalités
         ]

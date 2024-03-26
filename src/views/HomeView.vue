@@ -18,26 +18,27 @@
   </header>
   <section>
     <div class="tab-buttons" id="nos-fonctionnalites">
+
       <div class="card-wrapper" id="cards">
-        <router-link class="tab" to="/fonctionnalite1#nos-fonctionnalites">
+        <router-link class="tab" to="/ServeursHeberges#nos-fonctionnalites">
           <div class="card">
             <h3>Serveurs hébergés</h3>
             <p>Une solution reposant sur des services en data-center pour une performance maximum</p>
           </div>
         </router-link>
-        <router-link class="tab" to="/fonctionnalite2#nos-fonctionnalites">
+        <router-link class="tab" to="/ServeursLocaux#nos-fonctionnalites">
           <div class="card">
             <h3>Serveurs locaux</h3>
             <p>Une réplication pour offrir des services spécifiques ainsi qu'une haute disponibilité</p>
           </div>
         </router-link>
-        <router-link class="tab" to="/fonctionnalite3#nos-fonctionnalites">
+        <router-link class="tab" to="/Administration#nos-fonctionnalites">
           <div class="card">
             <h3>Administration</h3>
             <p>Une interface pour gérer, configurer, maintenir, et surveiller les serveurs rattachés</p>
           </div>
         </router-link>
-        <router-link class="tab" to="/fonctionnalite4#nos-fonctionnalites">
+        <router-link class="tab" to="/SuportFunctionView#nos-fonctionnalites">
           <div class="card">
             <h3>Support</h3>
             <p>Surveiller et gérer vos appareils réseau sans agent ou client</p>
@@ -45,8 +46,8 @@
         </router-link>
       </div>
     </div>
-    <div class="tab-content">
 
+    <div class="tab-content">
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component"/>
