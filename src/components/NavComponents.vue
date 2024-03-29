@@ -34,15 +34,13 @@ export default {
       this.show = false;
     },
 
-    closelink(){
+    closelink() {
       document.querySelectorAll('.link').forEach(link => {
         link.addEventListener('click', () => {
           this.hiden = false;
         });
       });
     }
-
-
 
 
   },

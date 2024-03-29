@@ -40,7 +40,7 @@ export default {
               <router-link to="/qui-sommes-nous">À propos</router-link>
             </li>
             <li>
-              <a href="https://www.linkedin.com/company/irundo">
+              <a href="https://www.linkedin.com/company/irundofr">
                 <Icon width="32px" color="#00000" icon="akar-icons:linkedin-fill"/>
               </a>
             </li>
