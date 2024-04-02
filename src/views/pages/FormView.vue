@@ -45,15 +45,14 @@ export default {
     display: grid;
     margin: auto;
     .info {
+      padding: 8px;
       h2 {
         font-size: 40px;
         font-family: Orbitron, sans-serif;
         font-weight: 600;
         font-optical-sizing: auto;
         margin-bottom: 32px;
-
       }
-
       .text {
         font-family: "Plus Jakarta Sans", sans-serif;
         font-size: 18px;
