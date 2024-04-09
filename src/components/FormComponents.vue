@@ -9,9 +9,8 @@ export default {
       error: '',
     };
   },
-
+  // charge le script de recaptcha
   mounted() {
-    // Chargement du script reCAPTC
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
     script.async = true;
@@ -22,13 +21,6 @@ export default {
 
   methods: {
     sendEmail() {
-      var response = window.grecaptcha.getResponse();
-      if (response.length === 0) {
-        this.error = 'Veuillez cocher la case "Je ne suis pas un robot"';
-        return false;
-      } else {
-        this.error = '';
-      }
       this.show = true;
       emailjs.sendForm('service_1pv68d6', 'template_rdopjjl', this.$refs.form, { publicKey: 'IxcCC4LpCtMe3xHFx' })
           .then(
@@ -105,7 +97,8 @@ export default {
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Message" v-model="message"></textarea>
       </div>
-      <div class="g-recaptcha" data-sitekey="6Lcf-JgpAAAAAOBo73s_DHd6CFfavrVhQzTV0ga5"></div>
+      <div class="g-recaptcha" data-sitekey="6LdcnJgpAAAAAGIDqM55Y5fHXgsY-JDLi8sIfXFe"></div>
+      <br>
       <hr>
       <p>{{ errore }}</p>
       <button class=".btn" type="submit">Envoyer</button>

@@ -6,7 +6,6 @@ export default {
   components: {CardComponent}
 }
 </script>
-
 <template>
   <div class="content" id="content">
     <div class="card-f-wraper">
