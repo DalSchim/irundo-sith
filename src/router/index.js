@@ -38,7 +38,19 @@ const routes = [
         path: '/qui-sommes-nous',
         name: 'qui-sommes-nous',
         component: () => import(/* webpackChunkName: "qui-sommes-nous" */ '../views/pages/QuiSommeNousView.vue'),
+    },
+    {
+        path:'/mentions-legales',
+        name:'mentions-legales',
+        component: () => import(/* webpackChunkName: "conditions-generales" */ '../views/pages/ConditionGView.vue'),
+    },
+    {
+        path:'/politique-de-confidentialite',
+        name:'politique-de-confidentialite',
+        component: () => import(/* webpackChunkName: "politique-de-confidentialite" */ '../views/pages/ConfidentialiteView.vue'),
     }
+
+
 ]
 // crée un scroll to top pour les route qui sommes nous et form
 const router = createRouter({
@@ -50,7 +62,7 @@ const router = createRouter({
 // scroll to top pour les routes qui sommes nous et form
 
 router.afterEach((to) => {
-    const routesWithScrollTop = ['/form', '/qui-sommes-nous'];
+    const routesWithScrollTop = ['/form', '/qui-sommes-nous,', '/mentions-legales', '/politique-de-confidentialite'];
     if (routesWithScrollTop.includes(to.path)) {
         setTimeout(() => {
             window.scrollTo(0, 0);

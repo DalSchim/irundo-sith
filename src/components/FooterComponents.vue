@@ -40,6 +40,12 @@ export default {
               <router-link to="/qui-sommes-nous">À propos</router-link>
             </li>
             <li>
+              <router-link to="/mentions-legales">Mentions légales</router-link>
+            </li>
+            <li>
+              <router-link to="/politique-de-confidentialite">Politique de confidentialité</router-link>
+            </li>
+            <li>
               <a href="https://www.linkedin.com/company/irundofr">
                 <Icon width="32px" color="#00000" icon="akar-icons:linkedin-fill"/>
               </a>
