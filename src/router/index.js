@@ -62,7 +62,7 @@ const router = createRouter({
 // scroll to top pour les routes qui sommes nous et form
 
 router.afterEach((to) => {
-    const routesWithScrollTop = ['/form', '/qui-sommes-nous,', '/mentions-legales', '/politique-de-confidentialite'];
+    const routesWithScrollTop = ['/form', '/qui-sommes-nous', '/mentions-legales', '/politique-de-confidentialite'];
     if (routesWithScrollTop.includes(to.path)) {
         setTimeout(() => {
             window.scrollTo(0, 0);
